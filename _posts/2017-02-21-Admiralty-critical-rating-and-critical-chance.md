@@ -23,5 +23,5 @@ $$CritRatio = CritRate / MinRequirement$$
 
 Critical Chance is just the application of a simple Logistic Function.
 
-$$CritChance = 1 + \left( \frac(-1, \left(1 + \left(\frac(CritRatio,2) \right) \right)$$
+CritChance = 1 + \left( \frac(-1, \left(1 + \left(\frac(CritRatio,2) \right) \right)
 
