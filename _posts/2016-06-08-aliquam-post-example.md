@@ -5,8 +5,7 @@ category: blog
 comments: true
 description: This page is only for demonstration purposes. It shows the styling of all the components found in Aliquam theme.
 tags:
-    - lorem
-    - ipsum
+    - blog
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc rhoncus luctus quam in gravida.
