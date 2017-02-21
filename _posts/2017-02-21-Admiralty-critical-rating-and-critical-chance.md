@@ -5,7 +5,6 @@ category: blog
 comments: true
 description: An examination of STO Admiralty system's critical rating and critical chance. 
 tags:
-    - blog
 	- sto-aso
 ---
 
