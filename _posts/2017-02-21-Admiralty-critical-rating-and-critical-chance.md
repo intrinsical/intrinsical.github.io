@@ -13,13 +13,13 @@ I have been asked several times about the relationship between critical rating a
 
 ## Calculating Critical Chance
 
-It turns out to be a pretty simple formula with two only parameters, which I call $$MinRequirement$$ and $$CritRate$$. MinRequirement is simply the minimum points needed to get 100% success at an assignment, so all you need to do is sum the assignment AND event's requirements.
+It turns out to be a pretty simple formula with two only parameters, which I call MinRequirement and CritRate. MinRequirement is simply the minimum points needed to get 100% success at an assignment, so all you need to do is sum the assignment AND event's requirements.
 
-$$MinRequirement = AssignmentENG + AssignmentTAC + AssignmentSCI + EventENG + EventTAC + EventSCI$$
+MinRequirement = AssignmentENG + AssignmentTAC + AssignmentSCI + EventENG + EventTAC + EventSCI
 
-Next, calculate $$CritRatio$$
+Next, calculate CritRatio
 
-$$CritRatio = CritRate / MinRequirement$$
+CritRatio = CritRate / MinRequirement
 
 Critical Chance is just the application of a simple Logistic Function.
 
