@@ -9,7 +9,7 @@ owner: intrinsical
 # Optional quote in the footer
 # To disable set enable to false
 quote:
-  enable: true
+  enable: false
   quote: Some fancy quote
   author: John Doe
 
