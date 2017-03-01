@@ -15,7 +15,7 @@ I have been asked several times about the relationship between critical rating a
 This is what a STO developer, Borticus, [had to say](https://www.reddit.com/r/sto/comments/3qhuoi/dont_send_stronger_ships_then_you_need_to_in_the/cwg3qyq/) about Admiralty critical rating and how to calculate it.
 
 >
-> $$1-(\frac{T}{(T+C)})$$ 
+> $$1-\left(\frac{T}{(T+C)}\right)$$ 
 >
 > is the actual formula.
 > How $$C$$ is calculated is as follows:
@@ -31,16 +31,21 @@ This is what a STO developer, Borticus, [had to say](https://www.reddit.com/r/st
 {: .blockquote cite="https://www.reddit.com/r/sto/comments/3qhuoi/dont_send_stronger_ships_then_you_need_to_in_the/cwg3qyq/" }
 
 
-## Calculating Critical Chance
+## My Take on Critical Chance
 
+Of course, back then the Admiralty system was brand new and I had no information on any of the details. So I had to reverse engineer it. 
 It turns out to be a pretty simple formula with two only parameters, which I call $$MinRequirement$$ and $$CritRate$$. $$MinRequirement$$ is simply the minimum points needed to get 100% success at an assignment, which is the sum of both the assignment AND event's requirements.
 
-$$MinRequirement & = AssignmentENG + \\
+$$
+\begin{align*}
+MinRequirement & = AssignmentENG + \\
  & AssignmentTAC + \\
  & AssignmentSCI + \\
  & EventENG + \\
  & EventTAC + \\
- & EventSCI$$
+ & EventSCI
+\end{align*}
+$$
 
 Next, calculate $$CritRatio$$
 
