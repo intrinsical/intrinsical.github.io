@@ -10,7 +10,24 @@ tags:
 
 I have been asked several times about the relationship between critical rating and critical chance in Star Trek Online's admiralty system. I figure it's best to document this down once and for all. This way, the next time someone asks I can simply point to this post.
 
-## Background
+## Reverse Engineering the Admiralty System
+
+When I first started working on ASO, the Admiralty system was still brand new and was only available for testing on Tribble test server. So I had to reverse engineer everything from scratch. 
+
+I played with a number of assignments, plugging in different sets of ships. I recording down the critical chance and critical rate numbers in a comma separated file, and began analyzing it for patterns. 
+
+## What is Critical Rating?
+
+Critical Rating is primarily derived from any "overflow" or surplus stats. For example when you send a very strong ship on a simple admiralty assignment, you will get surplus. Suppose you have an assignment that requires 20 Eng, 20 Tac, 20 Sci. If you send ships that have a combined stat of 25 Eng, 25 Tac, 25 Sci, you have a total surplus stat of 15. This 15 surplus stat becomes your Basic Critical Rating value. Certain ships have special abilities that will further enhance this Critical Rating value. Also, some special events have an innate +Critical Rating bonus that will further increase your Critcal Rating for the assignment.
+
+Your chance of getting a critical success on an assignment is dependent on the Critical Rating value. The more Critical Rating you have, the larger the Critical Chance. However, there is a built in exponential mechanic where you need an ever increasing amounts of Critical Rating to get a larger Critical Chance. The chart below shows the Critical Rating required for an example assignment (20 Eng, 20 Tac, 20 Sci).
+
+~[Critical Rating vs Critical Chance]({{ site.url }}/assets/admiralty-crit.png)
+
+To get 10% Critical Chance, you just need 13 Critical Rating. To get 50% Critical Chance, you need 120 Critical Rating. However to get a 80% Critical Chance on the assignment, you need a whopping 480 Critical Rating. Beyond 80% Critical Chance, the Critical Rating requirements get larger at an ever increasing (exponential) rate. In fact, it is impossible to get 100% Critical Chance as you will need infinite Critical Rating.
+
+
+## A word from Borticus
 
 This is what a STO developer, Borticus, [had to say](https://www.reddit.com/r/sto/comments/3qhuoi/dont_send_stronger_ships_then_you_need_to_in_the/cwg3qyq/) about Admiralty critical rating and how to calculate it.
 
