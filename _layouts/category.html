@@ -2,6 +2,11 @@
 layout: default
 ---
 
+<div>
+<h1>{{ page.category }}</h1>
+{{ content }}
+</div>
+
 {% for page in site.categories[page.category] %}
 {% include articles.html %}
 {% endfor %}
