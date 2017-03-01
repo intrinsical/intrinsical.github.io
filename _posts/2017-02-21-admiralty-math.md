@@ -15,13 +15,13 @@ I have been asked several times about the relationship between critical rating a
 This is what Borticus (Cryptic developer) had to say about Admiralty critical rating and how to calculate it.
 
 > $$1-(T/(T+C))$$ is the actual formula.
-> How "C" is calculated is as follows:
-> =StatExtra*(StatRequired/AllStatTotal)
+> How $$C$$ is calculated is as follows:
+> $$=StatExtra*\left(\frac{StatRequired}{AllStatTotal}\right)$$
 > 
 > In other words, if an Assignment has requirements of 10/10/10 and you slot 10/10/20, you've exceeded one stat by 10. This value is then compared to the total requirement to give you a ratio of contribution, working out as 3.333(repeating).
 > So, the total formula is:
 > 1-(AllStatTotal/(AllStatTotal+(StatExtra*(StatRequired/AllStatTotal))))
-<footer><cite> - Borticus, Cryptic developer</cite></footer>
+><footer><cite> - <a href="https://www.reddit.com/r/sto/comments/3qhuoi/dont_send_stronger_ships_then_you_need_to_in_the/cwg3qyq/">Borticus, Cryptic developer</a></cite></footer>
 {: .blockquote cite="https://www.reddit.com/r/sto/comments/3qhuoi/dont_send_stronger_ships_then_you_need_to_in_the/cwg3qyq/" }
 
 
