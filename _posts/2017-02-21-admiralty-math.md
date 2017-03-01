@@ -12,7 +12,7 @@ I have been asked several times about the relationship between critical rating a
 
 ## Background
 
-This is what Borticus (Cryptic developer) had to say about Admiralty critical rating and how to calculate it.
+This is what a STO developer, Borticus, had to say about Admiralty critical rating and how to calculate it.
 
 > $$1-(T/(T+C))$$ is the actual formula.
 > How $$C$$ is calculated is as follows:
@@ -23,7 +23,7 @@ This is what Borticus (Cryptic developer) had to say about Admiralty critical ra
 > So, the total formula is:
 >
 > $$1 - \left( \frac{AllStatTotal}{\left(AllStatTotal + \left(StatExtra* \left(\frac{StatRequired}{AllStatTotal}\right)\right)\right)}\right)$$
-><footer><cite> - <a href="https://www.reddit.com/r/sto/comments/3qhuoi/dont_send_stronger_ships_then_you_need_to_in_the/cwg3qyq/">Borticus, Cryptic developer</a></cite></footer>
+><footer><cite> - <a href="https://www.reddit.com/r/sto/comments/3qhuoi/dont_send_stronger_ships_then_you_need_to_in_the/cwg3qyq/">Borticus</a></cite></footer>
 {: .blockquote cite="https://www.reddit.com/r/sto/comments/3qhuoi/dont_send_stronger_ships_then_you_need_to_in_the/cwg3qyq/" }
 
 
