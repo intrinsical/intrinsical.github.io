@@ -20,14 +20,14 @@ This is what a STO developer, Borticus, [had to say](https://www.reddit.com/r/st
 > is the actual formula.
 > How $$C$$ is calculated is as follows:
 > 
-> $$=StatExtra*\left(\frac{StatRequired}{AllStatTotal}\right)$$
+> $$C = StatExtra*\left(\frac{StatRequired}{AllStatTotal}\right)$$
 > 
 > In other words, if an Assignment has requirements of 10/10/10 and you slot 10/10/20, you've exceeded one stat by 10. This value is then compared to the total requirement to give you a ratio of contribution, working out as 3.333(repeating).
 > So, the total formula is:
 >
 > $$1 - \left( \frac{AllStatTotal}{\left(AllStatTotal + \left(StatExtra* \left(\frac{StatRequired}{AllStatTotal}\right)\right)\right)}\right)$$
 > 
-><footer><cite> - [Borticus](https://www.reddit.com/r/sto/comments/3qhuoi/dont_send_stronger_ships_then_you_need_to_in_the/cwg3qyq/)</cite></footer>
+><footer><cite> - Borticus</cite></footer>
 {: .blockquote cite="https://www.reddit.com/r/sto/comments/3qhuoi/dont_send_stronger_ships_then_you_need_to_in_the/cwg3qyq/" }
 
 
@@ -35,7 +35,12 @@ This is what a STO developer, Borticus, [had to say](https://www.reddit.com/r/st
 
 It turns out to be a pretty simple formula with two only parameters, which I call $$MinRequirement$$ and $$CritRate$$. $$MinRequirement$$ is simply the minimum points needed to get 100% success at an assignment, which is the sum of both the assignment AND event's requirements.
 
-$$MinRequirement = AssignmentENG + AssignmentTAC + AssignmentSCI + EventENG + EventTAC + EventSCI$$
+$$MinRequirement & = AssignmentENG + \\
+ & AssignmentTAC + \\
+ & AssignmentSCI + \\
+ & EventENG + \\
+ & EventTAC + \\
+ & EventSCI$$
 
 Next, calculate $$CritRatio$$
 
