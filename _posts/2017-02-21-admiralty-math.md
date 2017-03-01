@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Notes on critical rating and critical chance
+title: Admiralty critical chance
 category: sto-aso
 comments: true
-description: An examination of critical rating and critical chance in the Admiralty system. 
+description: An examination of critical chance and how to calculate it. 
 tags:
     - sto-aso
 ---
@@ -22,7 +22,7 @@ Critical Rating is primarily derived from any "overflow" or surplus stats. For e
 
 Your chance of getting a critical success on an assignment is dependent on the Critical Rating value. The more Critical Rating you have, the larger the Critical Chance. However, there is a built in exponential mechanic where you need an ever increasing amounts of Critical Rating to get a larger Critical Chance. The chart below shows the Critical Rating required for an example assignment (20 Eng, 20 Tac, 20 Sci).
 
-~[Critical Rating vs Critical Chance]({{ site.url }}/assets/admiralty-crit.png)
+![Critical Rating vs Critical Chance]({{ site.url }}/assets/admiralty-crit.png)
 
 To get 10% Critical Chance, you just need 13 Critical Rating. To get 50% Critical Chance, you need 120 Critical Rating. However to get a 80% Critical Chance on the assignment, you need a whopping 480 Critical Rating. Beyond 80% Critical Chance, the Critical Rating requirements get larger at an ever increasing (exponential) rate. In fact, it is impossible to get 100% Critical Chance as you will need infinite Critical Rating.
 
