@@ -23,6 +23,7 @@ This is what a STO developer, Borticus, had to say about Admiralty critical rati
 > So, the total formula is:
 >
 > $$1 - \left( \frac{AllStatTotal}{\left(AllStatTotal + \left(StatExtra* \left(\frac{StatRequired}{AllStatTotal}\right)\right)\right)}\right)$$
+> 
 ><footer><cite> - <a href="https://www.reddit.com/r/sto/comments/3qhuoi/dont_send_stronger_ships_then_you_need_to_in_the/cwg3qyq/">Borticus</a></cite></footer>
 {: .blockquote cite="https://www.reddit.com/r/sto/comments/3qhuoi/dont_send_stronger_ships_then_you_need_to_in_the/cwg3qyq/" }
 
@@ -33,11 +34,11 @@ It turns out to be a pretty simple formula with two only parameters, which I cal
 
 $$MinRequirement = AssignmentENG + AssignmentTAC + AssignmentSCI + EventENG + EventTAC + EventSCI$$
 
-Next, calculate CritRatio
+Next, calculate $$CritRatio$$
 
 $$CritRatio = \frac{CritRate}{MinRequirement}$$
 
 Critical Chance is just the application of a simple Logistic Function.
 
-$$CritChance = 1 + \left( \frac{-1}{\left(1 + \frac{CritRatio}{2}\right)| \right)$$
+$$CritChance = 1 + \left( \frac{-1}{\left(1 + \frac{CritRatio}{2}\right) \right)$$
 
