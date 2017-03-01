@@ -12,9 +12,12 @@ I have been asked several times about the relationship between critical rating a
 
 ## Background
 
-This is what a STO developer, Borticus, had to say about Admiralty critical rating and how to calculate it.
+This is what a STO developer, Borticus, [had to say](https://www.reddit.com/r/sto/comments/3qhuoi/dont_send_stronger_ships_then_you_need_to_in_the/cwg3qyq/) about Admiralty critical rating and how to calculate it.
 
-> $$1-(T/(T+C))$$ is the actual formula.
+>
+> $$1-(\frac{T}{(T+C)})$$ 
+>
+> is the actual formula.
 > How $$C$$ is calculated is as follows:
 > 
 > $$=StatExtra*\left(\frac{StatRequired}{AllStatTotal}\right)$$
@@ -24,7 +27,7 @@ This is what a STO developer, Borticus, had to say about Admiralty critical rati
 >
 > $$1 - \left( \frac{AllStatTotal}{\left(AllStatTotal + \left(StatExtra* \left(\frac{StatRequired}{AllStatTotal}\right)\right)\right)}\right)$$
 > 
-><footer><cite> - <a href="https://www.reddit.com/r/sto/comments/3qhuoi/dont_send_stronger_ships_then_you_need_to_in_the/cwg3qyq/">Borticus</a></cite></footer>
+><footer><cite> - [Borticus](https://www.reddit.com/r/sto/comments/3qhuoi/dont_send_stronger_ships_then_you_need_to_in_the/cwg3qyq/)</cite></footer>
 {: .blockquote cite="https://www.reddit.com/r/sto/comments/3qhuoi/dont_send_stronger_ships_then_you_need_to_in_the/cwg3qyq/" }
 
 
@@ -40,5 +43,5 @@ $$CritRatio = \frac{CritRate}{MinRequirement}$$
 
 Critical Chance is just the application of a simple Logistic Function.
 
-$$CritChance = 1 + \left( \frac{-1}{\left(1 + \frac{CritRatio}{2}\right) \right)$$
+$$CritChance = 1 + \left( \frac{-1}{\left(1 + \frac{CritRatio}{2}\right)} \right)$$
 
