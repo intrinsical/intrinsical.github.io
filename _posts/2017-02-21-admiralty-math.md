@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Admiralty System, A look at critical rating and critical chance
+title: Calculating Admiralty critical rating and critical chance
 category: sto-aso
 comments: true
 description: An examination of STO Admiralty system's critical rating and critical chance. 
