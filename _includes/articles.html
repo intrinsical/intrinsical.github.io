@@ -5,6 +5,6 @@
         {% endif %}
         {% include post_meta.html %}
     </header>
-    <p>{{ page.description }}</p>
+    <p>{{ page.description | markdownify }}</p>
 	<p><br/>[&nbsp;<a class="link-to-post" href="{{ site.baseurl }}{{ page.url }}">Details</a>&nbsp;]</p>
 </article>
