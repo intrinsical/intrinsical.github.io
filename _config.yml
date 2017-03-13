@@ -20,7 +20,7 @@ title: Intrinsical's Projects
 
 # Following needed for disqus integration
 # Set your 'disqus' account name
-disqus:
+disqus: intrinsical
 
 # Uncomment if deployed locally
 #url: https://localhost:4000
