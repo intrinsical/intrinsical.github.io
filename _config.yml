@@ -71,6 +71,7 @@ sass:
 gems:
   - jekyll-paginate
   - jekyll-sitemap # add /sitemap.xml file
+  - jekyll-seo-tag
 
 paginate_path: /_pages/page:num
 
