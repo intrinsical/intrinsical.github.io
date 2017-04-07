@@ -35,7 +35,7 @@ url: https://intrinsical.github.io
 baseurl:
 
 # Change this to your google analytics ID
-google_analytics:
+google_analytics: UA-98969-5
 
 # Contact form pupublic key
 contact_PK: 921d66e3b4a433e25abe126491aac5c2
