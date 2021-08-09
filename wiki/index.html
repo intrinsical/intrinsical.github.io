@@ -1247,6 +1247,8 @@ Error message and password prompt
 
 <li>Spell Mastery</li>
 
+<li>Spell Scroll</li>
+
 <li>Spell Scroll Mishap</li>
 
 <li>Spell Scroll Table</li>
@@ -11390,8 +11392,7 @@ Error message and password prompt
 <div status="complete" title="$:/Import">
 <pre>The following tiddlers were imported:
 
-# [[Spell Scroll Table]]
-# [[Spell Scroll Mishap]]</pre>
+# [[Spell Scroll]]</pre>
 </div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
@@ -12707,8 +12708,8 @@ exports.weaponAttack = weaponAttack;
 <div created="20210809122438048" modified="20210809122438048" title="$:/state/tab&lt;&lt;hash [tag[Config]sort[]]&gt;&gt;--2123993939">
 <pre>MarksConfig</pre>
 </div>
-<div created="20210809141836678" modified="20210809144027607" title="$:/state/tab&lt;&lt;hash [tag[DnD]sort[]]&gt;&gt;--1327276369">
-<pre>Character Creation</pre>
+<div created="20210809141836678" modified="20210809144126852" title="$:/state/tab&lt;&lt;hash [tag[DnD]sort[]]&gt;&gt;--1327276369">
+<pre>Spell</pre>
 </div>
 <div created="20210809142241398" modified="20210809142242322" title="$:/state/tab&lt;&lt;hash [tag[Entity]sort[]]&gt;&gt;-913423281">
 <pre>Spellbook</pre>
@@ -12737,7 +12738,7 @@ exports.weaponAttack = weaponAttack;
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20210809144007793" list="$:/Import MainPage DnD" modified="20210809144031343" title="$:/StoryList">
+<div created="20210809144120309" list="$:/Import MainPage DnD Class" modified="20210809144122934" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -20032,6 +20033,22 @@ Uncounted thousands of spells have been created over the course of the multivers
 <pre>At 18th level, you have achieved such mastery over certain spells that you can cast them at will. Choose a 1st-level wizard spell and a 2nd-level wizard spell that are in your spellbook. You can cast those spells at their lowest level without expending a spell slot when you have them prepared. If you want to cast either spell at a higher level, you must expend a spell slot as normal.
 
 By spending 8 hours in study, you can exchange one or both of the spells you chose for different spells of the same levels.</pre>
+</div>
+<div created="20191125033615995" modified="20210802052631470" tags="Item" title="Spell Scroll">
+<pre>A spell scroll bears the words of a single spell, written in a mystical cipher. If the spell is on your class's spell list, you can use an action to read the scroll and cast its spell without having to provide any of the spell's components. Otherwise, the scroll is unintelligible.
+
+If the spell is on your class's spell list but of a higher level than you can normally cast, you must make an ability check using your spellcasting ability to determine whether you cast it successfully. The DC equals 10 + spell's level. On a failed check, the spell disappears from the scroll with no other effect.
+
+Once the spell is cast, the words on the scroll fade, and the scroll itself crumbles to dust.
+
+The level of the spell on the scroll determines the spell's saving throw DC and attack bonus, as well as the scroll's rarity, as shown in the Spell Scroll Table.
+
+&lt;&lt;fold &quot;Spell Scroll Table&quot;&gt;&gt;
+
+A wizard spell on a spell scroll can be copied just as spells in spellbooks can be copied. When a spell is copied from a spell scroll, the copier must succeed on &lt;&lt;arcana &quot;10+Spell_Level&quot;&gt;&gt;. If the check succeeds, the spell is successfully copied. Whether the check succeeds or fails, the spell scroll is destroyed.
+
+&lt;&lt;fold &quot;Spell Scroll Mishap&quot;&gt;&gt;
+</pre>
 </div>
 <div caption="Variant Rule: Spell Scroll Mishaps" created="20210802052658348" modified="20210802052821550" title="Spell Scroll Mishap">
 <pre>A creature who tries and fails to cast a spell from a spell scroll must make a &lt;&lt;save Int 10&gt;&gt;. If the saving throw fails, roll on the Scroll Mishap table.
