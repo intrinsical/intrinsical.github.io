@@ -47,7 +47,7 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE." />
 <link id="faviconLink" rel="shortcut icon" href="favicon.ico">
-<title>My TiddlyWiki — a non-linear personal web notebook</title>
+<title>D&D Wiki — a non-linear personal web wiki for dungeons and dragons</title>
 <!--~~ This is a Tiddlywiki file. The points of interest in the file are marked with this pattern ~~-->
 
 <!--~~ Raw markup ~~-->
@@ -155,6 +155,8 @@ Error message and password prompt
 
 <li>$:/GitHub/Username</li>
 
+<li>$:/Import</li>
+
 <li>$:/isEncrypted</li>
 
 <li>$:/plugins/benwebber/dnd</li>
@@ -162,6 +164,14 @@ Error message and password prompt
 <li>$:/plugins/mklauber/math.js</li>
 
 <li>$:/plugins/tiddlywiki/menubar</li>
+
+<li>$:/SiteSubtitle</li>
+
+<li>$:/SiteTitle</li>
+
+<li>$:/state/showeditpreview</li>
+
+<li>$:/state/sidebar</li>
 
 <li>$:/state/tab-1749438307</li>
 
@@ -174,6 +184,8 @@ Error message and password prompt
 <li>$:/themes/tiddlywiki/snowwhite</li>
 
 <li>$:/themes/tiddlywiki/vanilla</li>
+
+<li>Basic Macros</li>
 
 <li>Campaign</li>
 
@@ -10065,9 +10077,8 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20210808232506099" modified="20210808232507294" title="$:/DefaultTiddlers">
-<pre>GettingStarted
-MainPage</pre>
+<div created="20210808232506099" modified="20210809055113327" title="$:/DefaultTiddlers">
+<pre>MainPage</pre>
 </div>
 <div created="20210808232126762" modified="20210808232459751" title="$:/GitHub/Branch">
 <pre>master</pre>
@@ -10083,6 +10094,11 @@ MainPage</pre>
 </div>
 <div created="20210808231637351" modified="20210808231638854" title="$:/GitHub/Username">
 <pre>intrinsical</pre>
+</div>
+<div status="complete" title="$:/Import">
+<pre>The following tiddlers were imported:
+
+# [[Basic Macros]]</pre>
 </div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
@@ -10984,6 +11000,18 @@ MainPage</pre>
     }
 }</pre>
 </div>
+<div created="20210809055104879" modified="20210809055109034" title="$:/SiteSubtitle">
+<pre>a non-linear personal web wiki for dungeons and dragons</pre>
+</div>
+<div created="20210809055053613" modified="20210809055055391" title="$:/SiteTitle">
+<pre>D&amp;D Wiki</pre>
+</div>
+<div created="20210809055032306" modified="20210809055032306" title="$:/state/showeditpreview">
+<pre>yes</pre>
+</div>
+<div created="20210809055030420" modified="20210809055123681" title="$:/state/sidebar">
+<pre>no</pre>
+</div>
 <div created="20210808231632729" modified="20210809052559367" title="$:/state/tab-1749438307">
 <pre>$:/core/ui/ControlPanel/Plugins</pre>
 </div>
@@ -10993,7 +11021,7 @@ MainPage</pre>
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20210809054726861" list="$:/Import DnD GettingStarted MainPage" modified="20210809054726861" title="$:/StoryList">
+<div list="$:/Import GettingStarted MainPage" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -11104,6 +11132,109 @@ MainPage</pre>
         }
     }
 }</pre>
+</div>
+<div created="20190703054059220" list="" modified="20210717054515764" tags="Macro $:/tags/Macro" title="Basic Macros">
+<pre>\define hover(tiddler)
+&lt;$hover popup=&quot;$:/state/$tiddler$&quot;&gt;[[$tiddler$]]&lt;/$hover&gt;&lt;$reveal type=&quot;popup&quot; state=&quot;$:/state/$tiddler$&quot;&gt;&lt;div class=&quot;tc-drop-down&quot; style=&quot;max-width: 500px; padding: 7px; white-space: normal;&quot;&gt;&lt;$transclude tiddler=&quot;$tiddler$&quot; mode=&quot;block&quot; /&gt;&lt;/div&gt;&lt;/$reveal&gt;
+\end
+
+\define fold(heading, tiddler)
+&lt;$button class=&quot;tc-btn-invisible&quot; popup=&lt;&lt;qualify &quot;$:/state/section$heading$&quot;&gt;&gt;&gt;
+
+!!! + $heading$
+&lt;/$button&gt;
+&lt;$reveal type=&quot;nomatch&quot; state=&lt;&lt;qualify &quot;$:/state/section$heading$&quot;&gt;&gt; text=&quot;&quot;&gt;
+
+&lt;div align=&quot;right&quot;&gt;[ [[Open|$tiddler$]] ]&lt;/div&gt;
+
+{{$tiddler$}}
+&lt;/$reveal&gt;
+---
+\end
+
+\define include(tiddler)
+!! &lt;$link to=&quot;$tiddler$&quot;&gt;&lt;$transclude tiddler=&quot;$tiddler$&quot; field=&quot;caption&quot;&gt;&lt;$view tiddler=&quot;$tiddler$&quot; field=&quot;title&quot; /&gt;&lt;/$transclude&gt;&lt;/$link&gt;
+{{$tiddler$}}
+\end
+
+\define h3(tiddler)
+!!! &lt;$link to=&quot;$tiddler$&quot;&gt;&lt;$transclude tiddler=&quot;$tiddler$&quot; field=&quot;caption&quot;&gt;&lt;$view tiddler=&quot;$tiddler$&quot; field=&quot;title&quot; /&gt;&lt;/$transclude&gt;&lt;/$link&gt;
+
+&lt;$transclude tiddler=&quot;$tiddler$&quot; mode=block /&gt;
+\end
+
+\define p(tiddler)
+&lt;p&gt;''&lt;$link to=&quot;$tiddler$&quot;&gt;&lt;$transclude tiddler=&quot;$tiddler$&quot; field=&quot;caption&quot;&gt;&lt;$view tiddler=&quot;$tiddler$&quot; field=&quot;title&quot; /&gt;&lt;/$transclude&gt;&lt;/$link&gt;.'' &lt;$transclude tiddler=&quot;$tiddler$&quot; mode=inline /&gt; &lt;/p&gt;
+\end
+
+\define htabs(tiddlers)
+&lt;$macrocall $name=&quot;tabs&quot; tabsList=&quot;$tiddlers$&quot; state=&quot;$:/state/tab&lt;&lt;hash $tiddlers$&gt;&gt;&quot;/&gt;
+&lt;hr/&gt;
+//Quick Links:// &lt;&lt;links &quot;$tiddlers$&quot;&gt;&gt;
+\end
+
+\define sections(tiddlers, default)
+&lt;$macrocall $name=&quot;tabs&quot; tabsList=&quot;$tiddlers$&quot; state=&quot;$:/state/tab&lt;&lt;hash $tiddlers$&gt;&gt;&quot; default=&quot;$default$&quot;/&gt;
+&lt;hr/&gt;
+//Quick Links:// &lt;&lt;links &quot;$tiddlers$&quot;&gt;&gt;
+\end
+
+\define vtabs(tiddlers, default)
+&lt;$macrocall $name=&quot;tabs&quot; tabsList=&quot;$tiddlers$&quot; class=&quot;tc-vertical&quot; state=&quot;$:/state/tab&lt;&lt;hash $tiddlers$&gt;&gt;&quot; default=&quot;$default$&quot;/&gt;
+&lt;hr/&gt;
+//Quick Links:// &lt;&lt;links &quot;$tiddlers$&quot;&gt;&gt;
+\end
+
+\define sections-vertical(tiddlers)
+&lt;$macrocall $name=&quot;tabs&quot; tabsList=&quot;$tiddlers$&quot; class=&quot;tc-vertical&quot; state=&quot;$:/state/tab&lt;&lt;hash $tiddlers$&gt;&gt;&quot;/&gt;
+&lt;hr/&gt;
+//Quick Links:// &lt;&lt;links &quot;$tiddlers$&quot;&gt;&gt;
+\end
+
+\define link(tiddler)
+{{$tiddler$||QuicklinkTemplate}}
+\end
+
+\define links(tiddlers)
+&lt;$list filter=&quot;$tiddlers$&quot;&gt;| {{||QuicklinkTemplate}} &lt;/$list&gt; |
+\end
+
+\define p2(tiddlers)
+&lt;$list filter=&quot;$tiddlers$&quot;&gt;{{||P2Template}} &lt;/$list&gt;
+\end
+
+\define p3(tiddlers)
+&lt;$list filter=&quot;$tiddlers$&quot;&gt;{{||P3Template}} &lt;/$list&gt;
+\end
+
+\define imageuri(title)
+&lt;$macrocall $name=&quot;makedatauri&quot; type={{$title$!!type}} text={{$title$}}/&gt;
+\end
+
+\define snippet(tiddler)
+&lt;span class=&quot;padding&quot;&gt;
+
+{{$tiddler$}}
+&lt;/span&gt;
+\end
+
+
+&quot;&quot;&quot;
+''&amp;lt;&amp;lt;include'' //tiddler//''&amp;gt;&amp;gt;'' - Include a tiddler as a chapter
+''&amp;lt;&amp;lt;h3'' //tiddler//''&amp;gt;&amp;gt;'' - Include a tiddler as a third level chapter
+''&amp;lt;&amp;lt;p'' //tiddler//''&amp;gt;&amp;gt;'' - Include a tiddler as a paragraph
+''&amp;lt;&amp;lt;htabs'' //tiddler//''&amp;gt;&amp;gt;'' - List tiddlers in a tab panel
+''&amp;lt;&amp;lt;vtabs'' //tiddler//''&amp;gt;&amp;gt;'' - List tiddlers in a vertical tab panel
+''&amp;lt;&amp;lt;link'' //tiddler//''&amp;gt;&amp;gt;'' - Link to a tiddler, using it's caption if it exists
+''&amp;lt;&amp;lt;links'' //tiddlers//''&amp;gt;&amp;gt;'' - Link to a list of tiddlers, using their captions if it exists
+''&amp;lt;&amp;lt;p2'' //tiddlers//''&amp;gt;&amp;gt;'' - List tiddlers as a series of paragraphs
+''&amp;lt;&amp;lt;p3'' //tiddlers//''&amp;gt;&amp;gt;'' - List tiddlers as a series of paragraphs
+''&amp;lt;&amp;lt;hover'' //tiddler//''&amp;gt;&amp;gt;'' - Popup tiddler's content
+''&amp;lt;&amp;lt;fold'' //title// //tiddler//''&amp;gt;&amp;gt;'' - Include foldable tiddler
+''&amp;lt;&amp;lt;snippet'' //title// //tiddler//''&amp;gt;&amp;gt;'' - Include tiddler as a floating snippet
+''&amp;lt;&amp;lt;imageuri'' //tiddler//''&amp;gt;&amp;gt;'' - URI of image tiddler
+&quot;&quot;&quot;
+</pre>
 </div>
 <div caption="Campaigns" created="20200701053117016" icon="sword-shield.gif" modified="20210717162555522" order="1" tags="[[Adventure Type]] Presentation MainPage" title="Campaign">
 <pre>&lt;&lt;htabs &quot;[tag[Campaign]sort[order]]&quot;&gt;&gt;
