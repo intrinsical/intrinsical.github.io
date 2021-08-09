@@ -237,6 +237,8 @@ Error message and password prompt
 
 <li>ConditionMenu</li>
 
+<li>Config</li>
+
 <li>Conjure Animals Table</li>
 
 <li>Cover</li>
@@ -297,9 +299,13 @@ Error message and password prompt
 
 <li>Huge Animated Objects</li>
 
+<li>Image</li>
+
 <li>Incapacitated</li>
 
 <li>Invisible</li>
+
+<li>Javascript</li>
 
 <li>Jumping</li>
 
@@ -319,7 +325,11 @@ Error message and password prompt
 
 <li>Lycanthropy</li>
 
+<li>Macro</li>
+
 <li>MainPage</li>
+
+<li>MarksConfig</li>
 
 <li>MarkStylesheet</li>
 
@@ -367,6 +377,8 @@ Error message and password prompt
 
 <li>ranger.png</li>
 
+<li>Raw Data</li>
+
 <li>Restrained</li>
 
 <li>Ritual Spells</li>
@@ -403,6 +415,8 @@ Error message and password prompt
 
 <li>Stunned</li>
 
+<li>Stylesheet</li>
+
 <li>Suffocating</li>
 
 <li>Summon Greater Demon Tips</li>
@@ -410,6 +424,10 @@ Error message and password prompt
 <li>sword-shield.gif</li>
 
 <li>TCE Spell</li>
+
+<li>Template</li>
+
+<li>Test</li>
 
 <li>Three-Quarters Cover</li>
 
@@ -444,6 +462,8 @@ Error message and password prompt
 <li>warlock.png</li>
 
 <li>Weather</li>
+
+<li>Widget</li>
 
 <li>Wild Magic Surge Table</li>
 
@@ -10354,39 +10374,16 @@ Error message and password prompt
 <div status="complete" title="$:/Import">
 <pre>The following tiddlers were imported:
 
-# [[DM Tool]]
-# [[Player Tool]]
-# [[Spell Tool]]
-# [[Animate Objects Table]]
-# [[Huge Animated Objects]]
-# [[Large Animated Objects]]
-# [[Medium Animated Objects]]
-# [[Small Animated Objects]]
-# [[Tiny Animated Objects]]
-# [[Wild Magic Surge Table]]
-# [[Conjure Animals Table]]
-# [[Polymorph Table]]
-# [[Summon Greater Demon Tips]]
-# [[Average Class Hitpoints Table]]
-# [[Damage Severity Table]]
-# [[Attack Cantrips]]
-# [[Concentration Spells]]
-# [[Ritual Spells]]
-# [[SpellbookDisplay]]
-# [[Spells By Class]]
-# [[Bard Spells]]
-# [[Cleric Spells]]
-# [[Druid Spells]]
-# [[Paladin Spells]]
-# [[Ranger Spells]]
-# [[Sorcerer Spells]]
-# [[Warlock Spells]]
-# [[Wizard Spells]]
-# [[Spells By Sourcebook]]
-# [[PHB Spell]]
-# [[SCAG Cantrip]]
-# [[TCE Spell]]
-# [[XGE Spell]]</pre>
+# [[Config]]
+# [[Image]]
+# [[Javascript]]
+# [[Macro]]
+# [[Raw Data]]
+# [[Stylesheet]]
+# [[Template]]
+# [[Widget]]
+# [[Test]]
+# [[MarksConfig]]</pre>
 </div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
@@ -11321,7 +11318,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div list="$:/Import MainPage" title="$:/StoryList">
+<div created="20210809112649511" list="$:/Import MainPage TiddlyWiki" modified="20210809112649511" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -11795,6 +11792,10 @@ A shield and a holy symbol
 &lt;&lt;toc-selective-expandable &quot;Condition&quot;  &quot;sort[order]&quot;&gt;&gt;
 
 &lt;/div&gt;
+</pre>
+</div>
+<div created="20210127022328202" modified="20210127022348897" tags="TiddlyWiki" title="Config">
+<pre>&lt;&lt;vtabs &quot;[tag[Config]sort[]]&quot;&gt;&gt;
 </pre>
 </div>
 <div created="20190721092216563" modified="20210114022031898" tags="Table [[Conjure Animals]] [[Spell Tool]]" title="Conjure Animals Table">
@@ -12594,12 +12595,35 @@ Clear Rolls
 &lt;/$button&gt;
 </pre>
 </div>
+<div created="20210809053643835" modified="20210809054142624" tags="TiddlyWiki" title="Image">
+<pre>&lt;style&gt;
+.my-gallery svg {
+width: 6em;
+height: 6em;
+margin: 1em;
+}
+&lt;/style&gt;
+&lt;div class=&quot;my-gallery&quot;&gt;
+&lt;$list filter=&quot;[all[tiddlers]tag[Image]]&quot;&gt;
+&lt;$link to=&lt;&lt;currentTiddler&gt;&gt;&gt;&lt;span style=&quot;width: 10%;&quot; title=&lt;&lt;currentTiddler&gt;&gt;&gt;
+&lt;$image width=10% source=&lt;&lt;currentTiddler&gt;&gt; /&gt;
+&lt;/span&gt;&lt;/$link&gt;
+&lt;/$list&gt;
+&lt;/div&gt;
+
+
+</pre>
+</div>
 <div created="20190529210936573" modified="20190529210946274" tags="Condition" title="Incapacitated">
 <pre>An incapacitated creature can't take actions or reactions.</pre>
 </div>
 <div created="20190529210953500" modified="20210213095348760" tags="Condition" title="Invisible">
 <pre>* An invisible creature is impossible to see without the aid of magic or a special sense. For the purpose of hiding, the creature is [[Heavily Obscured]]. The creature's location can be detected by any noise it makes or any tracks it leaves.
 * Attack rolls against the creature have disadvantage, and the creature's attack rolls have advantage.
+</pre>
+</div>
+<div created="20210110123025917" modified="20210110123319465" tags="TiddlyWiki" title="Javascript">
+<pre>&lt;&lt;vtabs &quot;[tag[Javascript]sort[]]&quot;&gt;&gt;
 </pre>
 </div>
 <div created="20190710114732519" modified="20210113092255022" order="4" tags="Environment [[Movement Rules]]" title="Jumping">
@@ -12690,10 +12714,34 @@ A lycanthrope can either resist its curse or embrace it. By resisting the curse,
 Some individuals see little point in fighting the curse and accept what they are. With time and experience, they learn to master their shapechanging ability and can assume beast form or hybrid form at will. Most lycanthropes that embrace their bestial natures succumb to bloodlust, becoming evil, opportunistic creatures that prey on the weak.
 </pre>
 </div>
+<div caption="Macros" created="20210110122325514" modified="20210110122847925" tags="TiddlyWiki" title="Macro">
+<pre>&lt;&lt;vtabs &quot;[tag[Macro]sort[]]&quot;&gt;&gt;
+</pre>
+</div>
 <div created="20210110121849274" icon="dnd.png" modified="20210725122704592" tags="" title="MainPage">
 <pre>&lt;div class=&quot;gallery&quot;&gt;&lt;$list filter=&quot;[tag[MainPage]sort[order]]&quot;&gt;{{||LogoTemplate}}&lt;/$list&gt;&lt;/div&gt;
 
 &lt;&lt;htabs &quot;[[Character]] [[Hardcover]] [[Class]] [[Adventurers League DM]] [[AdvancedSearch]]&quot; Character&gt;&gt;
+</pre>
+</div>
+<div caption="Mark Settings" created="20210208065714172" modified="20210228120902634" tags="Config" title="MarksConfig" type="">
+<pre>|max top|k
+|^!Entity Mark |''Entity Text''&lt;br/&gt;[[$:/config/DefaultColourMappings/mark-entity-text]] |&lt;$edit-text tiddler=&quot;$:/config/DefaultColourMappings/mark-entity-text&quot; tag=input/&gt;|
+|~|''Entity Background''&lt;br/&gt;[[$:/config/DefaultColourMappings/mark-entity-text]] |&lt;$edit-text tiddler=&quot;$:/config/DefaultColourMappings/mark-entity-background&quot; tag=input/&gt;|
+|^!Positive Mark |''Positive Text''&lt;br/&gt;[[$:/config/DefaultColourMappings/mark-positive-text]] |&lt;$edit-text tiddler=&quot;$:/config/DefaultColourMappings/mark-positive-text&quot; tag=input/&gt;|
+|~|''Positive Background''&lt;br/&gt;[[$:/config/DefaultColourMappings/mark-positive-background]] |&lt;$edit-text tiddler=&quot;$:/config/DefaultColourMappings/mark-positive-background&quot; tag=input/&gt;|
+|^!Negative Mark |''Negative Text''&lt;br/&gt;[[$:/config/DefaultColourMappings/mark-negative-text]] |&lt;$edit-text tiddler=&quot;$:/config/DefaultColourMappings/mark-negative-text&quot; tag=input/&gt;|
+|~|''Negative Background''&lt;br/&gt;[[$:/config/DefaultColourMappings/mark-negative-background]] |&lt;$edit-text tiddler=&quot;$:/config/DefaultColourMappings/mark-negative-background&quot; tag=input/&gt;|
+|^!Saving Throw Mark |''Saving Throw Text''&lt;br/&gt;[[$:/config/DefaultColourMappings/mark-save-text]] |&lt;$edit-text tiddler=&quot;$:/config/DefaultColourMappings/mark-save-text&quot; tag=input/&gt;|
+|~|''Saving Throw Background''&lt;br/&gt;[[$:/config/DefaultColourMappings/mark-save-background]] |&lt;$edit-text tiddler=&quot;$:/config/DefaultColourMappings/mark-save-background&quot; tag=input/&gt;|
+|^!Skill Check Mark |''Skill Check Text''&lt;br/&gt;[[$:/config/DefaultColourMappings/mark-skill-text]] |&lt;$edit-text tiddler=&quot;$:/config/DefaultColourMappings/mark-skill-text&quot; tag=input/&gt;|
+|~|''Skill Check Background''&lt;br/&gt;[[$:/config/DefaultColourMappings/mark-skill-background]] |&lt;$edit-text tiddler=&quot;$:/config/DefaultColourMappings/mark-skill-background&quot; tag=input/&gt;|
+|^!Pass Mark |''Pass Text''&lt;br/&gt;[[$:/config/DefaultColourMappings/mark-pass-text]] |&lt;$edit-text tiddler=&quot;$:/config/DefaultColourMappings/mark-pass-text&quot; tag=input/&gt;|
+|~|''Pass Background''&lt;br/&gt;[[$:/config/DefaultColourMappings/mark-pass-background]] |&lt;$edit-text tiddler=&quot;$:/config/DefaultColourMappings/mark-pass-background&quot; tag=input/&gt;|
+|^!Fail Mark |''Fail Text''&lt;br/&gt;[[$:/config/DefaultColourMappings/mark-fail-text]] |&lt;$edit-text tiddler=&quot;$:/config/DefaultColourMappings/mark-fail-text&quot; tag=input/&gt;|
+|~|''Fail Background''&lt;br/&gt;[[$:/config/DefaultColourMappings/mark-fail-background]] |&lt;$edit-text tiddler=&quot;$:/config/DefaultColourMappings/mark-fail-background&quot; tag=input/&gt;|
+|^!Value Mark |''Value Text''&lt;br/&gt;[[$:/config/DefaultColourMappings/mark-value-text]] |&lt;$edit-text tiddler=&quot;$:/config/DefaultColourMappings/mark-value-text&quot; tag=input/&gt;|
+|~|''Value Background''&lt;br/&gt;[[$:/config/DefaultColourMappings/mark-value-background]] |&lt;$edit-text tiddler=&quot;$:/config/DefaultColourMappings/mark-value-background&quot; tag=input/&gt;|
 </pre>
 </div>
 <div caption="Mark Stylesheet" created="20210125025543167" modified="20210317010032646" tags="$:/tags/Stylesheet Stylesheet" title="MarkStylesheet" type="text/vnd.tiddlywiki">
@@ -13259,6 +13307,10 @@ A longbow and a quiver of 20 arrows
 <div created="20190721233320292" modified="20190721233323244" tags="Image" title="ranger.png" type="image/png">
 <pre>iVBORw0KGgoAAAANSUhEUgAAAJYAAACCCAQAAAAOT/nkAAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfjBxUXHQhhPenqAAAgAElEQVR42u3dd7heZZU3/s/eTz0thRBSKEkICRBAhBBKqCKCAjIgRUdFwIJgG8d3iqMzo44zOjO+KiNWhiIiilQRFKRKkU5ooaYAwYSEJOQkpz1lP3u/fzz3eUggIe0g/K6f97mSKyfnnH32Xvu+1/1d3/Vd6+Yv4y/jL+NNHtFQX/Dc7B4leYlMXr8icqqKUpG6nBRt6iKJnFQsE8upypTUw+f9hmmoiBQ1NMQKahKdEnWxkgGZDv3yUpFEm1iPohixVOqLJgzp8+WH1lSPZ//mIA3dnnO0l2yhV1m3kSKrdCjpU0BNKlYWGZAXGVCWE8s0ZAa0i63SLi/Tr13OKh1SBRUU1eSkivqVJeraZPpFhhvwgkisy7MuGOKJEA/t5c4zWZcDbW3AcLu7U7vpBsz2dpP8QZu93e9PDjDMIyYYbbbEDJFZdjLa9brso26OfYz3a1vbzSIv20u7P9jB1h41YF+r3G1v492pzR5WetK+xrnfGLtaIudoO9jFXLdnb9lleEX2Owfax+0eNtEWFvqMR1zuNGN811QfcZNbfUabLzrMKX5ghU94ys+d5FD/oewzbnGZz5rmH810jJ+a40v6fd2xDnK+hpO86Kc+ZEff1eGzHnCF03T5oX0c7yIL7W+eAROl5pvnx0P4hLmhu9TKE//nxG08oVtstEecYECPzChteoxHr2EoedauSpZok9OnbLSGZUbJ1LQZZguzbSe1VJcxFllqNxWx2IBM1bbqEmMMiNV0GmuVYep6lXUakJpsvvletsoXv3rF196CM+usjMhEjyupuNUBxlugaid9ZtnDMI/qNMHLFpssMkenKRb4k73E7rCrUR6R2kW32fYTmavDaN2WmiLzvBEme8oSuym6z0Q7ulNsNyvMcpDIg8YZa6GGSR62nYmGu8o/mhS9xYw1J/uOU9Q9ZntPeULRjiId+hUMGKNXv+Gt3bFHaqSqinZl3RLDJSrKSlbpVLJMplOkX06XVXJirNIlr67PeKv0aNdhmXbDdIsM02fAMg1zHK7bLuqeV/DJ6C22G37Pga5whBftZiu9/lkODZGs9asS7fpBSUOirCpDLNOmXyyWtPxDQ04j/Kt5lbxELG3tTZFMKqchlspLwk9M94+KqHnaKPeZk02J3kK74c1ZUWSyyQ53tXbXhGmbV2x9T0IwFVUJKsGQqUw/0papaIQ/zb+z1hXS1nekGlJkLWSVC2//CYtUxXawrxH2cP5bCToszy43w0Rb+L25JnjQveHhEtU3HFena3w0FA34iS3dZLGbbG28Pjdnbxlj3Wyq+eZYYDeM9X0FsQiFoQ8RXmdkMpmayNN+6zCRmhV+7TA/e6vMrBey62yjbG8nuFanX+jVkEkCJn/jI7Y1X0gBqZ8rWuQYbWZgmnOzt4SxLrK/EfbyA0/pkLhJXSbTrvFnWIRrbuqRSF2m7CW/EfmZpRZpN9m9XsjedGM9lC3WY675jtPrEN9Q1WaYogpyQ4l6X3fxDf4byobjWku900RbyVxtX+e++TPrQvur2N87PWa5X3tBIu+f1KTaNMKO9uclUY50qjZ9LlfyRzPknGAXyzyevanGuirr1OlwP/OIfiNdq1uq4DjHoKLtz2qo5kebL+g0IO9uj6i60WzLPG9/51s17U001l0musdCk21pd7d7SowesW8qEnxWTiGgriHnhFabUZk2qZJj7a8beZlz7WgHU+XNt0TRbY+/aca6IIsNs7MZpviNHhcrSUXKKqb4CFJ5RQ11ZJIALId25AjB0IB2mW9rIJJqeM51hptvX9NsZT/XvlnLcEF2lwNt7wW3ecKuLtSjhkynROTrtkGsJpJXQE75DZhVDbFEqlObfmcZp64g05AXu9hKd3nB7cZomOwn2ZtirHPs60bdtrKLSfrcKNGBkqXa5I30tYCzIokEDY03BKSmIrFe/d7lVHUlkUhBgh6XOk7DJInbTHK3Odmf3VgPZ/1G2M84U31H5EfI6xVJdGpIpU5zhES7HDIF1Ieamg3LMFYUafMfMgWRikwsliq70kIrjLKND8o71E///DPrPHtrV3CeugM85GF1CQpiNZlIm7qzbKFfqoyG4huRIQlLsSL292Yo6sMS1OXkVZT9StnvPOuCwO3fl/1ZjXVZNsJiCyxzmrm2cp5UQaRNTaKhro7IVH8vryFuLZahd/AZ2jHN30o1dOBlObG6vEjFHz3ofUr21u8Wh29ypLiJxrrOntrt593OUXK151BXNKAEVilKZPi8QzCgGPiB3BtgrLx+Od82QqoglWjXkFNSEYnFzhV73G6GOVZel8uzP5uxvp3tLrObH5tvsrwrxCioIZFXVZbIK8iUfE9JQS3QdtmQ+KhIDiV5sUwOn3aweqAHE4sxIBVJpSIvuspIv7PAfKlpbtX9lT+LsV7IZtvSM3ocrGKK862UR0MmlmpgUYu6y+zsmxqE5ZgOgX9qXqtdVUMqVjXF1xTlJfJIdQf+NWtxrlcr2cZ22gy4224u+uobbKyVJ8K53mvATBMMeNKTbpWpty7XpIkXBqQeoeJvHYJEpDAkC6+orqQ/+KqirXzPiPByUtS91LoXGvIa+vzUVu4302TvsaMnPZa9ocYafhm3Zd3qDnSVubpt42KJYkBTg+479nJr34uUDfih8WKZ6hBAhybPXhXp0meUitMdJpNTlRehalVgI5p3kKHmRs/qcaf/FZttF79+45fhL+zvTs/YXYfd3eUhkZp80DAIC3GFLHzenGlT/btEpH0IlmEWoG2mosNyB/h7eZF+ZdTQvQZbnw9pj7zvm2mMv9JujpyX3JW9oca6ONtawXvsZpTfWuLKcNuRhiz4CzIvhveaiaSKUh9xnLz+IQikm7+hhLpUhx/qlEkVZHqUsDDcVSYKu3ROQ+oF12t4ygRHGeddfv5Gzqzur9xkTyM97DKRma6xICDzxmrRf4xnxeLW583Fd57RQxJIN8FJVVGHAd8yTSYVIdIlwXNrsKcFtZAhSv0Mz3veLwy3xBgXZW+YsX781f3crNvbzdBnqV+L5dQ0c3hFNZmcCAtXu9ks7JUj/a/SEPisangRNQOOcUbg4CM59UABvRR8aNMSzf+NNFRUXOlgiWP1eNx0N1qSvSHGejx71gQzTLWtcw1zmUrLiSYytbD3NDBg2WpLJq8uVnekz4alUUa8yXtjTqqgoNMFGmJRyBwWgqecH1RdcXh1AkCOZX5tkWctNd77lU3fqEhxI4x1sRnK2vynZQ7wtBs1FNfisCMMeC6I0jKpVEGsoO4/7CHSqRK8yaaZq64kUXel4WvxgZkXg6EGjTSY/0kl6i42zH2ecYmccV7aCBZig411Y1a10p3KvmC5MX4op7DW8CUTGfBMmFeRvFgaZGtFFxiut0XXRZs0ryJVmX/yztaeu/p1EgtFkoDdB3fkV8x1n2ccYbKZel1tP98d+pn1ezONdKTtnGOZu80Vqa/m2lcfBZnnW8swlcpECiJ1b/MVRUWJaBPdfUOG/XxFFkL0NU2+xGKF1sJ7JQM0OGrONd7Vpun0IaOMdGM2hMZaeeIvsoLYbr6lx97G+olUQ6mF3F+9uefNCTD1lfeelyno8TeOVw/RXbqRc6u5oEpG+aGSKOyMa455XpIgL37Vq2wmNDotcLFtzTLLAnNNdIUVlw6ZsdITHzTNzTjVIqOdHzj1Zujx2mWSiMxWC8TMoNolEVmhy4D/tYOcqpLCRgXWUbh+1Y+9PcyS145nJdLVwp34VS+kV+wXxso72HgsNdFVJw6Zsc46cYqCDyh52QMWuUlFGdUAHF7LLyXmmd/6rCEXnP1IA2IdrpTpUFXfCJAatZbh/3EsegmB1ppz5+6wB9Ze5c2i1nLstNL3jXO5dlPsYU93mpsNibEeyVbqsoNfe1zDTBeqyIJssbGWC6RyMivNCWxl8xFy4Q2Xlay0qx/oVdgkLcR+/kUk09kKfNYcN2soiwO6yqSt3xEFscoqmbs9Lqfm5/IWmeaioZlZF9jLbeY62tYyD7urpapKWWusVxBpuF4Wvh6v8e7rhuv3MaeIpeFrbS1snlvnTWbaZcY5VykA0Cj89qTlunnIvMBlUV/jVQyarQlY+lzqYP3eq8MTttS/AWTzeo11dTZCmw8Zh58Z6fz1zoWiikzkctFaZ16Morwf20453PoASqG04LXf3zRpuz78j0nK4UW9snU0d+Wimt+s9+Xn1ZWU3OFedQu0+YAd7OGXmzuzlmfXeptRnvB7A97p0uCJXm/URGJFL7tWfi0+LRfkjCXXy+mQoSRWXS1EWXNZl6XyKviO47UhXQ3OZkEs2ZxL6zdWgqpU3kXy5lvse17WbaQrs80y1hV2dr9FJnqvxSLXBIecrYdESdUkrmlxXa/+aiSTmeQXBpBXDQB27XxXJSy54/2thrpawOdpQFlJ2Eaq5nhmA4npuoZn/M5+it5psift4VYvZZtsrPnZ7SabaXvbukCXX3pZsl5TRS0cf4uX18K7Dy6dWOIYX5eE28gFWnrt6Crnbc6TyeQVxCGUicNDNJdq3sX6NojkKWpmMq+Sd4+KPznCcGNdtekz6woHKBrhq5Y60GK/Q/t6fVYWwuR2c/3uNabKUJSooaDPl3wmQMiGeB1AIhbpcLXhGgphT0sDrG1oyInU5KzcAL/TvIeaWKdMr++boN9zHrPClh6yMNskY92TzVNwPb7tBR3O01Bu6Y1fb1RAn4IfhpmYvWYhFNU0tKk727EBskZqaxEptWvocq2x+uUlIdsdhTx3GvbcgoZfWbgRqbZeJO6xwjB72t+L5jnM9zZtZv3KQUrO0O6XetznUanqBoYnUchIP+bKdaRFU/kAHhMXmhEC69jAa767X87P7aGsXSIvF/isTEOqIB9mV7cfb6CpmjOzpCFS90OT/FLORH9thKo7s4021m+yLgW7+nfddjDJhS14uSG3ktPUZuV8RyIOnqTRYjSjFpNa0FD2G3u2Hl5w369oub7jaPmQkxwURTb9WC4guYKqGzwZlPHrX4ZNErEZazzt9yZa4nb3e9JeLt7YmdWEDPeLfFZdu0u8qLYavlkfhRJpiJRUPeoSiU61Fi3zWpq4aLhrjFI2Ul2zHKA90IZ5P/Q53WG3TEIwnAXVexYEIPT6krrSRkYEzTzBFbZSNNNUkYrtXJJtlLHOt6tO7/Gyha6UukK7vOoG6dqT8O4bIrG6L6kExVR1nd6jZIwbjdGtHDT0FTQkzvZJdSPE+uTkw+NlYQ+MRAZkONvCTaJ8MsxxqcgfdJpgmp1d5+XHN9hYKy59wghdrvO81Puco65fovCqAGLd9o9DejVVtNDXFTTUldbBf7WJVe3ufrurqIcwqk3J2T4hUkWsQ3+Lto5XY6raRJ5ylnzIKG68uXLu9oIuy12KR+3lJ9M22FhfP/Ed7rbEcbbR8IjbNJS0qSlvgAvNoRbeOxUFZ7tLoihRXcvPp3JqSuo63emA4LNK6s7xmaD36g2+blDp0HTvzY86/tUqAxpr5bfWf7+JF/3agRKflddrirlrJZvjVye7uDMr2s5JRij7kZKfBfl/RbvKBry7enDmkYI86gb8jZKaeK0+JQ6uvKAs50ZHyUmMcKOPqIgV9GrHygAr4tWStzl5Of/rMgUlmyY7ac7U291pnrv1eY+ifZy3/pk14mv8yk5Wmedaq3zUbZ7So6gYMFa8AbthWwhtaxKxkpxHnBnq4pO1RpNNI0fKYtf6iKludohauE6HWGb4qwKtOCQ9HvMPOtTUxGslA9fFi70yOqX6/coky1RcaClq7sjWtmbWGBdlmT6JGaZ7SN33dQeBYyK3Fni5di/QQCHsYE1IMMtY00OK/bUkdCSTk0oUPeYlP7GtAeUW45CE1EgjYLNBfn1Aj2MsVEN7yGBm6zXWq2t9Ksh7yVgHyNlT5FEH+aWHvva6M+tP2T12sZudZS6Qc7M/EXR8Nth9NlZbjqlGUH2e6aYWV5C10hnNjPUgAVxwl6t93Aj92glQIZNTCOn4BirhgSsyJ3hCJhKF2CLdgFeZvYaFKIllfiZzjZdVvFubHfw0W6exlmdcLdVthB/qs7e83wyB+KygIRYrOMFvVGWqapqS7HrYjZowoepef/QFY6Q6ZGryosDiCzAhpxLwXk2fI91u80dOTU2k3yX29ScrzLNAzg2WZ+sw1qjo0ewBwz3oFn9nvi1cYMUQpNvrilJ1qT4n+orHlJTU5VqSoGZ2Me9eN/i8dsQSkaKmvrkh0q+KDgPKKoG52sMfWwmTTX+pgzMtp9/VVploB8PM97ztnb1ub/fVLDFd7BEvmKDXf8kNgZAjClRKFKqeR9rV58ywbXgRNUV1fR71kL8Jwrh8yAzVApdaDaCgX7sBj7jE5RYqBV305okvm8s8FzDkQU73gA4jvcMtXnKSGdFaZtYfskVGGesPDrenF10vC7LDzRuDLFVTldBmhTu8354+4urgf1IFi9zmdHU1xWDcBkqSoB6tG5B6yZcdYH9nWyivqqhtAzed16OZm4nbTF7ZIy6xlWMs02s3Vdeta2b9bTZe2U5+p12s7j+HRAM6iKtzosBcNf/OqZrs095lqjl+6d/VFSQSJZE0OPGkBThu9V33WSVW16UncO6GYObHob4/p2Evp7vRBCO8y00WOs67orUaa1b2IzPMMdzbkPpP9w9RvWBJFcP0SlFWCQ0GYoktHG0npxoj1qMrMAIl9IuVsdCFrnFPaNiTU5MP+2QuCH5t5txqyORkOvyjCcra3WSsxBLfi9YBHfaMxnjIgBluNcxCJ4Rb3/x3V0Vej1QuBMlpoO7KXnaj9xsnluhSC+wUFUVlz7jAtVa4R1eYR7VQlRNJ1YfkZSaBH4vt5mBbWelpx5rnIf/6ejjr0yIH6bCDgntMcxA6COhbELhuSmSvlVbIAg8Vy5RUjPEHk1BpMfFNsVBZzfmutouP+paP60FZYzUEN3QjlZfq9HlXWiVnf3W7eKcto9fF/j/NXjZGah8LLZU400qdelGSrkMIsmn7Y0FNpuhS7229s+by6zYCN7jfdIeLpRK9jna3OMDS1RMjQzWKTnaohv30+6W3u9W/GRO9LutwpCflLfCAG+T1O0lZb9CN1g1FJWoulFNWRYq+HEyVqIRHrxqh31m6fdq7xWpiRcNcbmupRqu8d12R3saD5oIytvVuI2ztW5baweMOe5Wp1mKsraL3mWWmyXYw3PVOMVysHjTuQ4G7GhKFED0e6F9CU5WcsoayTMHd3ucwJxiun5C2yhvpO3Kr0Y/ZGnX3mwOaMxWRj3neAnVn6NWm14mRV9VUrwWgvyca8KJbbWGET1nmjOCWh6r8LdIR6rWm+q2GRitn02TuL/QOt/tny0QhPqyjruwkfx+yOdlqYo/Nv59EZB97yzvQ1i601ANOAsOeWC/592F32dISv/SSZ+xpepj+WVAeby5I7Rery7zkLHklFXGIAhP/5KOqBtzmEE/qVZNXCHWpf/RogI+v8Aebb6y8SMEHLPEO3zDH25QMt1+0IeQO+EbWZj89BiyxwBSfUJWXkwzBVl0KeZ9YrOqP9g1vrKHiQ34b5Jex1Ai/coiiWqj62c6SYKzV59VQuPi/dow7HCUzymLX+0fbRxucsDjVE5aYZZzdzLSlI+VlqkPyJquikNJqJkBiiUTNCof4rYZ6qE2MdDveb9QVA1LbQU1DrqX1MiQ+KzLGkRb5qGle9Hvz7L5WU63TWOOjvT1tpZpzZB5zomGho2i2iTvgYK4wCsxUKrGd75uuIi+y0vFmaYTGnIOP0e/9zpOE+pv/tY+iuoZ8CKA3jROJDepdm1nt43WY4UY3aLO9uT4VbSjHGsaqaV96/GDbetoOLrG7J31HU9u0abiK4VbKaSgqOMg0OzrSViJ5fRqO9Ecl1TUyNM2bK7vSfoFU5ib3m+sWC+TDfNs0lDeo7xpmK991tZP0mmS52xzg8I01Fjdl15tugXfpsxx/59lN8liRLIS8uVAl+C1/FzKJzcxO3XFuQcMI3Wudl3eYIQq0dqxmqT0sXa3V3cY59EQka72afzdB2USrXOEAdzs72siMNBwWFT2vaqFzjfSITwcFzKZM+hryUv0i030h9O6Lggrw826R09AV+P7XXuFoz4Xef7GGojFO1RRXbvzrS4I7qIpFDrWTYWqu0LCve525nidZ5zjZXPsb6SRlC+xjZisu29hUU6SpLC7IfFU9cAdNzPQD52pT01RHJGt9vIqj9WuEr1blnWlrvZvUgSQKif8m5/9h9xsw0tHyltjKtGgTjbVztKOnPGopPu1xp9lqEx18Gf3K6t7nyJCZLovFHvZ3cnpRXo1qfi0ym+tfQjifU5La1nFyoQZoY8ObpmMvSPyVEXayo21dbqmFTlvvGlmni+eTu8xS0mu2m6WGOWgTbi6SC2LIVLtvyILPoKLmpPDAJRXZqxZ5E3S2hzD3Oy4TGwj5yLz/NppNaDpVDyqduu0dr892/tsSB3jadOOjTTTWsCcY9sThXrSLrY23jUecatwmGKuhIKch8VlTWymKurIvek6bJEi14yCDs1oiIwrVrwNyvmypkijU/hT8w1r1XOuPIPKq8gqO9rInjfYZVYkXnRzZ1JnVHO+PXrDKnbY23EGqTgoM5eoTen1cURS6vE/0+aCqanqtO/1E3UAoymW4z69WuFT2WTu1SF+K5vhG8DhNv/VhW4dqw7hVJxRvwIbTUJCY5CgVx6u52lwPef8GbVXrGSe7w9ZedpmqRxxmrxAhNqsmNmQ3yimo4+vGBmRUkIl8Vn/L4DmdrvXf9m8lEQYc6V67y4VFmyj7nlnBlB0qRvucRsgi5je4aCqVqis63SLTneM5+ylpOCRaX2OMDTDWAVGXnNGOMVanBY7RrqotlKRsiHNP1BXt6X2hrBIqzvFUiOzq2Mqd9pD6snLgSkfbTsltjhPpEKuryvuSnDSQkZlPGW9ARwiHi60eAK9P8hVxkJ39wRZOsLWi2U7VVHpsprE4yYOWu17JHkbb37s0u8tEIVH1+qMS8oBnKSqoyCOz3H+pBNSTN8YddlWSd6i3yanqcoCd5bW5yAf1ibWL1dzsOpHOAClKvhD83YBcUNOvb9TUjXaKxU73oqorPWOKXTdgWm6QsXaOdvS4qXp9T5frHKujVf64IbfXJvEBB4pDNVld5GzPGpQb5fzUNkHTlfMjeXk9/rWFz853gIZEQ1nDVwh0XUHNx42TKGlv6ek3hEB+p9QU93pEyaEeD+zVkBiLky0wVs0XkdfufSGz17FBuGtApy8HeqYmUfC4sxV1ysTq9vNupVBmEtvDGRo+5e0SSUh87S1T0CHB/a4Jm0uzI+nfSkX6tSmFvND6HrnLae7QazeHqrrDkcZFQ2asVdNGR4d5xP3u0OkEAz5orILONbb6dY9dXG+SJCQoUnxbVU6vLBzpMYj0qzKJU+Ucg7y8AXnN5mFVfRJtir6hImdAog+f9q8qyqqqG1SSlzrVcsfrEvmBHn3euWETa8OMNewJTowWG6VguQts6UmnqesLlMrrjyM9YLpcaHeeKHrYL6QGlBXVTJToDkuuTaSgaJJJwYhtqHhRWZc2kaqax12loU2mU0PBP7slhGGFDXALezhQ0csu0+kI9zrR8MsM5TKE08yyl+HebaIlpttHuhplkw/C28HLDnJXTFKWD+CxT17iX4LsLJE42q+tCF0gmsmMRN6WOkTaNTQ1pwO2dqMkAIS6s6RqCmpyYqmdjRAHYnHdQU5RrNNp7rPQ7k620CrDHLDBQclGGGt61OVPblP1vONE3h+ULfkg6E/X0BA3GYp6CJHjEJZ0qHnQLTIFqaJRzrGrXVX0htvJy6vIGxn20URer6ccZbofhBN26ma5W1FFIeQaV7R25rVpVuMARGtKZphqV/uqulDdgz60kfzJBo8z3GYnw/3eLHca5SiZQjBT0xu8orrJglhywKggWauEqOwnKtrVFfX7L+Pk7OcG7WI9oflB3Zba1JVD6VNO2Sn4a39tIOQwv62qFKQmdOkKhQpr81FCW/2SNp80186+oe4Ii+xix+gNMtaEaE/z9Tvd7nb2kg/rDPAhbVV0RWukmNpwWFgqZSnmuFiqX07NJ5wmwfv83PPq2hXVxHrEBgLA7Jd4wnamoN03TQoxwQ2eDnFjUdU2DgiCyrVHEPmgzHmnzEJV/2aOzOx1EshDYKzur5wRPSn2LTlb2E3BRyWBU0pDv6NkjTA4sZ8DRYE/ykt8r/UT43xVn5weUw33oRBsF0T6zNcuEku1W+EDDg3F6xN8Tl1ZQ90FAek3o8KPhog1XivPkMg0jHe6ZT5gqRutcJdjN4HG3OAx4mt81AMO0ONGw91spp1UUAqLYLCNXbPuKq/uZMVQ4JTKLPIrTeFkw8eM1y7SJfUxDzrcQjl1T/uWx5zlUYvM80u7WuJU7QGpf9yuYfb+wuKQVitoONj0cFDbayFos2lxzulesL8feNlkW+KY6A00FhwS9WtXd7y6bXQ7RadmB1qh+UQU0rE0bOvdIaBp1m9doVtBQ6TDDDV1qcyAD9nZzaY73D+4xr4+5QHfc6o9fdAqpxobMoT9Oh1oQA5LXRoaxTZfzyktqPrq8KaZT9/bHm5U83HjjXSDU3iVwHb97P1Gjw86175+7zi7yIy2m/vD7WfBtTeJ5Ly6fUwKHR9riqp+IFXVoaJqpWIos+yQ+ZQzTfBF+7daRdWscr1/sNTJhqmLFWUSK4JvylzpzFb3rKojDAt76qs9VvPEuw9rOEM3rvZ2U+wcMSp6Q2cWb4+21GOCPpfiHh+ThjKT3KvyxJFTCVRxXsN15gXtVSr2kKZGKzIgsYOiSxwa4EhNKmdLH3auKXYMaCtRUvV8y43f6aFW7SCTHdZqykghIL8odJN8lzEqZrvXlt5htuM3Md+40eNzTzxgJ21OsKuCsY4L3RkSXS3yrk3deEe04Gckdra8hk5VOZyCv5kAAAjVSURBVJnr9KsqaCgpWOhw20kkCuFclWbrlkMdakC/kl55NQvNlpPKyYtdImeVVEkBR2k2em16sSRsAHl143zEjQqOtp/ZFtvdTtGfyVhb7HKQBz1kgdkO1fBBI0NiqafVRSTDYSGnE8vr86j7JKESIpZ5ytWh81Fdnwt9XC4A3FQu6CEqyrZxiXaJTuSdr0dRU0GYutwqw8I5mT2O0KkqDaWbg7nvROyvjHSSxGyXa/e04zY5k70J45ToRVvZwlMe8YIXna4cwEMcFlJFhwNDuNJcFueGkt5Um5qckk/5gYVu8xOHeLv3GgiFKflg7JxMxSc85ky3WWS5/3SWgnowT+pPblczIJPXaWvb6QiyXDpC5WLONIe5X9HVtnaUe7xnI33VBmSkX3/8Nvujg4y1HHfYy997zkDIP+elYomTXKIWiJPldrVYIfQ/pi1Ei2VTjPJJx8nJh+U8WCLQaFV+XeF+883zjGpIz2ZhV32/i/VrU1f0pP2CyHew2UoRef/HGCt9QI/ZeNB3N/GpN7na5KioYoVzrDLfERInGZCXb7UpfJtrfUNfeOzEVZYGGiYJ9VxNvvNkP3erD4S+o4XVTrtoHmQlSDe+6SqXeH84JSMLfFrqVn/SLlKUGO02Xw2majZ2KaqZ5lBd9jfHlWpmO2NTH3lzSnM+4W4z5TxnkT842DukoRd8JucAR5ig02C7ihvESq+CjH3+xTnepjtIvwd5i1JgF9pQDVKSPHb0H0rhO7Og1HrJcrXAZ4wwxT/raOGtWK9RPukxOzhP0YG6dW5UNDhkxto5Gq1bwUwTHGGuk40UKQSPca/+0GxnENU3Ew6vhEJtRjgWK40IgCIK6YtaSyZQV2o1NEtF4QikV7pyxeHcuZoOiVi7a/SEudk0/pG28rixvmCumqd9ctMfePOKvs40S+pKS6yyvU7Hhgwhbe43LwDCTE4toPi0xS5lWOE+mc7gzvOhaWJBKbQDTsLtFVq3+s+hm23dYBOMwT42jaDhurlV+Z8o2NKxVvmcB9xjkdkONDp6k4y1ZXS8e+1jnFtV3Oc9RgcH3yv1/dYvWK6kN/RYLoqCSLxfyZlub1WrNsnlxf6vDzjUFz0sL2cgaASr+Khb1rIjVQyETvMFi/wSHSHcqvmkZUb5qZV2NMWffPjPeYLgq8fKEz+bXZJdk92RPZ19Jbsy+2IWZVFWzGS5TPbNLMtqWZJl2aPZpCyfFTKZLM6iTFbI8lk5K2eyb2XLsizrzbLsueyzWWdWyGTFLM5kn8oWZY2sP8uyLPt9dmAmK2Ze83FK1hyN7IVsevhJWSnryKZmN2efzGZld2a3ZpdlX8zu2kxN5WZb+g/ZNXYx3z6B3zzDUy2klDnEtsrm+UNoOPDKoe6NVgq2Yie7GW6+x3Sri1qJ2MQ4+9jOE573rMQwPWthrAq2M8NIS9xleUB2TfHcf5tooqdMdJGZnvHN6E02Fl/KJom0edpebjPZ5wNu1oKPTXq5f7XQtqGkqkOzF1KkFkBkbY0YP9MIyCwKV1q7zq8cFnYU5ARND3aoM1TwkA95ybXOtPNmPu0QnBl0pgdsbxvvMsY2pnhHOL9pmCSwSc0gp5m+yCtohNrUPn3ilon6QueHQW4zDY3pmkqqtnXebLuKekhHNM9EaSgZ5oNmabOf97rL07bebFMNibG2jd7mQVeZb569LPR+w7VhlZwONW3SQK8MNpBumiBRbilyCq0DjKohvZCE8KldmwGZSuDRX1kSg8/ebH+QU9RQ1FCVU3Wk8fYVmeUqIz3i9Ms2/0mH5Bici3e5epfdbWGhPs/bwjD3BlKuLlMPpzw1EVPznNYODalG6OotpBNyQcQdtw7AbahLwsE0aYvuWdN/DEqIauLW9031cS/YzsWOMsbDZpq+6+Y/5xBtpZdlD3uHnJI+j5niY5aJ5FVflURoHvaSvOp/m0FOTiNU1q9JCg92sh3EYs3vb/5/aa3i7siXjbPcyVZ6QKd7nPVWOnT7xCjT51yR+83Q7dPicHxtMaQnOg3WlCViWWvhRYGSIadNRTEcGpkLR0cO9t0a7BWYD90gaiGvUwhduV7xabEdHaDLQR7wpB73bBLRN0S08trHCS7y11ZaJvOAuveZoN2AfjWjJRYbYbhFthDLWaasy8pQIdarU8FSI+RVVYwUW66gXSUUzS0xRt5SwzWUvGS4dku1K6hJFEVhcxjQrlfsese6xnut0G68A4do/Qwhov3XbEtTNDxhwHDLTbfYfG832s3G2t1T5jtEt3na7ekZS+yp21zb2t4sA/a12GPebgt3GGkPT1huN6mHjbC3e/TZ23JzjLeDWTJvs8wj9lH0oNGmmmuhQyxzuwnI7GmxbV3qiyYP0VMO4Tlnv/jq7yzzR5GpOlVtb5yS2CgjFeVtI1W2ncgYJSVFnbbRboTEMAVdRhhhpJwttSkYZ5S8LqN1aDdeqsu2urQp2FJZpxHKirYyzBZiY7Rrs62GyDs96RnPeN7uq7UaeIv4LNg6muo5BzvREnNMssD5TjDFj0SO8IA7nabgf+zgEL/1lJMtcoEdTfV7VSd7yGUONcrFtvUeN7jL4Qp+ZaLjXGS+j1vsPHub6jd6HOUJv/VBU/1Eaqa7POwkLzrXWJHr7OFAO1vuk0O4doY4sPybbLjt7eEF1zrRVm4VOdg8tztOzu12soM7rPQuVbfZ2bYetMhRXvKww8V+Y4yZXnCPY2UutY8p7rPcoVa53InGetgKh5jv9z6g4GZjzPSEh7xH6j6TTXODokPNM99sH3TQW9dY12W/MtNCDavsJFLRUNJhqZJOq+REinoVRSpyoZKw2a1vlS3krNQup0dRm36pNvQrKhuQKEsNaBNJ1YzQsEpJwSrtClYpKXox1PYnuocIMrxBxuL/Ziu1q6sri9QVDBgm1WeYfh36A4cehYTZSvmgT+0Ku11Oj3LI7xRVFEO6Py+vVyFI/lN5/UoBo63pWVbq1OYFnzL1zaRk/r82Nu9E8r880l/GX8Zfxl/G/0/G/wO/99cyRtQehgAAAABJRU5ErkJggg==</pre>
 </div>
+<div created="20210209032314861" modified="20210209032333618" tags="TiddlyWiki" title="Raw Data">
+<pre>&lt;&lt;vtabs &quot;[tag[Raw Data]sort[]]&quot;&gt;&gt;
+</pre>
+</div>
 <div created="20190529211224125" modified="20190529211234626" tags="Condition" title="Restrained">
 <pre>* A restrained creature's speed becomes 0, and it can't benefit from any bonus to its speed.
 * Attack rolls against the creature have advantage, and the creature's attack rolls have disadvantage.
@@ -13494,6 +13546,10 @@ Two daggers
 * The creature automatically fails Strength and Dexterity saving throws.
 * Attack rolls against the creature have advantage.</pre>
 </div>
+<div caption="Stylesheets" created="20210110122943280" modified="20210110123007464" tags="TiddlyWiki" title="Stylesheet">
+<pre>&lt;&lt;vtabs &quot;[tag[Stylesheet]sort[]]&quot;&gt;&gt;
+</pre>
+</div>
 <div created="20190720225043771" modified="20210113092635970" order="6" tags="Environment" title="Suffocating">
 <pre>A creature can ''hold its breath'' for a number of minutes equal to ''1 + its Constitution modifier'' (minimum of 30 seconds).
 
@@ -13567,6 +13623,27 @@ For example, a creature with a Constitution of 14 can hold its breath for 3 minu
 !!! 9th Level Spells
 
 &lt;&lt;spells 9&gt;&gt;
+</pre>
+</div>
+<div caption="Templates" created="20210110122405300" modified="20210213113727839" tags="TiddlyWiki" title="Template">
+<pre>!! Typed Templates
+
+|!| !View | !Edit |
+|^!Item |ItemViewTemplate | &amp;mdash; |
+|^!DM Logsheet |DMLogsheetViewTemplate |DMLogsheetEditTemplate |
+|^!AL Logsheet |ALLogsheetViewTemplate |ALLogsheetEditTemplate |
+|^!Monster |MonsterViewTemplate&lt;br/&gt;MonsterTabTemplate |^MonsterEditTemplate |
+|^!Spell |SpellUpperViewTemplate&lt;br/&gt;SpellLowerViewTemplate |^SpellEditTemplate |
+
+!! Other Templates
+
+&lt;div class=&quot;tc-table-of-contents&quot;&gt;
+&lt;&lt;toc Template sort[title]&gt;&gt;
+&lt;/div&gt;
+</pre>
+</div>
+<div caption="Tests" created="20210117013055942" modified="20210117013115498" tags="TiddlyWiki" title="Test">
+<pre>&lt;&lt;vtabs &quot;[tag[Test]sort[]]&quot;&gt;&gt;
 </pre>
 </div>
 <div created="20190720134355512" modified="20190720134405337" tags="Cover" title="Three-Quarters Cover">
@@ -13786,6 +13863,10 @@ Leather armor, any simple weapon, and two daggers
 | !28 | 13 | 20 | 4 | &amp;mdash; | Strong | &amp;mdash; |
 | !29 | 9 | 16 | 17 | &amp;mdash; | Light | Light |
 | !30 | 1 | 9 | 4 | &amp;mdash; | &amp;mdash; | &amp;mdash; |
+</pre>
+</div>
+<div caption="Widgets" created="20210110180433929" modified="20210110180459616" tags="TiddlyWiki" title="Widget">
+<pre>&lt;&lt;vtabs &quot;[tag[Widget]sort[]]&quot;&gt;&gt;
 </pre>
 </div>
 <div created="20190625062657110" modified="20210227131404955" tags="[[Wild Magic Surge]] Table [[Player Tool]]" title="Wild Magic Surge Table">
