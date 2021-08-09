@@ -155,6 +155,8 @@ Error message and password prompt
 
 <li>$:/GitHub/Username</li>
 
+<li>$:/Import</li>
+
 <li>$:/isEncrypted</li>
 
 <li>$:/plugins/benwebber/dnd</li>
@@ -175,7 +177,17 @@ Error message and password prompt
 
 <li>$:/themes/tiddlywiki/vanilla</li>
 
+<li>Campaign</li>
+
+<li>DnD</li>
+
+<li>Dungeon Master</li>
+
+<li>Entity</li>
+
 <li>MainPage</li>
+
+<li>Note</li>
 
 </ul>
 </p>
@@ -10074,6 +10086,16 @@ MainPage</pre>
 <div created="20210808231637351" modified="20210808231638854" title="$:/GitHub/Username">
 <pre>intrinsical</pre>
 </div>
+<div status="complete" title="$:/Import">
+<pre>The following tiddlers were imported:
+
+# [[MainPage]]
+# [[Campaign]]
+# [[Dungeon Master]]
+# [[DnD]]
+# [[Entity]]
+# [[Note]]</pre>
+</div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
 </div>
@@ -10981,9 +11003,9 @@ MainPage</pre>
 <pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
 </div>
 <div title="$:/status/RequireReloadDueToPluginChange">
-<pre>yes</pre>
+<pre>no</pre>
 </div>
-<div created="20210809052557319" list="$:/Import GettingStarted $:/ControlPanel MainPage" modified="20210809052557319" title="$:/StoryList">
+<div list="$:/Import GettingStarted MainPage" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -11095,9 +11117,30 @@ MainPage</pre>
     }
 }</pre>
 </div>
-<div created="20210808232252096" modified="20210808232518328" tags="" title="MainPage">
-<pre>This is a test.
+<div caption="Campaigns" created="20200701053117016" icon="sword-shield.gif" modified="20210717162555522" order="1" tags="[[Adventure Type]] Presentation MainPage" title="Campaign">
+<pre>&lt;&lt;htabs &quot;[tag[Campaign]sort[order]]&quot;&gt;&gt;
 </pre>
+</div>
+<div caption="D&amp;D" created="20210111015423602" icon="dnd.png" modified="20210720100251707" order="4" tags="MainPage" title="DnD">
+<pre>&lt;&lt;vtabs &quot;[tag[DnD]sort[]]&quot;&gt;&gt;
+</pre>
+</div>
+<div caption="DM" created="20210114030322558" icon="token-dm.png" modified="20210717055246915" order="5" tags="MainPage" title="Dungeon Master">
+<pre>&lt;&lt;vtabs &quot;[tag[Dungeon Master]sort[]]&quot;&gt;&gt;
+</pre>
+</div>
+<div caption="Entities" created="20210111090553106" icon="mm.gif" modified="20210717055300560" order="6" tags="MainPage" title="Entity">
+<pre>&lt;&lt;htabs &quot;[tag[Entity]sort[]]&quot;&gt;&gt;
+</pre>
+</div>
+<div created="20210110121849274" icon="dnd.png" modified="20210725122704592" tags="" title="MainPage">
+<pre>&lt;div class=&quot;gallery&quot;&gt;&lt;$list filter=&quot;[tag[MainPage]sort[order]]&quot;&gt;{{||LogoTemplate}}&lt;/$list&gt;&lt;/div&gt;
+
+&lt;&lt;htabs &quot;[[Character]] [[Hardcover]] [[Class]] [[Adventurers League DM]] [[AdvancedSearch]]&quot; Character&gt;&gt;
+</pre>
+</div>
+<div caption="Notes" created="20190410021317846" icon="notes.gif" modified="20210717055312536" order="6" tags="MainPage" title="Note">
+<pre>&lt;&lt;vtabs &quot;[tag[Note]sort[]]&quot;&gt;&gt;</pre>
 </div>
 
 
