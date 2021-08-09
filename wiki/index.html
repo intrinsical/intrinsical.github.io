@@ -177,6 +177,8 @@ Error message and password prompt
 
 <li>$:/state/tab-2065006209</li>
 
+<li>$:/state/tab&lt;&lt;hash [[Character]] [[Hardcover]] [[Class]] [[Adventurers League DM]] [[AdvancedSearch]]&gt;&gt;--660301733</li>
+
 <li>$:/status/RequireReloadDueToPluginChange</li>
 
 <li>$:/StoryList</li>
@@ -185,15 +187,21 @@ Error message and password prompt
 
 <li>$:/themes/tiddlywiki/vanilla</li>
 
+<li>AdvancedSearch</li>
+
 <li>Basic Macros</li>
 
 <li>Campaign</li>
+
+<li>Class</li>
 
 <li>DnD</li>
 
 <li>Dungeon Master</li>
 
 <li>Entity</li>
+
+<li>Hardcover</li>
 
 <li>MainPage</li>
 
@@ -10098,7 +10106,9 @@ Error message and password prompt
 <div status="complete" title="$:/Import">
 <pre>The following tiddlers were imported:
 
-# [[Basic Macros]]</pre>
+# [[AdvancedSearch]]
+# [[Hardcover]]
+# [[Class]]</pre>
 </div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
@@ -11018,10 +11028,13 @@ Error message and password prompt
 <div created="20210808231634668" modified="20210808231634668" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
 </div>
+<div created="20210809055734783" modified="20210809055737129" title="$:/state/tab&lt;&lt;hash [[Character]] [[Hardcover]] [[Class]] [[Adventurers League DM]] [[AdvancedSearch]]&gt;&gt;--660301733">
+<pre>AdvancedSearch</pre>
+</div>
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div list="$:/Import GettingStarted MainPage" title="$:/StoryList">
+<div list="$:/Import MainPage" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -11133,6 +11146,10 @@ Error message and password prompt
     }
 }</pre>
 </div>
+<div caption="Advanced Search" created="20210720102520688" icon="" modified="20210720102603471" tags="" title="AdvancedSearch">
+<pre>{{$:/AdvancedSearch}}
+</pre>
+</div>
 <div created="20190703054059220" list="" modified="20210717054515764" tags="Macro $:/tags/Macro" title="Basic Macros">
 <pre>\define hover(tiddler)
 &lt;$hover popup=&quot;$:/state/$tiddler$&quot;&gt;[[$tiddler$]]&lt;/$hover&gt;&lt;$reveal type=&quot;popup&quot; state=&quot;$:/state/$tiddler$&quot;&gt;&lt;div class=&quot;tc-drop-down&quot; style=&quot;max-width: 500px; padding: 7px; white-space: normal;&quot;&gt;&lt;$transclude tiddler=&quot;$tiddler$&quot; mode=&quot;block&quot; /&gt;&lt;/div&gt;&lt;/$reveal&gt;
@@ -11240,6 +11257,12 @@ Error message and password prompt
 <pre>&lt;&lt;htabs &quot;[tag[Campaign]sort[order]]&quot;&gt;&gt;
 </pre>
 </div>
+<div caption="Classes" created="20210109115558288" icon="phb.gif" modified="20210720095218125" order="3" tags="Presentation [[Character Creation]]" title="Class">
+<pre>! Classes
+
+&lt;div class=&quot;gallery&quot;&gt;&lt;$list filter=&quot;[tag[Class]sort[]]&quot;&gt;{{||LogoTemplate}}&lt;/$list&gt;&lt;/div&gt;
+</pre>
+</div>
 <div caption="D&amp;D" created="20210111015423602" icon="dnd.png" modified="20210720100251707" order="4" tags="MainPage" title="DnD">
 <pre>&lt;&lt;vtabs &quot;[tag[DnD]sort[]]&quot;&gt;&gt;
 </pre>
@@ -11250,6 +11273,10 @@ Error message and password prompt
 </div>
 <div caption="Entities" created="20210111090553106" icon="mm.gif" modified="20210717055300560" order="6" tags="MainPage" title="Entity">
 <pre>&lt;&lt;htabs &quot;[tag[Entity]sort[]]&quot;&gt;&gt;
+</pre>
+</div>
+<div caption="Hardcovers" created="20210205030955348" modified="20210720095516031" tags="Campaign" title="Hardcover">
+<pre>&lt;div class=&quot;gallery&quot;&gt;&lt;$list filter=&quot;[tag[Adventure]tag[Hardcover]sort[published]]&quot;&gt;{{||LogoTemplate}}&lt;/$list&gt;&lt;/div&gt;
 </pre>
 </div>
 <div created="20210110121849274" icon="dnd.png" modified="20210725122704592" tags="" title="MainPage">
