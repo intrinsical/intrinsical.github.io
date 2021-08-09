@@ -161,6 +161,8 @@ Error message and password prompt
 
 <li>$:/plugins/benwebber/dnd</li>
 
+<li>$:/plugins/benwebber/dnd/dnd.js</li>
+
 <li>$:/plugins/mklauber/math.js</li>
 
 <li>$:/plugins/tiddlywiki/menubar</li>
@@ -184,6 +186,8 @@ Error message and password prompt
 <li>$:/state/tab&lt;&lt;hash [[Character]] [[Hardcover]] [[Class]] [[Adventurers League DM]] [[AdvancedSearch]]&gt;&gt;--660301733</li>
 
 <li>$:/state/tab&lt;&lt;hash [tag[Campaign]sort[order]]&gt;&gt;--1411255381</li>
+
+<li>$:/state/tab&lt;&lt;hash [tag[TiddlyWiki]sort[]]&gt;&gt;-272320623</li>
 
 <li>$:/status/RequireReloadDueToPluginChange</li>
 
@@ -217,6 +221,8 @@ Error message and password prompt
 
 <li>Carrying</li>
 
+<li>Categorization Macro</li>
+
 <li>Charmed</li>
 
 <li>Class</li>
@@ -242,6 +248,8 @@ Error message and password prompt
 <li>Conjure Animals Table</li>
 
 <li>Cover</li>
+
+<li>D&amp;D Macros</li>
 
 <li>D&amp;D Stylesheet</li>
 
@@ -281,6 +289,8 @@ Error message and password prompt
 
 <li>fighter.png</li>
 
+<li>Fold Macro</li>
+
 <li>Frightened</li>
 
 <li>General Stylesheet</li>
@@ -293,15 +303,21 @@ Error message and password prompt
 
 <li>Hardcover</li>
 
+<li>hash.js</li>
+
 <li>Heavily Obscured</li>
 
 <li>Hiding</li>
 
 <li>Huge Animated Objects</li>
 
+<li>IconLinkTemplate</li>
+
 <li>Image</li>
 
 <li>Incapacitated</li>
+
+<li>IndexViewTemplate</li>
 
 <li>Invisible</li>
 
@@ -321,6 +337,8 @@ Error message and password prompt
 
 <li>Lightly Obscured</li>
 
+<li>Link</li>
+
 <li>LogoTemplate</li>
 
 <li>Lycanthropy</li>
@@ -328,6 +346,8 @@ Error message and password prompt
 <li>Macro</li>
 
 <li>MainPage</li>
+
+<li>MarkMacro</li>
 
 <li>MarksConfig</li>
 
@@ -337,15 +357,29 @@ Error message and password prompt
 
 <li>mm.gif</li>
 
+<li>Modifiers</li>
+
 <li>Monk</li>
 
 <li>monk.png</li>
+
+<li>Monster Macros</li>
+
+<li>MonsterEditTemplate</li>
+
+<li>MonsterTabTemplate</li>
+
+<li>MonsterViewTemplate</li>
 
 <li>Note</li>
 
 <li>notes.gif</li>
 
 <li>Obscurement</li>
+
+<li>P2Template</li>
+
+<li>P3Template</li>
 
 <li>Paladin</li>
 
@@ -403,15 +437,45 @@ Error message and password prompt
 
 <li>sorcerer.png</li>
 
+<li>Spell Macros</li>
+
 <li>Spell Tool</li>
 
 <li>SpellbookDisplay</li>
+
+<li>SpellEditTemplate</li>
+
+<li>SpellLowerViewTemplate</li>
 
 <li>SpellMenu</li>
 
 <li>Spells By Class</li>
 
 <li>Spells By Sourcebook</li>
+
+<li>SpellSlot1</li>
+
+<li>SpellSlot2</li>
+
+<li>SpellSlot3</li>
+
+<li>SpellSlot4</li>
+
+<li>SpellSlot5</li>
+
+<li>SpellSlot6</li>
+
+<li>SpellSlot7</li>
+
+<li>SpellSlot8</li>
+
+<li>SpellSlot9</li>
+
+<li>SpellSummaryRowTemplate</li>
+
+<li>SpellTableRowTemplate</li>
+
+<li>SpellUpperViewTemplate</li>
 
 <li>Stunned</li>
 
@@ -422,6 +486,8 @@ Error message and password prompt
 <li>Summon Greater Demon Tips</li>
 
 <li>sword-shield.gif</li>
+
+<li>TableRowTemplate</li>
 
 <li>TCE Spell</li>
 
@@ -10374,16 +10440,38 @@ Error message and password prompt
 <div status="complete" title="$:/Import">
 <pre>The following tiddlers were imported:
 
-# [[Config]]
-# [[Image]]
-# [[Javascript]]
-# [[Macro]]
-# [[Raw Data]]
-# [[Stylesheet]]
-# [[Template]]
-# [[Widget]]
-# [[Test]]
-# [[MarksConfig]]</pre>
+# [[Categorization Macro]]
+# [[D&amp;D Macros]]
+# [[Fold Macro]]
+# [[MarkMacro]]
+# [[Monster Macros]]
+# [[Spell Macros]]
+# [[$:/plugins/benwebber/dnd/dnd.js]]
+# [[hash.js]]
+# [[Modifiers]]
+# [[SpellSlot1]]
+# [[SpellSlot2]]
+# [[SpellSlot3]]
+# [[SpellSlot4]]
+# [[SpellSlot5]]
+# [[SpellSlot6]]
+# [[SpellSlot7]]
+# [[SpellSlot8]]
+# [[SpellSlot9]]
+# [[MonsterViewTemplate]]
+# [[MonsterEditTemplate]]
+# [[MonsterTabTemplate]]
+# [[SpellUpperViewTemplate]]
+# [[SpellEditTemplate]]
+# [[SpellLowerViewTemplate]]
+# [[Link]]
+# [[SpellSummaryRowTemplate]]
+# [[SpellTableRowTemplate]]
+# [[TableRowTemplate]]
+# [[IndexViewTemplate]]
+# [[IconLinkTemplate]]
+# [[P2Template]]
+# [[P3Template]]</pre>
 </div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
@@ -11135,6 +11223,381 @@ Error message and password prompt
     }
 }</pre>
 </div>
+<div created="20210309031338172" modified="20210309110155303" module-type="library" tags="Javascript" title="$:/plugins/benwebber/dnd/dnd.js" type="application/javascript">
+<pre>&quot;use strict&quot;;
+Object.defineProperty(exports, &quot;__esModule&quot;, { value: true });
+/* tslint:disable:object-literal-sort-keys */
+var CR_TO_XP = {
+    &quot;0&quot;: 0,
+    &quot;1/8&quot;: 25,
+    &quot;1/4&quot;: 50,
+    &quot;1/2&quot;: 100,
+    &quot;1&quot;: 200,
+    &quot;2&quot;: 450,
+    &quot;3&quot;: 700,
+    &quot;4&quot;: 1100,
+    &quot;5&quot;: 1800,
+    &quot;6&quot;: 2300,
+    &quot;7&quot;: 2900,
+    &quot;8&quot;: 3900,
+    &quot;9&quot;: 5000,
+    &quot;10&quot;: 5900,
+    &quot;11&quot;: 7200,
+    &quot;12&quot;: 8400,
+    &quot;13&quot;: 10000,
+    &quot;14&quot;: 11500,
+    &quot;15&quot;: 13000,
+    &quot;16&quot;: 15000,
+    &quot;17&quot;: 18000,
+    &quot;18&quot;: 20000,
+    &quot;19&quot;: 22000,
+    &quot;20&quot;: 25000,
+    &quot;21&quot;: 33000,
+    &quot;22&quot;: 41000,
+    &quot;23&quot;: 50000,
+    &quot;24&quot;: 62000,
+    &quot;25&quot;: 75000,
+    &quot;26&quot;: 90000,
+    &quot;27&quot;: 105000,
+    &quot;28&quot;: 120000,
+    &quot;29&quot;: 135000,
+    &quot;30&quot;: 155000,
+};
+/* tslint:enable */
+var SKILL_CODES_TO_CAPTIONS = {
+    ac: &quot;Acrobatics&quot;,
+    an: &quot;AnimalHandling&quot;,
+    ar: &quot;Arcana&quot;,
+    at: &quot;Athletics&quot;,
+    d: &quot;Deception&quot;,
+    h: &quot;History&quot;,
+    ins: &quot;Insight&quot;,
+    int: &quot;Intimidation&quot;,
+    inv: &quot;Investigation&quot;,
+    m: &quot;Medicine&quot;,
+    n: &quot;Nature&quot;,
+    perc: &quot;Perception&quot;,
+    perf: &quot;Performance&quot;,
+    pers: &quot;Persuasion&quot;,
+    r: &quot;Religion&quot;,
+    sl: &quot;SleightOfHand&quot;,
+    st: &quot;Stealth&quot;,
+    su: &quot;Survival&quot;,
+};
+var ABILITY_REGEX = /^(STR|DEX|CON|INT|WIS|CHA).*/i;
+var SKILL_REGEX = new RegExp(&quot;^(&quot; + Object.keys(SKILL_CODES_TO_CAPTIONS).join(&quot;|&quot;) + &quot;).*&quot;, &quot;i&quot;);
+var AttackType;
+(function (AttackType) {
+    AttackType[AttackType[&quot;Melee&quot;] = 0] = &quot;Melee&quot;;
+    AttackType[AttackType[&quot;Ranged&quot;] = 1] = &quot;Ranged&quot;;
+    AttackType[AttackType[&quot;MeleeOrRanged&quot;] = 2] = &quot;MeleeOrRanged&quot;;
+})(AttackType = exports.AttackType || (exports.AttackType = {}));
+var DamageType;
+(function (DamageType) {
+    DamageType[&quot;Acid&quot;] = &quot;&lt;&lt;dnd._lingo Damage/Type/Acid&gt;&gt;&quot;;
+    DamageType[&quot;Bludgeoning&quot;] = &quot;&lt;&lt;dnd._lingo Damage/Type/Bludgeoning&gt;&gt;&quot;;
+    DamageType[&quot;Cold&quot;] = &quot;&lt;&lt;dnd._lingo Damage/Type/Cold&gt;&gt;&quot;;
+    DamageType[&quot;Fire&quot;] = &quot;&lt;&lt;dnd._lingo Damage/Type/Fire&gt;&gt;&quot;;
+    DamageType[&quot;Force&quot;] = &quot;&lt;&lt;dnd._lingo Damage/Type/Force&gt;&gt;&quot;;
+    DamageType[&quot;Lightning&quot;] = &quot;&lt;&lt;dnd._lingo Damage/Type/Lightning&gt;&gt;&quot;;
+    DamageType[&quot;Necrotic&quot;] = &quot;&lt;&lt;dnd._lingo Damage/Type/Necrotic&gt;&gt;&quot;;
+    DamageType[&quot;Piercing&quot;] = &quot;&lt;&lt;dnd._lingo Damage/Type/Piercing&gt;&gt;&quot;;
+    DamageType[&quot;Poison&quot;] = &quot;&lt;&lt;dnd._lingo Damage/Type/Poison&gt;&gt;&quot;;
+    DamageType[&quot;Psychic&quot;] = &quot;&lt;&lt;dnd._lingo Damage/Type/Psychic&gt;&gt;&quot;;
+    DamageType[&quot;Radiant&quot;] = &quot;&lt;&lt;dnd._lingo Damage/Type/Radiant&gt;&gt;&quot;;
+    DamageType[&quot;Slashing&quot;] = &quot;&lt;&lt;dnd._lingo Damage/Type/Slashing&gt;&gt;&quot;;
+    DamageType[&quot;Thunder&quot;] = &quot;&lt;&lt;dnd._lingo Damage/Type/Thunder&gt;&gt;&quot;;
+})(DamageType = exports.DamageType || (exports.DamageType = {}));
+var Spell = /** @class */ (function () {
+    function Spell(level, school, cast, ritual, range, verbal, somatic, material, duration) {
+        this.level = level;
+        this.school = school;
+        this.cast = cast;
+        this.ritual = ritual;
+        this.range = range;
+        this.verbal = verbal;
+        this.somatic = somatic;
+        this.material = material;
+        this.duration = duration;
+    }
+    Object.defineProperty(Spell.prototype, &quot;isCantrip&quot;, {
+        get: function () {
+            return !isNaN(this.level) &amp;&amp; this.level === 0;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Spell.prototype.render = function () {
+        var descriptionLevel = Number.isNaN(this.level) ? &quot;&quot; : this.level;
+        var output = [
+            &quot;//&lt;&lt;dnd._spellDescription level:\&quot;&quot; + descriptionLevel + &quot;\&quot; school:\&quot;&quot; + this.school + &quot;\&quot; ritual:\&quot;&quot; + this.ritual + &quot;\&quot;&gt;&gt;//&quot;,
+            &quot;&quot;,
+        ];
+        var componentFragments = [];
+        if (this.verbal) {
+            componentFragments.push(&quot;&lt;&lt;dnd._lingo Spell/Verbal&gt;&gt;&quot;);
+        }
+        if (this.somatic) {
+            componentFragments.push(&quot;&lt;&lt;dnd._lingo Spell/Somatic&gt;&gt;&quot;);
+        }
+        if (this.material) {
+            componentFragments.push(&quot;&lt;&lt;dnd._lingo Spell/Material&gt;&gt; (&quot; + this.material + &quot;)&quot;);
+        }
+        var components = componentFragments.join(&quot;, &quot;);
+        var fields = [
+            { caption: &quot;Spell/CastingTime&quot;, value: this.cast },
+            { caption: &quot;Spell/Range&quot;, value: this.range },
+            { caption: &quot;Spell/Components&quot;, value: components },
+            { caption: &quot;Spell/Duration&quot;, value: this.duration },
+        ];
+        output = output.concat(renderFields(fields, true));
+        output.push(&quot;&quot;);
+        return output.join(&quot;\n&quot;);
+    };
+    return Spell;
+}());
+exports.Spell = Spell;
+var StatBlock = /** @class */ (function () {
+    function StatBlock(size, type, alignment, ac, hp, speed, str, dex, con, int, wis, cha, senses, languages, challenge, tags, saves, skills, dimm, dres, dvul, cimm, cres, cvul) {
+        this.size = size;
+        this.type = type;
+        this.alignment = alignment;
+        this.ac = ac;
+        this.hp = hp;
+        this.speed = speed;
+        this.str = str;
+        this.dex = dex;
+        this.con = con;
+        this.int = int;
+        this.wis = wis;
+        this.cha = cha;
+        this.senses = senses;
+        this.languages = languages;
+        this.challenge = challenge;
+        this.tags = tags;
+        this.saves = saves;
+        this.skills = skills;
+        this.dimm = dimm;
+        this.dres = dres;
+        this.dvul = dvul;
+        this.cimm = cimm;
+        this.cres = cres;
+        this.cvul = cvul;
+    }
+    Object.defineProperty(StatBlock.prototype, &quot;description&quot;, {
+        get: function () {
+            // TODO: Translate stored size, type values in description.
+            var descriptionFragments = [this.size, this.type];
+            if (this.tags) {
+                descriptionFragments.push(this.renderTags(this.tags));
+            }
+            var description = descriptionFragments.join(&quot; &quot;).trim();
+            if (this.alignment) {
+                description = description + &quot;, &quot; + this.alignment;
+            }
+            return description;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    StatBlock.prototype.render = function () {
+        var output = [
+            &quot;//&quot; + capitalize(this.description) + &quot;//&quot;,
+            &quot;&quot;,
+        ];
+        var fields = [
+            { caption: &quot;StatBlock/AC&quot;, value: this.ac },
+            { caption: &quot;StatBlock/HP&quot;, value: average(this.hp) },
+            { caption: &quot;StatBlock/Speed&quot;, value: this.speed },
+        ];
+        output = output.concat(renderFields(fields, true));
+        output.push(&quot;&quot;);
+        output.push(&quot;---&quot;);
+        var abilities = [
+            { caption: &quot;StatBlock/STR&quot;, value: this.str },
+            { caption: &quot;StatBlock/DEX&quot;, value: this.dex },
+            { caption: &quot;StatBlock/CON&quot;, value: this.con },
+            { caption: &quot;StatBlock/INT&quot;, value: this.int },
+            { caption: &quot;StatBlock/WIS&quot;, value: this.wis },
+            { caption: &quot;StatBlock/CHA&quot;, value: this.cha },
+        ];
+        output = output.concat(this.renderAbilities(abilities));
+        output.push(&quot;&quot;);
+        output.push(&quot;---&quot;);
+        fields = [
+            { caption: &quot;StatBlock/Saves&quot;, value: this.saves },
+            { caption: &quot;StatBlock/Skills&quot;, value: this.skills },
+            { caption: &quot;StatBlock/DamageImmunities&quot;, value: this.dimm },
+            { caption: &quot;StatBlock/DamageResistances&quot;, value: this.dres },
+            { caption: &quot;StatBlock/DamageVulnerabilities&quot;, value: this.dvul },
+            { caption: &quot;StatBlock/ConditionImmunities&quot;, value: this.cimm },
+            { caption: &quot;StatBlock/ConditionResistances&quot;, value: this.cres },
+            { caption: &quot;StatBlock/ConditionVulnerabilities&quot;, value: this.cvul },
+        ];
+        output = output.concat(renderFields(fields, false));
+        // Does the challenge field embed XP?
+        var challengeRegexp = /(\d+)\s+(\d+)?/;
+        var challengeMatch = this.challenge.match(challengeRegexp);
+        var challengeMacro = &quot;&lt;&lt;dnd.xp \&quot;&quot; + this.challenge + &quot;\&quot;&gt;&gt;&quot;;
+        if (challengeMatch &amp;&amp; challengeMatch[2]) {
+            challengeMacro = &quot;&lt;&lt;dnd.xp \&quot;&quot; + challengeMatch[1] + &quot;\&quot; \&quot;&quot; + challengeMatch[2] + &quot;\&quot;&gt;&gt;&quot;;
+        }
+        fields = [
+            { caption: &quot;StatBlock/Senses&quot;, value: this.senses },
+            { caption: &quot;StatBlock/Languages&quot;, value: this.languages },
+            { caption: &quot;StatBlock/Challenge&quot;, value: challengeMacro },
+        ];
+        output = output.concat(renderFields(fields, true));
+        output.push(&quot;&quot;);
+        output.push(&quot;---&quot;);
+        return output.join(&quot;\n&quot;);
+    };
+    StatBlock.prototype.renderTags = function (tags) {
+        return tags ? &quot;(&quot; + tags + &quot;)&quot; : &quot;&quot;;
+    };
+    StatBlock.prototype.renderAbilities = function (abilities) {
+        return [
+            &quot;| &quot; + abilities.map(function (field) { return &quot;&lt;&lt;dnd._lingo &quot; + field.caption + &quot;&gt;&gt;&quot;; }).join(&quot; | &quot;) + &quot; |h&quot;,
+            &quot;| &quot; + abilities.map(function (field) { return ability(field.value); }).join(&quot; | &quot;) + &quot; |&quot;,
+        ];
+    };
+    return StatBlock;
+}());
+exports.StatBlock = StatBlock;
+function ability(score) {
+    return score + &quot; (&quot; + modifier(score) + &quot;)&quot;;
+}
+exports.ability = ability;
+function modifier(score) {
+    var mod = Math.floor((score - 10) / 2);
+    var op = (mod &gt;= 0) ? &quot;+&quot; : &quot;−&quot;; // minus sign (U+2212)
+    return &quot;&quot; + op + Math.abs(mod);
+}
+exports.modifier = modifier;
+function average(expr) {
+    var regexp = /^(\d+)?d(\d+)\s?(?:(-|\+)\s?(\d+))?$/i;
+    var match = expr.match(regexp);
+    if (!match) {
+        return expr;
+    }
+    var nDice = parseInt(match[1], 10) || 1;
+    var nSides = parseInt(match[2], 10);
+    var op = match[3];
+    var mod = parseInt(match[4], 10) || 0;
+    var avg;
+    if (!op) {
+        avg = Math.floor(nDice * (1 + nSides) / 2 + mod);
+        return avg + &quot; (&quot; + nDice + &quot;d&quot; + nSides + &quot;)&quot;;
+    }
+    if (op === &quot;+&quot;) {
+        avg = Math.floor(nDice * (1 + nSides) / 2 + mod);
+    }
+    else {
+        op = &quot;−&quot;;
+        avg = Math.floor(nDice * (1 + nSides) / 2 - mod);
+    }
+    return avg + &quot; (&quot; + nDice + &quot;d&quot; + nSides + &quot; &quot; + op + &quot; &quot; + mod + &quot;)&quot;;
+}
+exports.average = average;
+function capitalize(s) {
+    return s.charAt(0).toLocaleUpperCase() + s.slice(1);
+}
+exports.capitalize = capitalize;
+// tslint:disable-next-line:no-shadowed-variable
+function check(ability, skill, dc) {
+    var abilityMatch = ability.match(ABILITY_REGEX);
+    if (!abilityMatch) {
+        return &quot;&quot;;
+    }
+    var abilityCode = abilityMatch[1].toLocaleUpperCase();
+    var fragments = [&quot;&lt;&lt;dnd._lingo Ability/&quot; + abilityCode + &quot;&gt;&gt;&quot;];
+    if (skill) {
+        var skillMatch = skill.match(SKILL_REGEX);
+        if (skillMatch) {
+            var skillCode = skillMatch[1].toLocaleLowerCase();
+            fragments.push(&quot;(&lt;&lt;dnd._lingo Skill/&quot; + SKILL_CODES_TO_CAPTIONS[skillCode] + &quot;&gt;&gt;)&quot;);
+        }
+    }
+    if (dc) {
+        fragments.unshift(&quot;&lt;&lt;dnd._lingo Check/DC&gt;&gt; &quot; + dc);
+    }
+    return fragments.join(&quot; &quot;);
+}
+exports.check = check;
+function renderFields(fields, alwaysRender) {
+    var output = [];
+    for (var _i = 0, fields_1 = fields; _i &lt; fields_1.length; _i++) {
+        var field = fields_1[_i];
+        if (alwaysRender || field.value) {
+            output.push(&quot;|!&lt;&lt;dnd._lingo &quot; + field.caption + &quot;&gt;&gt; |&quot; + field.value + &quot; |&quot;);
+        }
+    }
+    return output;
+}
+function getXP(rating) {
+    rating = rating.replace(/['&quot;]/g, &quot;&quot;);
+    return CR_TO_XP[rating];
+}
+exports.getXP = getXP;
+function hit(damage, damageType, extraDamage, extraDamageType, condDamage, condDamageType, extraCondDamage, extraCondDamageType, when, effect) {
+    var buffer = [&quot;//&lt;&lt;dnd._lingo StatBlock/Action/Hit&gt;&gt;://&quot;];
+    buffer.push(renderDamage(damage, damageType, extraDamage, extraDamageType));
+    var or = &quot;&quot;;
+    if (condDamage &amp;&amp; condDamageType &amp;&amp; when) {
+        or = renderDamage(condDamage, condDamageType, extraCondDamage, extraCondDamageType) + &quot; &quot; + when;
+    }
+    var output = buffer.join(&quot; &quot;);
+    if (or) {
+        output = output + &quot;, &lt;&lt;dnd._lingo StatBlock/Action/Or&gt;&gt; &quot; + or;
+    }
+    if (effect) {
+        output = output + &quot;, &quot; + effect;
+    }
+    return output + &quot;.&quot;;
+}
+exports.hit = hit;
+function renderDamage(damage, damageType, extraDamage, extraDamageType) {
+    var buffer = [
+        average(damage),
+        damageType,
+    ];
+    if (extraDamage &amp;&amp; extraDamageType) {
+        buffer = buffer.concat([
+            &quot;&lt;&lt;dnd._lingo StatBlock/Action/Plus&gt;&gt;&quot;,
+            average(extraDamage),
+            extraDamageType,
+        ]);
+    }
+    return buffer.join(&quot; &quot;);
+}
+function weaponAttack(attackType, bonus, reach, range, target) {
+    var _a;
+    // tslint:disable max-line-length
+    var attackTypesToCaptions = (_a = {},
+        _a[AttackType.Melee] = {
+            attack: &quot;&lt;&lt;dnd._lingo StatBlock/Action/Melee&gt;&gt;&quot;,
+            reachOrRange: &quot;&lt;&lt;dnd._lingo StatBlock/Action/Reach&gt;&gt; &quot; + reach,
+        },
+        _a[AttackType.Ranged] = {
+            attack: &quot;&lt;&lt;dnd._lingo StatBlock/Action/Ranged&gt;&gt;&quot;,
+            reachOrRange: &quot;&lt;&lt;dnd._lingo StatBlock/Action/Range&gt;&gt; &quot; + range,
+        },
+        _a[AttackType.MeleeOrRanged] = {
+            attack: &quot;&lt;&lt;dnd._lingo StatBlock/Action/MeleeOrRanged&gt;&gt;&quot;,
+            reachOrRange: &quot;&lt;&lt;dnd._lingo StatBlock/Action/Reach&gt;&gt; &quot; + reach + &quot; &lt;&lt;dnd._lingo StatBlock/Action/Or&gt;&gt; &lt;&lt;dnd._lingo StatBlock/Action/Range&gt;&gt; &quot; + range,
+        },
+        _a);
+    var captions = attackTypesToCaptions[attackType];
+    var output = [
+        &quot;//&quot; + captions.attack + &quot;:// &quot; + bonus + &quot; &lt;&lt;dnd._lingo StatBlock/Action/ToHit&gt;&gt;&quot;,
+        captions.reachOrRange,
+        target || &quot;&lt;&lt;dnd._lingo StatBlock/Action/DefaultTarget&gt;&gt;&quot;,
+    ];
+    return output.join(&quot;, &quot;) + &quot;.&quot;;
+}
+exports.weaponAttack = weaponAttack;
+</pre>
+</div>
 <div author="Matthew Lauber" bag="default" core-version="&gt;=5.0.0" dependents="" description="Add a calc widget that evluates expression using Math.JS" list="" plugin-type="plugin" revision="0" title="$:/plugins/mklauber/math.js" type="application/json" version="1.1.2">
 <pre>{
     &quot;tiddlers&quot;: {
@@ -11315,10 +11778,13 @@ Error message and password prompt
 <div created="20210809060311286" modified="20210809060312664" title="$:/state/tab&lt;&lt;hash [tag[Campaign]sort[order]]&gt;&gt;--1411255381">
 <pre>Hardcover</pre>
 </div>
-<div title="$:/status/RequireReloadDueToPluginChange">
-<pre>no</pre>
+<div created="20210809112929671" modified="20210809113139497" title="$:/state/tab&lt;&lt;hash [tag[TiddlyWiki]sort[]]&gt;&gt;-272320623">
+<pre>Template</pre>
 </div>
-<div created="20210809112649511" list="$:/Import MainPage TiddlyWiki" modified="20210809112649511" title="$:/StoryList">
+<div title="$:/status/RequireReloadDueToPluginChange">
+<pre>yes</pre>
+</div>
+<div created="20210809112926152" list="$:/Import MainPage TiddlyWiki" modified="20210809112926152" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -11663,6 +12129,140 @@ An explorer’s pack and four javelins
 ''Size and Strength.'' Larger creatures can bear more weight, whereas Tiny creatures can carry less. For each size category above Medium, double the creature's carrying capacity and the amount it can push, drag, or lift. For a Tiny creature, halve these weights.
 </pre>
 </div>
+<div caption="Categorization Macros" created="20210111021445756" modified="20210614011752658" tags="Macro $:/tags/Macro" title="Categorization Macro">
+<pre>\define subclasses(class)
+&lt;h2&gt;Subclasses&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;''Player Handbook''&lt;/li&gt;
+  &lt;ul&gt;
+    &lt;$list filter=&quot;[tag[$class$]tag[Subclass]tag[PHB]sort[title]]&quot; emptyMessage=&quot;&lt;li&gt;No subclasses&lt;/li&gt;&quot;&gt;
+      &lt;li&gt;&lt;$link to=&lt;&lt;currentTiddler&gt;&gt; &gt;&lt;&lt;currentTiddler&gt;&gt;&lt;/$link&gt;&lt;/li&gt;
+    &lt;/$list&gt;
+  &lt;/ul&gt;
+&lt;li&gt;''Xanathar's Guide to Everything''&lt;/li&gt;
+  &lt;ul&gt;
+    &lt;$list filter=&quot;[tag[$class$]tag[Subclass]tag[XGE]sort[title]]&quot; emptyMessage=&quot;&lt;li&gt;No subclasses&lt;/li&gt;&quot;&gt;
+      &lt;li&gt;&lt;$link to=&lt;&lt;currentTiddler&gt;&gt; &gt;&lt;&lt;currentTiddler&gt;&gt;&lt;/$link&gt;&lt;/li&gt;
+    &lt;/$list&gt;
+  &lt;/ul&gt;
+&lt;li&gt;''Tasha's Cauldron of Everything''&lt;/li&gt;
+  &lt;ul&gt;
+    &lt;$list filter=&quot;[tag[$class$]tag[Subclass]tag[TCE]sort[title]]&quot; emptyMessage=&quot;&lt;li&gt;No subclasses&lt;/li&gt;&quot;&gt;
+      &lt;li&gt;&lt;$link to=&lt;&lt;currentTiddler&gt;&gt; &gt;&lt;&lt;currentTiddler&gt;&gt;&lt;/$link&gt;&lt;/li&gt;
+    &lt;/$list&gt;
+  &lt;/ul&gt;
+&lt;li&gt;''Sword Coast Adventurers Guide''&lt;/li&gt;
+  &lt;ul&gt;
+    &lt;$list filter=&quot;[tag[$class$]tag[Subclass]tag[SCAG]sort[title]]&quot; emptyMessage=&quot;&lt;li&gt;No subclasses&lt;/li&gt;&quot;&gt;
+      &lt;li&gt;&lt;$link to=&lt;&lt;currentTiddler&gt;&gt; &gt;&lt;&lt;currentTiddler&gt;&gt;&lt;/$link&gt;&lt;/li&gt;
+    &lt;/$list&gt;
+  &lt;/ul&gt;
+&lt;li&gt;''Eberron: Rising from The Last War''&lt;/li&gt;
+  &lt;ul&gt;
+    &lt;$list filter=&quot;[tag[$class$]tag[Subclass]tag[Eberron]sort[title]]&quot; emptyMessage=&quot;&lt;li&gt;No subclasses&lt;/li&gt;&quot;&gt;
+      &lt;li&gt;&lt;$link to=&lt;&lt;currentTiddler&gt;&gt; &gt;&lt;&lt;currentTiddler&gt;&gt;&lt;/$link&gt;&lt;/li&gt;
+    &lt;/$list&gt;
+  &lt;/ul&gt;
+&lt;li&gt;''Explorer's Guide to Wildemount''&lt;/li&gt;
+  &lt;ul&gt;
+    &lt;$list filter=&quot;[tag[$class$]tag[Subclass]tag[WGE]sort[title]]&quot; emptyMessage=&quot;&lt;li&gt;No subclasses&lt;/li&gt;&quot;&gt;
+      &lt;li&gt;&lt;$link to=&lt;&lt;currentTiddler&gt;&gt; &gt;&lt;&lt;currentTiddler&gt;&gt;&lt;/$link&gt;&lt;/li&gt;
+    &lt;/$list&gt;
+  &lt;/ul&gt;
+&lt;li&gt;''Guildmaster's Guide to Ravnica''&lt;/li&gt;
+  &lt;ul&gt;
+    &lt;$list filter=&quot;[tag[$class$]tag[Subclass]tag[GGR]sort[title]]&quot; emptyMessage=&quot;&lt;li&gt;No subclasses&lt;/li&gt;&quot;&gt;
+      &lt;li&gt;&lt;$link to=&lt;&lt;currentTiddler&gt;&gt; &gt;&lt;&lt;currentTiddler&gt;&gt;&lt;/$link&gt;&lt;/li&gt;
+    &lt;/$list&gt;
+  &lt;/ul&gt;
+&lt;li&gt;''Mythic Odysseys of Theros''&lt;/li&gt;
+  &lt;ul&gt;
+    &lt;$list filter=&quot;[tag[$class$]tag[Subclass]tag[MOT]sort[title]]&quot; emptyMessage=&quot;&lt;li&gt;No subclasses&lt;/li&gt;&quot;&gt;
+      &lt;li&gt;&lt;$link to=&lt;&lt;currentTiddler&gt;&gt; &gt;&lt;&lt;currentTiddler&gt;&gt;&lt;/$link&gt;&lt;/li&gt;
+    &lt;/$list&gt;
+  &lt;/ul&gt;
+&lt;li&gt;''Non-AL Legal''&lt;/li&gt;
+  &lt;ul&gt;
+    &lt;$list filter=&quot;[tag[$class$]tag[Subclass]tag[Non-AL]sort[title]]&quot; emptyMessage=&quot;&lt;li&gt;No subclasses&lt;/li&gt;&quot;&gt;
+      &lt;li&gt;&lt;$link to=&lt;&lt;currentTiddler&gt;&gt; &gt;&lt;&lt;currentTiddler&gt;&gt;&lt;/$link&gt;&lt;/li&gt;
+    &lt;/$list&gt;
+  &lt;/ul&gt;
+&lt;/ul&gt;
+\end
+
+\define subraces(race)
+&lt;h2&gt;Subraces&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;''Player Handbook''&lt;/li&gt;
+  &lt;ul&gt;
+    &lt;$list filter=&quot;[tag[$race$]tag[Subrace]tag[PHB]sort[title]]&quot; emptyMessage=&quot;&lt;li&gt;No subraces&lt;/li&gt;&quot;&gt;
+      &lt;li&gt;&lt;$link to=&lt;&lt;currentTiddler&gt;&gt; &gt;&lt;&lt;currentTiddler&gt;&gt;&lt;/$link&gt;&lt;/li&gt;
+    &lt;/$list&gt;
+  &lt;/ul&gt;
+&lt;li&gt;''Xanathar's Guide to Everything''&lt;/li&gt;
+  &lt;ul&gt;
+    &lt;$list filter=&quot;[tag[$race$]tag[Subrace]tag[XGE]sort[title]]&quot; emptyMessage=&quot;&lt;li&gt;No subraces&lt;/li&gt;&quot;&gt;
+      &lt;li&gt;&lt;$link to=&lt;&lt;currentTiddler&gt;&gt; &gt;&lt;&lt;currentTiddler&gt;&gt;&lt;/$link&gt;&lt;/li&gt;
+    &lt;/$list&gt;
+  &lt;/ul&gt;
+&lt;li&gt;''Tasha's Cauldron of Everything''&lt;/li&gt;
+  &lt;ul&gt;
+    &lt;$list filter=&quot;[tag[$race$]tag[Subrace]tag[TCE]sort[title]]&quot; emptyMessage=&quot;&lt;li&gt;No subraces&lt;/li&gt;&quot;&gt;
+      &lt;li&gt;&lt;$link to=&lt;&lt;currentTiddler&gt;&gt; &gt;&lt;&lt;currentTiddler&gt;&gt;&lt;/$link&gt;&lt;/li&gt;
+    &lt;/$list&gt;
+  &lt;/ul&gt;
+&lt;li&gt;''Elemental Evil Players Guide''&lt;/li&gt;
+  &lt;ul&gt;
+    &lt;$list filter=&quot;[tag[$race$]tag[Subrace]tag[EEPC]sort[title]]&quot; emptyMessage=&quot;&lt;li&gt;No subraces&lt;/li&gt;&quot;&gt;
+      &lt;li&gt;&lt;$link to=&lt;&lt;currentTiddler&gt;&gt; &gt;&lt;&lt;currentTiddler&gt;&gt;&lt;/$link&gt;&lt;/li&gt;
+    &lt;/$list&gt;
+  &lt;/ul&gt;
+&lt;li&gt;''Sword Coast Adventurer's Guide''&lt;/li&gt;
+  &lt;ul&gt;
+    &lt;$list filter=&quot;[tag[$race$]tag[Subrace]tag[SCAG]sort[title]]&quot; emptyMessage=&quot;&lt;li&gt;No subraces&lt;/li&gt;&quot;&gt;
+      &lt;li&gt;&lt;$link to=&lt;&lt;currentTiddler&gt;&gt; &gt;&lt;&lt;currentTiddler&gt;&gt;&lt;/$link&gt;&lt;/li&gt;
+    &lt;/$list&gt;
+  &lt;/ul&gt;
+&lt;li&gt;''Eberron: Rising from the Last War''&lt;/li&gt;
+  &lt;ul&gt;
+    &lt;$list filter=&quot;[tag[$race$]tag[Subrace]tag[Eberron]sort[title]]&quot; emptyMessage=&quot;&lt;li&gt;No subraces&lt;/li&gt;&quot;&gt;
+      &lt;li&gt;&lt;$link to=&lt;&lt;currentTiddler&gt;&gt; &gt;&lt;&lt;currentTiddler&gt;&gt;&lt;/$link&gt;&lt;/li&gt;
+    &lt;/$list&gt;
+  &lt;/ul&gt;
+&lt;li&gt;''Explorer's Guide to Wildemount''&lt;/li&gt;
+  &lt;ul&gt;
+    &lt;$list filter=&quot;[tag[$race$]tag[Subrace]tag[WGE]sort[title]]&quot; emptyMessage=&quot;&lt;li&gt;No subraces&lt;/li&gt;&quot;&gt;
+      &lt;li&gt;&lt;$link to=&lt;&lt;currentTiddler&gt;&gt; &gt;&lt;&lt;currentTiddler&gt;&gt;&lt;/$link&gt;&lt;/li&gt;
+    &lt;/$list&gt;
+  &lt;/ul&gt;
+&lt;li&gt;''Volo's Guide to Monsters''&lt;/li&gt;
+  &lt;ul&gt;
+    &lt;$list filter=&quot;[tag[$race$]tag[Subrace]tag[Volo]sort[title]]&quot; emptyMessage=&quot;&lt;li&gt;No subraces&lt;/li&gt;&quot;&gt;
+      &lt;li&gt;&lt;$link to=&lt;&lt;currentTiddler&gt;&gt; &gt;&lt;&lt;currentTiddler&gt;&gt;&lt;/$link&gt;&lt;/li&gt;
+    &lt;/$list&gt;
+  &lt;/ul&gt;
+&lt;li&gt;''Mordenkainen's Tome of Foes''&lt;/li&gt;
+  &lt;ul&gt;
+    &lt;$list filter=&quot;[tag[$race$]tag[Subrace]tag[MToF]sort[title]]&quot; emptyMessage=&quot;&lt;li&gt;No subraces&lt;/li&gt;&quot;&gt;
+      &lt;li&gt;&lt;$link to=&lt;&lt;currentTiddler&gt;&gt; &gt;&lt;&lt;currentTiddler&gt;&gt;&lt;/$link&gt;&lt;/li&gt;
+    &lt;/$list&gt;
+  &lt;/ul&gt;
+&lt;li&gt;''Non-AL Legal''&lt;/li&gt;
+  &lt;ul&gt;
+    &lt;$list filter=&quot;[tag[$race$]tag[Subrace]tag[Non-AL]sort[title]]&quot; emptyMessage=&quot;&lt;li&gt;No subraces&lt;/li&gt;&quot;&gt;
+      &lt;li&gt;&lt;$link to=&lt;&lt;currentTiddler&gt;&gt; &gt;&lt;&lt;currentTiddler&gt;&gt;&lt;/$link&gt;&lt;/li&gt;
+    &lt;/$list&gt;
+  &lt;/ul&gt;
+&lt;/ul&gt;
+\end
+
+&quot;&quot;&quot;
+''&amp;lt;&amp;lt;subclasses'' //class//''&amp;gt;&amp;gt;'' - List subclasses, grouped by source manual
+''&amp;lt;&amp;lt;subraces'' //race//''&amp;gt;&amp;gt;'' - List subraces, grouped by source manual
+&quot;&quot;&quot;</pre>
+</div>
 <div created="20190529210615508" modified="20190529210625561" tags="Condition" title="Charmed">
 <pre>* A charmed creature can't attack the charmer or target the charmer with harmful abilities or magical effects.
 * The charmer has advantage on any ability check to interact socially with the creature.</pre>
@@ -11895,6 +12495,85 @@ There are three degrees of cover. If a target is behind multiple sources of cove
 
 {{Hiding}}
 
+</pre>
+</div>
+<div bite_dmg1="2,4 = 6" bite_dmg2="1,2,4 = 7" bite_tohit="2,6 = 8" bite_tohit1="3,6 = 9" bite_tohit2="3,6 = 9" claw_dmg1="6,2 = 8" claw_dmg2="3 = 3" claw_tohit1="13,7 = 20" claw_tohit2="8,7 = 15" created="20190405080147886" list="" modified="20210204131034577" tags="Macro $:/tags/Macro" title="D&amp;D Macros">
+<pre>\define ability(label, value, modifier, saving)
+&lt;table style=&quot;width: 100px;&quot;&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot; align=&quot;center&quot; style=&quot;width: 75px; height: 78px;&quot;&gt;$label$&lt;br/&gt;&lt;div style=&quot;font-size:x-large; font-weight: bold; width: 1.5em; height: 1.5em; padding-top: 0.3em;&quot;&gt;$value$&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;center&quot;&gt;Mod&lt;/td&gt;&lt;td align=&quot;center&quot;&gt;$modifier$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;center&quot;&gt;Save&lt;/td&gt;&lt;td align=&quot;center&quot;&gt;$saving$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+\end
+
+\define ability-value(label, value)
+&lt;$macrocall $name=&quot;ability&quot; label=$label$ value=$value$ modifier={{Modifiers##$value$}} saving={{Modifiers##$value$}} /&gt;
+\end
+
+\define ability-field(label, field)
+&lt;$macrocall $name=&quot;ability-value&quot; label=$label$ value={{$field$}} /&gt;
+\end
+
+\define stat(label1, value, label2, class=&quot;&quot;)
+&lt;table style=&quot;width: 100px; height: 100px; margin: 0px;&quot; class=&quot;$class$&quot;&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: center; vertical-align: middle; height: 22px; border: none; font-size: 90%;&quot;&gt;$label1$&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: center; vertical-align: middle; height: 31px; border: none; font-size: x-large;&quot;&gt;$value$&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: center; vertical-align: middle; height: 22px; border: none; font-size: 90%;&quot;&gt;$label2$&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+\end
+
+\define box(field)
+&lt;$checkbox field=&quot;$field$&quot; checked=&quot;Used&quot; unchecked=&quot;&quot; class=&quot;box&quot; /&gt;
+\end
+
+\define skill(level)
+&lt;$reveal type=&quot;match&quot; default=&quot;0&quot; text=&quot;$level$&quot;&gt;&amp;#9675;&amp;#9675;&lt;/$reveal&gt;&lt;$reveal type=&quot;match&quot; default=&quot;1&quot; text=&quot;$level$&quot;&gt;&amp;#9673;&amp;#9675;&lt;/$reveal&gt;&lt;$reveal type=&quot;match&quot; default=&quot;2&quot; text=&quot;$level$&quot;&gt;&amp;#9673;&amp;#9673;&lt;/$reveal&gt;
+\end
+
+\define diceroll(title dice field)
+&lt;table&gt;&lt;tr&gt;&lt;th style=&quot;padding: 0;&quot; colspan=&quot;2&quot;&gt;$title$&lt;/th&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;padding: 0;&quot; align=&quot;center&quot;&gt;&lt;$button&gt;
+&lt;$action-dice $dice=&quot;$dice$&quot; $field=&quot;$field$&quot; /&gt;
+$dice$
+&lt;/$button&gt;&lt;/td&gt;&lt;td style=&quot;padding: 0px 5px 1px 5px;&quot;&gt;&lt;$view field=&quot;$field$&quot; class=&quot;dice&quot; /&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+\end
+
+\define dicerollv(title dice field)
+&lt;table&gt;&lt;tr&gt;&lt;th style=&quot;padding: 0;&quot; colspan=&quot;2&quot;&gt;$title$&lt;/th&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style=&quot;padding: 0;&quot; align=&quot;center&quot;&gt;&lt;$button&gt;
+&lt;$action-dice $dice=&quot;$dice$&quot; $field=&quot;$field$&quot; $verbose=1 /&gt;
+$dice$
+&lt;/$button&gt;&lt;/td&gt;&lt;td style=&quot;padding: 0px 5px 1px 5px;&quot;&gt;&lt;$view field=&quot;$field$&quot; class=&quot;dice&quot; /&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+\end
+
+\define attack(prefix name damage_type tohit damage info)
+&lt;tr&gt;&lt;th colspan=&quot;4&quot;&gt;Deprecated function&lt;/th&gt;&lt;/tr&gt;
+\end
+
+\define attack2(prefix name tohit damage1 damage2 info)
+&lt;tr&gt;&lt;th colspan=&quot;4&quot;&gt;Deprecated function&lt;/th&gt;&lt;/tr&gt;
+\end
+
+\define dc(prefix name damage_type dc damage info)
+&lt;tr&gt;&lt;th colspan=&quot;4&quot;&gt;Deprecated function&lt;/th&gt;&lt;/tr&gt;
+\end
+
+&quot;&quot;&quot;
+''&amp;lt;&amp;lt;ability'' //label// //value// //modifier// //saving_throw//''&amp;gt;&amp;gt;'' - Display a single character ability score
+''&amp;lt;&amp;lt;ability-value'' //label// //value//''&amp;gt;&amp;gt;'' - Display a single character ability score, modifiers are automatically calculated from value
+''&amp;lt;&amp;lt;ability-field'' //label// //field//''&amp;gt;&amp;gt;'' - Display a single character ability score, with value is stored in a tiddler field
+''&amp;lt;&amp;lt;statistic'' //top_label// //value// //bottom_label// //stylesheet class//''&amp;gt;&amp;gt;'' - Display a single character statistic
+''&amp;lt;&amp;lt;box'' //field//''&amp;gt;&amp;gt;'' - Create a checkbox field
+''&amp;lt;&amp;lt;skill'' //proficiency_level//''&amp;gt;&amp;gt;'' - &lt;&lt;skill 1&gt;&gt;
+''&amp;lt;&amp;lt;diceroll'' //title 1d6 field//''&amp;gt;&amp;gt;'' - Roll dice 
+''&amp;lt;&amp;lt;dicerollv'' //title 3d6 field//''&amp;gt;&amp;gt;'' - Roll dice, with detailed results
+''&amp;lt;&amp;lt;attack'' //name damage_type tohit dmg_dice field_prefix info//''&amp;gt;&amp;gt;'' - Roll attack dice
+''&amp;lt;&amp;lt;dc'' //name damage_type dc dmg_dice field_prefix info//''&amp;gt;&amp;gt;'' - Roll saving throw attack damage
+&quot;&quot;&quot;
 </pre>
 </div>
 <div created="20190609060137944" list="" modified="20210720095146991" tags="Stylesheet $:/tags/Stylesheet" title="D&amp;D Stylesheet" type="text/vnd.tiddlywiki">
@@ -12523,6 +13202,37 @@ You start with the following equipment, in addition to the equipment granted by 
 <div created="20190721233413971" modified="20190721233415571" tags="Image" title="fighter.png" type="image/png">
 <pre>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</pre>
 </div>
+<div created="20210403070804717" modified="20210808132400435" tags="Macro $:/tags/Macro" title="Fold Macro">
+<pre>\define fold(tiddler)
+&lt;$set name=&quot;controller&quot; value=&quot;$:/state/$(currentTiddler)$/section/$tiddler$&quot;&gt;
+
+&lt;div style=&quot;width: 100%&quot;&gt;
+&lt;$reveal type=&quot;nomatch&quot; state=&lt;&lt;controller&gt;&gt; text=&quot;open&quot;&gt;
+  &lt;$button class=&quot;tc-btn-invisible&quot; set=&lt;&lt;controller&gt;&gt; setTo=&quot;open&quot;&gt;
+    &lt;span class=&quot;fold&quot;&gt;&amp;#707; &lt;$transclude tiddler=&quot;$tiddler$&quot; field=&quot;caption&quot;&gt;&lt;$view tiddler=&quot;$tiddler$&quot; field=&quot;title&quot; /&gt;&lt;/$transclude&gt;&lt;/span&gt;
+  &lt;/$button&gt;
+&lt;/$reveal&gt;&lt;$reveal type=&quot;match&quot; state=&lt;&lt;controller&gt;&gt; text=&quot;open&quot;&gt;
+  &lt;$button class=&quot;tc-btn-invisible&quot; set=&lt;&lt;controller&gt;&gt; setTo=&quot;close&quot;&gt;
+    &lt;span class=&quot;unfold&quot;&gt;&amp;#709; &lt;$transclude tiddler=&quot;$tiddler$&quot; field=&quot;caption&quot;&gt;&lt;$view tiddler=&quot;$tiddler$&quot; field=&quot;title&quot; /&gt;&lt;/$transclude&gt;&lt;/span&gt;
+  &lt;/$button&gt;&lt;/$reveal&gt;&lt;span style=&quot;float: right;&quot;&gt;[[[ Open ]|$tiddler$]]&lt;/span&gt;&lt;/div&gt;
+
+&lt;$reveal type=&quot;match&quot; state=&lt;&lt;controller&gt;&gt; text=&quot;open&quot;&gt;
+&lt;$transclude tiddler=&quot;$tiddler$&quot; mode=&quot;block&quot;/&gt;
+
+&lt;/$reveal&gt;
+&lt;/$set&gt;
+\end
+
+---
+
+&amp;lt;&amp;lt;''fold'' //tiddler//&amp;gt;&amp;gt;
+
+&lt;&lt;fold &quot;Kobold&quot;&gt;&gt;
+&lt;&lt;fold &quot;Kenku (Monster)&quot;&gt;&gt;
+&lt;&lt;fold &quot;Spell Scroll Mishap&quot;&gt;&gt;
+
+</pre>
+</div>
 <div created="20190529210822869" modified="20190529210838106" tags="Condition" title="Frightened">
 <pre>* A frightened creature has disadvantage on ability checks and attack rolls while the source of its fear is within line of sight.
 * The creature can't willingly move closer to the source of its fear.</pre>
@@ -12554,6 +13264,53 @@ The target of your grapple must be no more than one size larger than you, and it
 </div>
 <div caption="Hardcovers" created="20210205030955348" modified="20210720095516031" tags="Campaign" title="Hardcover">
 <pre>&lt;div class=&quot;gallery&quot;&gt;&lt;$list filter=&quot;[tag[Adventure]tag[Hardcover]sort[published]]&quot;&gt;{{||LogoTemplate}}&lt;/$list&gt;&lt;/div&gt;
+</pre>
+</div>
+<div caption="hash.js" created="20201210083328102" modified="20210110123148710" module-type="macro" tags="Javascript" title="hash.js" type="application/javascript">
+<pre>/*\
+title: hash.js
+type: application/javascript
+module-type: macro
+A hash generating macro for Tiddlywiki
+\*/
+(function() {
+
+    /*jslint node: true, browser: true */
+    /*global $tw: false */
+    &quot;use strict&quot;;
+
+    exports.name = &quot;hash&quot;;
+
+    exports.params = [{
+            name: &quot;text&quot;,
+            default: &quot;&quot;
+        }
+    ];
+
+    /*
+    Run the macro. Make sure it accepts the parameters you have defined above.
+    */
+    exports.run = function(text) {
+        try {
+            var theString = String(text);
+            var hashcode = 0;
+            var i = 0;
+            var code = 0;
+            
+            for (i = 0; i &lt; theString.length; i++) {
+                code = theString.charCodeAt(i);
+                hashcode  = ((hashcode &lt;&lt; 5) - hashcode) + code;
+                hashcode |= 0; // Convert to 32bit integer
+            }
+            
+            return Math.abs(hashcode).toString(16);
+        } catch (err) {
+            console.error(err.stack)
+            return &quot;(ERROR: &quot; + err.message + &quot;) &quot;;
+        }
+    };
+
+})();
 </pre>
 </div>
 <div created="20190720224859688" modified="20210209142324396" tags="Obscurement" title="Heavily Obscured">
@@ -12595,6 +13352,9 @@ Clear Rolls
 &lt;/$button&gt;
 </pre>
 </div>
+<div created="20190722013846138" modified="20200222043526569" tags="Template" title="IconLinkTemplate">
+<pre>&lt;div align=&quot;center&quot;&gt;&lt;$link to={{!!title}}&gt;&lt;$list filter=&quot;[all[current]has[icon]]&quot;&gt;&lt;$image source={{!!icon}} width=100 /&gt;&lt;br/&gt;&lt;/$list&gt;&lt;$list filter=&quot;[all[current]has[caption]]&quot;&gt;&lt;$view field=caption /&gt;&lt;/$list&gt;&lt;$list filter=&quot;[all[current]!has[caption]]&quot;&gt;&lt;$view field=title /&gt;&lt;/$list&gt;&lt;/$link&gt;&lt;$list filter=&quot;[all[current]has[level]]&quot;&gt;&lt;br/&gt;//level &lt;$view field=level /&gt;//&lt;/$list&gt;&lt;/div&gt;</pre>
+</div>
 <div created="20210809053643835" modified="20210809054142624" tags="TiddlyWiki" title="Image">
 <pre>&lt;style&gt;
 .my-gallery svg {
@@ -12616,6 +13376,18 @@ margin: 1em;
 </div>
 <div created="20190529210936573" modified="20190529210946274" tags="Condition" title="Incapacitated">
 <pre>An incapacitated creature can't take actions or reactions.</pre>
+</div>
+<div created="20201210075323019" modified="20201210083202243" tags="Template $:/tags/ViewTemplate" title="IndexViewTemplate">
+<pre>&lt;$list filter=&quot;[all[current]tag[Index]]&quot;&gt;
+
+&lt;hr/&gt;
+&lt;h2&gt;Index&lt;/h2&gt;
+&lt;div class=&quot;tc-table-of-contents&quot;&gt;
+&lt;$macrocall $name=&quot;toc-selective-expandable&quot; tag=&lt;&lt;currentTiddler&gt;&gt; sort=&quot;sort[title]&quot; /&gt;
+&lt;/div&gt;
+&lt;hr/&gt;
+&lt;/$list&gt;
+</pre>
 </div>
 <div created="20190529210953500" modified="20210213095348760" tags="Condition" title="Invisible">
 <pre>* An invisible creature is impossible to see without the aid of magic or a special sense. For the purpose of hiding, the creature is [[Heavily Obscured]]. The creature's location can be detected by any noise it makes or any tracks it leaves.
@@ -12703,6 +13475,9 @@ Clear Rolls
 
 </pre>
 </div>
+<div caption="Link" created="20200705133217801" modified="20200705133225789" tags="Template" title="Link">
+<pre>&lt;strong&gt;&lt;$link to={{!!title}}&gt;&lt;$transclude field=&quot;caption&quot;&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$transclude&gt;&lt;/$link&gt;&lt;/strong&gt;</pre>
+</div>
 <div created="20210720094232281" modified="20210720095729788" tags="Template" title="LogoTemplate">
 <pre>&lt;div style=&quot;text-align: center; width:100px; padding: 5px;&quot;&gt;&lt;$link to={{!!title}}&gt;&lt;$list filter=&quot;[all[current]has[icon]]&quot;&gt;&lt;$image source={{!!icon}} width=100 /&gt;&lt;br/&gt;&lt;/$list&gt;&lt;$list filter=&quot;[all[current]has[caption]]&quot;&gt;&lt;$view field=caption /&gt;&lt;/$list&gt;&lt;$list filter=&quot;[all[current]!has[caption]]&quot;&gt;&lt;$view field=title /&gt;&lt;/$list&gt;&lt;/$link&gt;&lt;$list filter=&quot;[all[current]has[level]]&quot;&gt;&lt;br/&gt;//level &lt;$view field=level /&gt;//&lt;/$list&gt;&lt;/div&gt;</pre>
 </div>
@@ -12722,6 +13497,452 @@ Some individuals see little point in fighting the curse and accept what they are
 <pre>&lt;div class=&quot;gallery&quot;&gt;&lt;$list filter=&quot;[tag[MainPage]sort[order]]&quot;&gt;{{||LogoTemplate}}&lt;/$list&gt;&lt;/div&gt;
 
 &lt;&lt;htabs &quot;[[Character]] [[Hardcover]] [[Class]] [[Adventurers League DM]] [[AdvancedSearch]]&quot; Character&gt;&gt;
+</pre>
+</div>
+<div caption="Marks Macro" created="20210117013451313" modified="20210314145433691" tags="$:/tags/Macro Macro" title="MarkMacro" type="text/vnd.tiddlywiki">
+<pre>\define mark(label, data)
+\whitespace trim
+  &lt;div class=&quot;mark&quot;&gt;
+    &lt;span class=&quot;label&quot;&gt;$label$&lt;/span&gt;
+    &lt;span class=&quot;data&quot;&gt;$data$&lt;/span&gt;
+  &lt;/div&gt;
+\end
+
+\define mark-dice(icon, color, dice)
+\whitespace trim
+&lt;div class=&quot;mark&quot;&gt;
+  &lt;span class=&quot;label clean $color$&quot;&gt;&lt;span class=&quot;icon-$icon$&quot;/&gt;&lt;/span&gt;
+  &lt;span class=&quot;data clean $color$&quot;&gt;&lt;$macrocall $name=&quot;dnd.average&quot; expr=&quot;$dice$&quot;/&gt;&lt;/span&gt;
+&lt;/div&gt;
+\end
+
+\define mark-icon(icon, label, value)
+\whitespace trim
+&lt;div class=&quot;mark&quot; title=&quot;$icon$ $value$&quot;&gt;
+  &lt;span class=&quot;label&quot;&gt;&lt;span class=&quot;icon-$icon$&quot;&gt;$label$&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;data &quot;&gt;$value$&lt;/span&gt;
+&lt;/div&gt;
+\end
+
+\define entity(icon, label, value)
+\whitespace trim
+&lt;div class=&quot;mark&quot; title=&quot;$icon$ $value$&quot;&gt;
+  &lt;span class=&quot;label entity clean&quot;&gt;&lt;span class=&quot;icon-$icon$&quot;&gt;$label$&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;data entity clean&quot;&gt;$value$&lt;/span&gt;
+&lt;/div&gt;
+\end
+
+\define entity-range(icon, label, value)
+\whitespace trim
+&lt;div class=&quot;mark&quot; title=&quot;$icon$ $value$&quot;&gt;
+  &lt;span class=&quot;label entity clean&quot;&gt;&lt;span class=&quot;icon-$icon$&quot;&gt;$label$&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;data entity clean&quot;&gt;&lt;$macrocall $name=&quot;dnd.range&quot; range=&quot;$value$&quot;/&gt;&lt;/span&gt;
+&lt;/div&gt;
+\end
+
+\define damage(dice)
+&lt;$macrocall $name=mark-dice icon=hp-empty color=negative dice=&quot;$dice$&quot;/&gt;
+\end
+
+\define bludgeoning(dice)
+&lt;$macrocall $name=mark-dice icon=bludgeoning color=negative dice=&quot;$dice$&quot;/&gt;
+\end
+
+\define piercing(dice)
+&lt;$macrocall $name=mark-dice icon=piercing color=negative dice=&quot;$dice$&quot;/&gt;
+\end
+
+\define slashing(dice)
+&lt;$macrocall $name=mark-dice icon=slashing color=negative dice=&quot;$dice$&quot;/&gt;
+\end
+
+\define acid(dice)
+&lt;$macrocall $name=mark-dice icon=acid color=negative dice=&quot;$dice$&quot;/&gt;
+\end
+
+\define cold(dice)
+&lt;$macrocall $name=mark-dice icon=cold color=negative dice=&quot;$dice$&quot;/&gt;
+\end
+
+\define fire(dice)
+&lt;$macrocall $name=mark-dice icon=fire color=negative dice=&quot;$dice$&quot;/&gt;
+\end
+
+\define force(dice)
+&lt;$macrocall $name=mark-dice icon=force color=negative dice=&quot;$dice$&quot;/&gt;
+\end
+
+\define lightning(dice)
+&lt;$macrocall $name=mark-dice  icon=lightning color=negative dice=&quot;$dice$&quot;/&gt;
+\end
+
+\define necrotic(dice)
+&lt;$macrocall $name=mark-dice icon=necrotic color=negative dice=&quot;$dice$&quot;/&gt;
+\end
+
+\define poison(dice)
+&lt;$macrocall $name=mark-dice icon=poison color=negative dice=&quot;$dice$&quot;/&gt;
+\end
+
+\define psychic(dice)
+&lt;$macrocall $name=mark-dice icon=psychic color=negative dice=&quot;$dice$&quot;/&gt;
+\end
+
+\define radiant(dice)
+&lt;$macrocall $name=mark-dice icon=radiant color=negative dice=&quot;$dice$&quot;/&gt;
+\end
+
+\define thunder(dice)
+&lt;$macrocall $name=mark-dice icon=thunder color=negative dice=&quot;$dice$&quot;/&gt;
+\end
+
+\define heal(dice)
+&lt;$macrocall $name=mark-dice icon=hp-full color=positive dice=&quot;$dice$&quot;/&gt;
+\end
+
+\define circle(value)
+&lt;$macrocall $name=entity-range icon=circle value=&quot;$value$&quot;/&gt;
+\end
+
+\define square(value)
+&lt;$macrocall $name=entity-range icon=square value=&quot;$value$&quot;/&gt;
+\end
+
+\define sphere(value)
+&lt;$macrocall $name=entity-range icon=sphere value=&quot;$value$&quot;/&gt;
+\end
+
+\define cube(value)
+&lt;$macrocall $name=entity-range icon=cube value=&quot;$value$&quot;/&gt;
+\end
+
+\define cone(value)
+&lt;$macrocall $name=entity-range icon=cone value=&quot;$value$&quot;/&gt;
+\end
+
+\define cylinder(value)
+&lt;$macrocall $name=entity-range icon=cylinder value=&quot;$value$&quot;/&gt;
+\end
+
+\define line(value)
+&lt;$macrocall $name=entity-range icon=line value=&quot;$value$&quot;/&gt;
+\end
+
+\define wall(value)
+&lt;$macrocall $name=entity-range icon=wall value=&quot;$value$&quot;/&gt;
+\end
+
+\define distance(value)
+&lt;$macrocall $name=entity-range icon=distance value=&quot;$value$&quot;/&gt;
+\end
+
+\define range(value)
+&lt;$macrocall $name=entity-range icon=distance value=&quot;$value$&quot;/&gt;
+\end
+
+\define reach(value)
+&lt;$macrocall $name=entity-range icon=distance value=&quot;$value$&quot;/&gt;
+\end
+
+\define per(value)
+&lt;$macrocall $name=entity icon=person value=&quot;$value$&quot;/&gt;
+\end
+
+\define loc(value)
+&lt;$macrocall $name=entity icon=location value=&quot;$value$&quot;/&gt;
+\end
+
+\define org(value)
+&lt;$macrocall $name=entity icon=organization value=&quot;$value$&quot;/&gt;
+\end
+
+\define time(value)
+&lt;$macrocall $name=entity icon=time value=&quot;$value$&quot;/&gt;
+\end
+
+\define light(value)
+&lt;$macrocall $name=entity icon=light value=&quot;$value$&quot;/&gt;
+\end
+
+\define bright(value)
+\whitespace trim
+&lt;div class=&quot;mark&quot; title=&quot;bright $value$&quot;&gt;
+  &lt;span class=&quot;label entity clean&quot;&gt;&lt;span class=&quot;icon-light&quot;/&gt;&lt;/span&gt;
+  &lt;span class=&quot;data entity clean&quot;&gt;Bright&amp;nbsp;&lt;$macrocall $name=&quot;dnd.range&quot; range=&quot;$value$&quot;/&gt;&lt;/span&gt;
+&lt;/div&gt;
+\end
+
+\define dim(value)
+\whitespace trim
+&lt;div class=&quot;mark&quot; title=&quot;dim $value$&quot;&gt;
+  &lt;span class=&quot;label entity clean&quot;&gt;&lt;span class=&quot;icon-light&quot;/&gt;&lt;/span&gt;
+  &lt;span class=&quot;data entity clean&quot;&gt;Dim&amp;nbsp;&lt;$macrocall $name=&quot;dnd.range&quot; range=&quot;$value$&quot;/&gt;&lt;/span&gt;
+&lt;/div&gt;
+\end
+
+\define darkness(value)
+\whitespace trim
+&lt;div class=&quot;mark&quot; title=&quot;darkness $value$&quot;&gt;
+  &lt;span class=&quot;label entity clean&quot;&gt;&lt;span class=&quot;icon-light&quot;/&gt;&lt;/span&gt;
+  &lt;span class=&quot;data entity clean&quot;&gt;Darkness&amp;nbsp;&lt;$macrocall $name=&quot;dnd.range&quot; range=&quot;$value$&quot;/&gt;&lt;/span&gt;
+&lt;/div&gt;
+\end
+
+\define mob(monster)
+&lt;$macrocall $name=entity icon=monster label=&quot;{{$monster$||Link}}&quot;/&gt;
+\end
+
+\define loot(value)
+&lt;$macrocall $name=entity icon=loot value=&quot;$value$&quot;/&gt;
+\end
+
+\define book(value)
+&lt;$macrocall $name=entity icon=book value=&quot;$value$&quot;/&gt;
+\end
+
+\define spellbook(value)
+&lt;$macrocall $name=entity icon=spellbook value=&quot;$value$&quot;/&gt;
+\end
+
+\define potion(value)
+&lt;$macrocall $name=entity icon=potion value=&quot;$value$&quot;/&gt;
+\end
+
+\define scroll(value)
+&lt;$macrocall $name=entity icon=scroll value=&quot;$value$&quot;/&gt;
+\end
+
+\define roll(value)
+&lt;$macrocall $name=entity icon=roll-dice value=&quot;$value$&quot;/&gt;
+\end
+
+\define ac(value)
+&lt;$macrocall $name=entity icon=ac value=&quot;$value$&quot;/&gt;
+\end
+
+\define hp(value)
+&lt;$macrocall $name=entity icon=hp-full value=&quot;$value$&quot;/&gt;
+\end
+
+\define temp-hp(value)
+&lt;$macrocall $name=entity icon=hp-temp value=&quot;$value$&quot;/&gt;
+\end
+
+\define terrain(value)
+&lt;$macrocall $name=entity icon=terrain value=&quot;$value$&quot;/&gt;
+\end
+
+\define difficult()
+&lt;$macrocall $name=entity icon=terrain value=&quot;Difficult&quot;/&gt;
+\end
+
+\define melee(weapon, tohit)
+&lt;$macrocall $name=mark-icon icon=melee label=&quot;&amp;nbsp;$weapon$&quot; value=&quot;$tohit$&quot;/&gt;
+\end
+
+\define ranged(weapon, tohit)
+&lt;$macrocall $name=mark-icon icon=ranged label=&quot;&amp;nbsp;$weapon$&quot; value=&quot;$tohit$&quot;/&gt;
+\end
+
+\define casted(spell, tohit)
+&lt;$macrocall $name=mark-icon icon=spell label=&quot;&amp;nbsp;$spell$&quot; value=&quot;$tohit$&quot;/&gt;
+\end
+
+\define save(label, value)
+\whitespace trim
+&lt;div class=&quot;mark&quot; title=&quot;saving-throw $label$ $value$&quot;&gt;
+  &lt;span class=&quot;label save&quot;&gt;&lt;span class=&quot;icon-saving-throw&quot;/&gt;$label$&lt;/span&gt;
+  &lt;span class=&quot;data value&quot;&gt;$value$&lt;/span&gt;
+&lt;/div&gt;
+\end
+
+\define skillcheck(label, value)
+\whitespace trim
+&lt;div class=&quot;mark&quot; title=&quot;ability-check $label$ $value$&quot;&gt;
+  &lt;span class=&quot;label skill&quot;&gt;&lt;span class=&quot;icon-skill-check&quot;/&gt;$label$&lt;/span&gt;
+  &lt;span class=&quot;data value&quot;&gt;$value$&lt;/span&gt;
+&lt;/div&gt;
+\end
+
+\define acrobatics(dc)
+&lt;&lt;skillcheck &quot;Dexterity (Acrobatics)&quot; $dc$&gt;&gt;
+\end
+
+\define animalhandling(dc)
+&lt;&lt;skillcheck &quot;Wisdom (Animal Handling)&quot; $dc$&gt;&gt;
+\end
+
+\define arcana(dc)
+&lt;&lt;skillcheck &quot;Intelligence (Arcana)&quot; $dc$&gt;&gt;
+\end
+
+\define athletics(dc)
+&lt;&lt;skillcheck &quot;Strength (Athletics)&quot; $dc$&gt;&gt;
+\end
+
+\define deception(dc)
+&lt;&lt;skillcheck &quot;Charisma (Deception)&quot; $dc$&gt;&gt;
+\end
+
+\define history(dc)
+&lt;&lt;skillcheck &quot;Intelligence (History)&quot; $dc$&gt;&gt;
+\end
+
+\define insight(dc)
+&lt;&lt;skillcheck &quot;Wisdom (Insight)&quot; $dc$&gt;&gt;
+\end
+
+\define intimidation(dc)
+&lt;&lt;skillcheck &quot;Charisma (Intimidation)&quot; $dc$&gt;&gt;
+\end
+
+\define investigation(dc)
+&lt;&lt;skillcheck &quot;Intelligence (Investigation)&quot; $dc$&gt;&gt;
+\end
+
+\define medicine(dc)
+&lt;&lt;skillcheck &quot;Wisdom (Medicine)&quot; $dc$&gt;&gt;
+\end
+
+\define nature(dc)
+&lt;&lt;skillcheck &quot;Intelligence (Nature)&quot; $dc$&gt;&gt;
+\end
+
+\define perception(dc)
+&lt;&lt;skillcheck &quot;Wisdom (Perception)&quot; $dc$&gt;&gt;
+\end
+
+\define pp(dc)
+&lt;&lt;skillcheck &quot;Passive Perception&quot; $dc$&gt;&gt;
+\end
+
+\define performance(dc)
+&lt;&lt;skillcheck &quot;Charisma (Performance)&quot; $dc$&gt;&gt;
+\end
+
+\define persuasion(dc)
+&lt;&lt;skillcheck &quot;Charisma (Persuasion)&quot; $dc$&gt;&gt;
+\end
+
+\define religion(dc)
+&lt;&lt;skillcheck &quot;Intelligence (Religion)&quot; $dc$&gt;&gt;
+\end
+
+\define sleightofhand(dc)
+&lt;&lt;skillcheck &quot;Dexterity (Sleight of Hand)&quot; $dc$&gt;&gt;
+\end
+
+\define stealth(dc)
+&lt;&lt;skillcheck &quot;Dexterity (Stealth)&quot; $dc$&gt;&gt;
+\end
+
+\define survival(dc)
+&lt;&lt;skillcheck &quot;Wisdom (Survival)&quot; $dc$&gt;&gt;
+\end
+
+\define thievestools(dc)
+&lt;&lt;skillcheck &quot;Dexterity (Thieves' Tools)&quot; $dc$&gt;&gt;
+\end
+
+\define target()
+&lt;span class=&quot;icon-target entity-tag&quot; title=&quot;target&quot;/&gt;
+\end
+
+\define self()
+&lt;span class=&quot;icon-self entity-tag&quot; title=&quot;self&quot;/&gt;
+\end
+
+\define ritual()
+&lt;span class=&quot;icon-ritual entity-tag&quot; title=&quot;ritual&quot;/&gt;
+\end
+
+\define concentration()
+&lt;span class=&quot;icon-concentration entity-tag&quot; title=&quot;concentration&quot;/&gt;
+\end
+
+\define upcast()
+&lt;span class=&quot;icon-upcast entity-tag&quot; title=&quot;upcast&quot;/&gt;
+\end
+
+\define touch()
+&lt;span class=&quot;icon-touch entity-tag&quot; title=&quot;touch&quot;/&gt;
+\end
+
+\define instant()
+&lt;span class=&quot;icon-instantaneous entity-tag&quot; title=&quot;instantaneous&quot;/&gt;
+\end
+
+\define na()
+&lt;span class=&quot;icon-not-applicable entity-tag&quot; title=&quot;not-applicable&quot;/&gt;
+\end
+
+\define halved()
+&lt;span class=&quot;icon-hp-half entity-tag&quot;  title=&quot;damage-halved&quot;/&gt;
+\end
+
+\define advantage()
+&lt;span class=&quot;icon-advantage entity-tag&quot; title=&quot;advantage&quot;/&gt;
+\end
+
+\define disadvantage()
+&lt;span class=&quot;icon-disadvantage entity-tag&quot; title=&quot;disadvantage&quot;/&gt;
+\end
+
+\define action()
+&lt;span class=&quot;icon-action&quot; title=&quot;action&quot;/&gt;
+\end
+
+\define ba()
+&lt;span class=&quot;icon-bonus-action&quot; title=&quot;bonus-action&quot;/&gt;
+\end
+
+\define reaction()
+&lt;span class=&quot;icon-reaction&quot; title=&quot;reaction&quot;/&gt;
+\end
+
+\define round(value)
+&lt;$macrocall $name=entity icon=round value=&quot;$value$&quot;/&gt;
+\end
+
+\define turn(value)
+&lt;$macrocall $name=entity icon=round value=&quot;$value$&quot;/&gt;
+\end
+
+\define tick()
+&lt;span class=&quot;icon-tick&quot; title=&quot;pass&quot;/&gt;
+\end
+
+\define cross()
+&lt;span class=&quot;icon-cross&quot; title=&quot;fail&quot;/&gt;
+\end
+
+\define dnd()
+&lt;span class=&quot;icon-dnd&quot; title=&quot;d&amp;d&quot;/&gt;
+\end
+
+\define al()
+&lt;span class=&quot;icon-al&quot; title=&quot;adventurers' league&quot;/&gt;
+\end
+
+\define pass(value)
+\whitespace trim
+&lt;div class=&quot;mark&quot; title=&quot;pass&quot;&gt;
+  &lt;span class=&quot;label pass&quot;&gt;''&amp;#10003;&amp;nbsp;''&lt;/span&gt;
+  &lt;span class=&quot;data value&quot;&gt;$value$&lt;/span&gt;
+&lt;/div&gt;
+\end
+
+\define fail(value)
+\whitespace trim
+&lt;div class=&quot;mark&quot; title=&quot;fail&quot;&gt;
+  &lt;span class=&quot;label fail&quot;&gt;''&amp;#10005;&amp;nbsp;''&lt;/span&gt;
+  &lt;span class=&quot;data value&quot;&gt;$value$&lt;/span&gt;
+&lt;/div&gt;
+\end
+
+---
+
+{{TestMark}}
 </pre>
 </div>
 <div caption="Mark Settings" created="20210208065714172" modified="20210228120902634" tags="Config" title="MarksConfig" type="">
@@ -13029,6 +14250,40 @@ Clear Rolls
 <div created="20210609111433749" modified="20210609111435625" tags="Image" title="mm.gif" type="image/gif">
 <pre>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</pre>
 </div>
+<div created="20190616082504332" modified="20190616101952142" tags="[[Raw Data]]" title="Modifiers" type="application/x-tiddler-dictionary">
+<pre>1: -5
+2: -4
+3: -4
+4: -3
+5: -3
+6: -2
+7: -2
+8: -1
+9: -1
+10: 0
+11: 0
+12: +1
+13: +1
+14: +2
+15: +2
+16: +3
+17: +3
+18: +4
+19: +4
+20: +5
+21: +5
+22: +6
+23: +6
+24: +7
+25: +7
+26: +8
+27: +8
+28: +9
+29: +9
+30: +10
+
+</pre>
+</div>
 <div created="20190405081525806" icon="monk.png" list="" modified="20191124094636490" tags="PHB TOC-END Class" title="Monk">
 <pre>As a monk, you gain the following class features.
 
@@ -13074,6 +14329,114 @@ You start with the following equipment, in addition to the equipment granted by 
 <div created="20190721233408460" modified="20190721233409484" tags="Image" title="monk.png" type="image/png">
 <pre>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</pre>
 </div>
+<div created="20190727054150576" list="" modified="20210217104537233" tags="Macro $:/tags/Macro" title="Monster Macros" type="text/vnd.tiddlywiki">
+<pre>\define monster-stat(tiddler)
+{{$tiddler$||MonsterViewTemplate}}
+\end
+
+\define monster(tiddler)
+&lt;div style=&quot;width: 500px;&quot;&gt;
+&lt;$macrocall $name=&quot;monster-stat&quot; tiddler=&quot;$tiddler$&quot; /&gt;
+&lt;$transclude tiddler=&quot;$tiddler$&quot; field=text mode=block /&gt;
+&lt;/div&gt;
+\end
+
+\define mobs(tiddlers)
+&lt;&lt;tabs &quot;$tiddlers$&quot; template:MonsterTabTemplate&gt;&gt;
+&lt;hr/&gt;
+//Quick Links:// &lt;&lt;links &quot;$tiddlers$&quot;&gt;&gt;
+\end
+
+\define divider()
+[img[divider.png]]
+\end
+
+&quot;&quot;&quot;
+&amp;lt;&amp;lt;''monster'' //tiddler//&amp;gt;&amp;gt; - Display a complete monster stat block
+&amp;lt;&amp;lt;''monster-stat'' //tiddler//&amp;gt;&amp;gt; - Display a monster stat block without abilities and attack
+&amp;lt;&amp;lt;''mobs'' //tiddlers//&amp;gt;&amp;gt; - Display monsters in a tab panel
+&amp;lt;&amp;lt;''divider''&amp;gt;&amp;gt; - Insert a statblock divider
+&quot;&quot;&quot;
+</pre>
+</div>
+<div created="20210201125122038" list="" list-before="$:/core/ui/EditTemplate/body" modified="20210411042511608" tags="$:/tags/EditTemplate" title="MonsterEditTemplate" type="text/vnd.tiddlywiki">
+<pre>&lt;$list filter=&quot;[all[current]tag[Monster]]&quot;&gt;
+
+|''Name'' |&lt;$edit-text field=caption size=80/&gt;|
+|''Size'' |&lt;$edit-text field=size size=60/&gt;|
+|''Type'' |&lt;$edit-text field=mtype size=60 /&gt;|
+|''Alignment'' |&lt;$edit-text field=alignment size=60/&gt;|
+|''Source'' |&lt;$edit-text field=source size=60/&gt;|
+|[img[divider.png]]|&lt;|
+|''Armor Class'' |&lt;$edit-text field=ac size=8/&gt;|
+|''Armor'' |&lt;$edit-text field=armor size=80/&gt;|
+|''Hitpoints'' |&lt;$edit-text field=hp size=8/&gt;|
+|''Hit Dice'' |&lt;$edit-text field=hitdice size=8/&gt;|
+|''Speed'' |&lt;$edit-text field=speed size=80/&gt;|
+|[img[divider.png]]|&lt;|
+| &lt;div style=&quot;display: flex&quot;&gt;&lt;div style=&quot;width: 60px; text-align: center;&quot;&gt;''STR''&lt;br/&gt;&lt;$edit-text size=3 field=str/&gt;&lt;/div&gt;&lt;div style=&quot;width: 60px; text-align: center;&quot;&gt;''DEX''&lt;br/&gt;&lt;$edit-text size=3 field=dex/&gt;&lt;/div&gt;&lt;div style=&quot;width: 60px; text-align: center;&quot;&gt;''CON''&lt;br/&gt;&lt;$edit-text size=3 field=con/&gt;&lt;/div&gt;&lt;div style=&quot;width: 60px; text-align: center;&quot;&gt;''INT''&lt;br/&gt;&lt;$edit-text size=3 field=int/&gt;&lt;/div&gt;&lt;div style=&quot;width: 60px; text-align: center;&quot;&gt;''WIS''&lt;br/&gt;&lt;$edit-text size=3 field=wis/&gt;&lt;/div&gt;&lt;div style=&quot;width: 60px; text-align: center;&quot;&gt;''CHA''&lt;br/&gt;&lt;$edit-text size=3 field=cha/&gt;&lt;/div&gt;&lt;/div&gt;|&lt;|
+|[img[divider.png]]|&lt;|
+|''Saving Throws'' |&lt;$edit-text field=saving_throw size=80/&gt;|
+|''Skills'' |&lt;$edit-text field=skills size=80/&gt;|
+|''Damage Vulnerabilities'' |&lt;$edit-text field=damage_vulnerability size=80/&gt;|
+|''Damage Resistances'' |&lt;$edit-text field=damage_resistance size=80/&gt;|
+|''Damage Immunities'' |&lt;$edit-text field=damage_immunity size=80/&gt;|
+|''Condition Vulnerabilities'' |&lt;$edit-text field=condition_vulnerability size=80/&gt;|
+|''Condition Immunities'' |&lt;$edit-text field=condition_immunity size=80/&gt;|
+|''Senses'' |&lt;$edit-text field=senses size=80/&gt;|
+|''Languages'' |&lt;$edit-text field=languages size=80/&gt;|
+|''Challenge'' |&lt;$edit-text field=cr size=3/&gt;|
+|''XP'' |&lt;$edit-text field=xp size=12/&gt;|
+|''Proficiency Bonus'' |&lt;$edit-text field=proficiency size=3/&gt;|
+|[img[divider.png]]|&lt;|
+&lt;/$list&gt;</pre>
+</div>
+<div created="20190801024412723" modified="20210217104931429" tags="" title="MonsterTabTemplate">
+<pre>&lt;$list filter=&quot;[&lt;currentTab&gt;tag[Monster]]&quot;&gt;&lt;$macrocall $name=monster tiddler=&lt;&lt;currentTab&gt;&gt; /&gt;&lt;/$list&gt;&lt;$list filter=&quot;[&lt;currentTab&gt;!tag[Monster]]&quot;&gt;&lt;$transclude tiddler=&lt;&lt;currentTab&gt;&gt; field=text mode=block /&gt;&lt;/$list&gt;
+</pre>
+</div>
+<div created="20210203010556588" list-before="$:/core/ui/ViewTemplate/body" modified="20210411042739418" tags="$:/tags/ViewTemplate" title="MonsterViewTemplate" type="text/vnd.tiddlywiki">
+<pre>&lt;$list filter=&quot;[all[current]tag[Monster]]&quot;&gt;
+
+&lt;$list filter=&quot;[all[current]tag[Summoned]]&quot;&gt;
+&lt;div style=&quot;width: 500px;&quot;&gt;
+
+|max top|k
+| !Summoned Creature Parameters |&lt;|
+| !Proficiency Bonus | !Spell Level |
+| &lt;$edit-text field=proficiency/&gt; | &lt;$edit-text field=spell_level/&gt; |
+| !Caster DC | !Caster To-Hit |
+| &lt;$edit-text field=dc/&gt; | &lt;$edit-text field=to-hit/&gt; |
+&lt;/div&gt;&lt;/$list&gt;&lt;div style=&quot;width: 500px;&quot;&gt;&lt;h2&gt;&lt;$transclude field=&quot;caption&quot;&gt;&lt;$view field=&quot;title&quot;/&gt;&lt;/$transclude&gt;&lt;/h2&gt;
+&lt;div style=&quot;text-transform: initial;&quot;&gt;//{{!!size}}, {{!!mtype}}, {{!!alignment}}//&lt;/div&gt;
+[img[divider.png]]
+&lt;div&gt;''Armor Class'' {{!!ac}}&lt;$reveal type=&quot;nomatch&quot; state=&quot;!!armor&quot; text=&quot;&quot;&gt; ({{!!armor}})&lt;/$reveal&gt;&lt;/div&gt;
+&lt;div&gt;''Hitpoints'' {{!!hp}} ({{!!hitdice}})&lt;/div&gt;
+&lt;div&gt;''Speed'' {{!!speed}}&lt;/div&gt;
+[img[divider.png]]
+&lt;div style=&quot;display: flex&quot;&gt;
+ &lt;div style=&quot;width: 60px; text-align: center;&quot;&gt;''STR''&lt;br/&gt;{{!!str}} (&lt;$transclude tiddler=Modifiers index={{!!str}} /&gt;)&lt;/div&gt;
+ &lt;div style=&quot;width: 60px; text-align: center;&quot;&gt;''DEX''&lt;br/&gt;{{!!dex}} (&lt;$transclude tiddler=Modifiers index={{!!dex}} /&gt;)&lt;/div&gt;
+ &lt;div style=&quot;width: 60px; text-align: center;&quot;&gt;''CON''&lt;br/&gt;{{!!con}} (&lt;$transclude tiddler=Modifiers index={{!!con}} /&gt;)&lt;/div&gt;
+ &lt;div style=&quot;width: 60px; text-align: center;&quot;&gt;''INT''&lt;br/&gt;{{!!int}} (&lt;$transclude tiddler=Modifiers index={{!!int}} /&gt;)&lt;/div&gt;
+ &lt;div style=&quot;width: 60px; text-align: center;&quot;&gt;''WIS''&lt;br/&gt;{{!!wis}} (&lt;$transclude tiddler=Modifiers index={{!!wis}} /&gt;)&lt;/div&gt;
+ &lt;div style=&quot;width: 60px; text-align: center;&quot;&gt;''CHA''&lt;br/&gt;{{!!cha}} (&lt;$transclude tiddler=Modifiers index={{!!cha}} /&gt;)&lt;/div&gt;
+&lt;/div&gt;
+[img[divider.png]]
+&lt;$reveal type=&quot;nomatch&quot; state=&quot;!!saving_throw&quot; text=&quot;&quot;&gt;&lt;div&gt;''Saving Throws'' {{!!saving_throw}}&lt;/div&gt;&lt;/$reveal&gt;
+&lt;$reveal type=&quot;nomatch&quot; state=&quot;!!skills&quot; text=&quot;&quot;&gt;&lt;div&gt;''Skills'' {{!!skills}}&lt;/div&gt;&lt;/$reveal&gt;
+&lt;$reveal type=&quot;nomatch&quot; state=&quot;!!damage_vulnerability&quot; text=&quot;&quot;&gt;&lt;div&gt;''Damage Vulnerabilities'' {{!!damage_vulnerability}}&lt;/div&gt;&lt;/$reveal&gt;
+&lt;$reveal type=&quot;nomatch&quot; state=&quot;!!damage_resistance&quot; text=&quot;&quot;&gt;&lt;div&gt;''Damage Resistances'' {{!!damage_resistance}}&lt;/div&gt;&lt;/$reveal&gt;
+&lt;$reveal type=&quot;nomatch&quot; state=&quot;!!damage_immunity&quot; text=&quot;&quot;&gt;&lt;div&gt;''Damage Immunities'' {{!!damage_immunity}}&lt;/div&gt;&lt;/$reveal&gt;
+&lt;$reveal type=&quot;nomatch&quot; state=&quot;!!condition_vulnerability&quot; text=&quot;&quot;&gt;&lt;div&gt;''Condition Vulnerabilities'' {{!!condition_vulnerability}}&lt;/div&gt;&lt;/$reveal&gt;
+&lt;$reveal type=&quot;nomatch&quot; state=&quot;!!condition_immunity&quot; text=&quot;&quot;&gt;&lt;div&gt;''Condition Immunities'' {{!!condition_immunity}}&lt;/div&gt;&lt;/$reveal&gt;
+&lt;$reveal type=&quot;nomatch&quot; state=&quot;!!senses&quot; text=&quot;&quot;&gt;&lt;div&gt;''Senses'' {{!!senses}}&lt;/div&gt;&lt;/$reveal&gt;
+&lt;$reveal type=&quot;nomatch&quot; state=&quot;!!languages&quot; text=&quot;&quot;&gt;&lt;div&gt;''Languages'' {{!!languages}}&lt;/div&gt;&lt;/$reveal&gt;
+&lt;div&gt;''Challenge'' {{!!cr}} ({{!!xp}} XP)&lt;$reveal type=&quot;nomatch&quot; state=&quot;!!proficiency&quot; text=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;''Proficiency Bonus'' {{!!proficiency}}&lt;/$reveal&gt;&lt;/div&gt;
+[img[divider.png]]
+&lt;/div&gt;
+&lt;/$list&gt;</pre>
+</div>
 <div caption="Notes" created="20190410021317846" icon="notes.gif" modified="20210717055312536" order="6" tags="MainPage" title="Note">
 <pre>&lt;&lt;vtabs &quot;[tag[Note]sort[]]&quot;&gt;&gt;</pre>
 </div>
@@ -13086,6 +14449,16 @@ You start with the following equipment, in addition to the equipment granted by 
 |^!{{Lightly Obscured||Link}} |{{Lightly Obscured}} |
 |^!{{Heavily Obscured||Link}} |{{Heavily Obscured}} |
 </pre>
+</div>
+<div caption="Paragraph" created="20200309045722678" modified="20200309045732381" tags="Template" title="P2Template">
+<pre>&lt;h2&gt;&lt;$link to={{!!title}}&gt;&lt;$transclude field=&quot;caption&quot;&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$transclude&gt;&lt;/$link&gt;&lt;/h2&gt;
+
+&lt;$transclude field=&quot;text&quot; mode=&quot;block&quot;/&gt;</pre>
+</div>
+<div caption="Paragraph" created="20200309042809683" modified="20200309045718613" tags="Template" title="P3Template">
+<pre>&lt;h3&gt;&lt;$link to={{!!title}}&gt;&lt;$transclude field=&quot;caption&quot;&gt;&lt;$view field=&quot;title&quot; /&gt;&lt;/$transclude&gt;&lt;/$link&gt;&lt;/h3&gt;
+
+&lt;$transclude field=&quot;text&quot; mode=&quot;block&quot;/&gt;</pre>
 </div>
 <div created="20190405081634989" icon="paladin.png" list="" modified="20191124095020586" tags="TOC-END PHB Class" title="Paladin">
 <pre>As a paladin, you gain the following class features.
@@ -13516,6 +14889,73 @@ Two daggers
 <div created="20190721233501019" modified="20190721233502859" tags="Image" title="sorcerer.png" type="image/png">
 <pre>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</pre>
 </div>
+<div created="20190408004658942" list="" modified="20210317042601761" tags="Macro $:/tags/Macro" title="Spell Macros">
+<pre>\define spell(name)
+!! [[$name$]]
+&quot;&quot;&quot;
+&lt;hr/&gt;//{{$name$!!classes}}// &lt;span style=&quot;float:right&quot;&gt;//Source: {{$name$!!source}}//&lt;/span&gt;&lt;hr/&gt;//Level {{$name$!!level}} {{$name$!!school}}//
+
+''Casting Time'': {{$name$!!casting_time}}
+''Range'': {{$name$!!range}}
+''Components'': {{$name$!!components}}
+''Duration'': &lt;$list filter=&quot;[all[{$name$]get[concentration]] -No&quot;&gt;Concentration, &lt;/$list&gt; {{$name$!!duration}}
+&quot;&quot;&quot;
+
+{{$name$!!text}}
+
+&lt;$list filter=&quot;[all[$name$]get[at_higher_level]]&quot; variable=&quot;&quot;&gt;
+''At Higher Levels'': {{$name$!!at_higher_level}}
+&lt;/$list&gt;
+\end
+
+
+\define spelltable(spells)
+&lt;table class=&quot;max spelltable&quot;&gt;
+&lt;tr&gt;
+&lt;th align=&quot;left&quot;&gt;Spell&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;Level&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;School&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;Casting Time&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;V/S/M&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;Range/Area&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;Duration&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;Meta&lt;/th&gt;
+&lt;/tr&gt;
+&lt;$list filter=&quot;$spells$&quot; template=SpellTableRowTemplate /&gt;
+&lt;/table&gt;
+\end
+
+\define spells(spells, dc:&quot;DC&quot;, to-hit:&quot;to-hit&quot;)
+&lt;table class=&quot;max&quot;&gt;
+&lt;tr&gt;
+&lt;th align=&quot;center&quot;&gt;Cast&lt;/th&gt;
+&lt;th align=&quot;center&quot; colspan=&quot;3&quot;&gt;Spell&lt;/th&gt;
+&lt;th align=&quot;center&quot; rowspan=&quot;2&quot;&gt;Effect&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th align=&quot;center&quot;&gt;VSM&lt;/th&gt;
+&lt;th align=&quot;right&quot;&gt;&lt;&lt;range&gt;&gt;&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;&lt;&lt;target&gt;&gt;&lt;/th&gt;
+&lt;th align=&quot;left&quot;&gt;&lt;&lt;time&gt;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;$set name=dc value=&quot;$dc$&quot;&gt;&lt;$set name=to-hit value=&quot;$to-hit$&quot;&gt;&lt;$list filter=&quot;$spells$&quot; template=SpellSummaryRowTemplate /&gt;&lt;/$set&gt;&lt;/$set&gt;
+&lt;/table&gt;
+\end
+
+&quot;&quot;&quot;
+&amp;lt;&amp;lt;''spell'' //spellname//&amp;gt;&amp;gt; - Displays a single spell
+&amp;lt;&amp;lt;''spelltable'' //spell1 spell2 ...//&amp;gt;&amp;gt; - Displays a table of spells
+&amp;lt;&amp;lt;''spells'' //spells dc to-hit//&amp;gt;&amp;gt; - Displays a table of spells
+&quot;&quot;&quot;
+
+| !Spell Templates |
+|SpellUpperViewTemplate |
+|SpellLowerViewTemplate |
+|SpellEditTemplate |
+|SpellTableRowTemplate |
+|SpellSummaryRowTemplate |
+</pre>
+</div>
 <div caption="Spell Tools" created="20210114021841553" modified="20210114021952525" tags="Tool" title="Spell Tool">
 <pre>These are tools to help with casting of spells, such as selecting creatures to be summoned.
 
@@ -13525,6 +14965,31 @@ Two daggers
 <div caption="Spellbooks" created="20210130051236113" modified="20210130060501655" tags="Table [[Spell Encyclopedia]]" title="SpellbookDisplay">
 <pre>&lt;&lt;vtabs &quot;[tag[Spellbook]sort[title]]&quot;&gt;&gt;
 </pre>
+</div>
+<div created="20210201183415334" list="" list-before="$:/core/ui/EditTemplate/body" modified="20210411043414403" tags="$:/tags/EditTemplate" title="SpellEditTemplate" type="text/vnd.tiddlywiki">
+<pre>&lt;$list filter=&quot;[all[current]tag[Spell]]&quot;&gt;
+
+|!''Spell Level'' |&lt;$edit-text field=level/&gt;|!''Classes'' |&lt;$edit-text field=classes/&gt;|
+|!''Spell School'' |&lt;$edit-text field=school/&gt;|!''Source'' |&lt;$edit-text field=source/&gt;|
+|!''Casting Time'' |&lt;$edit-text field=casting_time/&gt;|!''Concentration?'' |&lt;$edit-text field=concentration/&gt;|
+|!''Range'' |&lt;$edit-text field=range/&gt;|!''Ritual?'' |&lt;$edit-text field=ritual/&gt;|
+|!''Components'' |&lt;$edit-text field=components/&gt;|&lt;|&lt;|
+|!''Material'' |&lt;$edit-text size=70 field=material/&gt;|&lt;|&lt;|
+|!''Duration'' |&lt;$edit-text field=duration/&gt;|&lt;|&lt;|
+|!''At Higher Levels'' |&lt;$edit-text size=70 field=at_higher_level/&gt;|&lt;|&lt;|
+| !Glyph |&lt;|&lt;|&lt;|
+|!''Casting Time'' |&lt;$edit-text field=glyph_casting_time/&gt;|&lt;|&lt;|
+|!''Range'' |&lt;$edit-text field=glyph_range/&gt;|&lt;|&lt;|
+|!''Target'' |&lt;$edit-text field=glyph_target/&gt;|&lt;|&lt;|
+|!''Duration'' |&lt;$edit-text field=glyph_duration/&gt;|&lt;|&lt;|
+|!''Summary'' |&lt;$edit-text field=glyph_effect size=70/&gt;|&lt;|&lt;|
+&lt;/$list&gt;</pre>
+</div>
+<div created="20190407015754428" list="" list-after="$:/core/ui/ViewTemplate/body" modified="20210317010447910" tags="$:/tags/ViewTemplate" title="SpellLowerViewTemplate" type="text/vnd.tiddlywiki">
+<pre>&lt;$list filter=&quot;[all[current]tag[Spell]]&quot;&gt;
+&lt;$reveal type=&quot;nomatch&quot; state=&quot;!!at_higher_level&quot; text=&quot;&quot;&gt;''At Higher Levels'': {{!!at_higher_level}}&lt;br/&gt;&lt;/$reveal&gt;
+''Summary'': &lt;$set name=dc value=DC&gt;&lt;$set name=to-hit value=to-hit&gt;{{!!glyph_casting_time}} | {{!!glyph_range}} | {{!!glyph_target}} | {{!!glyph_duration}} | {{!!glyph_effect}}&lt;/$set&gt;&lt;/$set&gt;
+&lt;/$list&gt;</pre>
 </div>
 <div caption="Spells" created="20210120090341375" is-dropdown="yes" modified="20210130051231252" tags="$:/tags/MenuBar" title="SpellMenu">
 <pre>&lt;div class=&quot;tc-table-of-contents&quot;&gt;
@@ -13540,6 +15005,255 @@ Two daggers
 <div created="20201209134325277" modified="20201209134400823" tags="[[Spell Encyclopedia]]" title="Spells By Sourcebook">
 <pre>&lt;&lt;sections &quot;[tag[Spells By Sourcebook]]&quot;&gt;&gt;
 </pre>
+</div>
+<div created="20210209032350760" modified="20210209032507778" tags="[[Raw Data]]" title="SpellSlot1" type="application/x-tiddler-dictionary">
+<pre>1: 2
+2: 3
+3: 4
+4: 4
+5: 4
+6: 4
+7: 4
+8: 4
+9: 4
+10: 4
+11: 4
+12: 4
+13: 4
+14: 4
+15: 4
+16: 4
+17: 4
+18: 4
+19: 4
+20: 4
+</pre>
+</div>
+<div created="20210209032511294" modified="20210209032541295" tags="[[Raw Data]]" title="SpellSlot2" type="application/x-tiddler-dictionary">
+<pre>1: 0
+2: 0
+3: 2
+4: 3
+5: 3
+6: 3
+7: 3
+8: 3
+9: 3
+10: 3
+11: 3
+12: 3
+13: 3
+14: 3
+15: 3
+16: 3
+17: 3
+18: 3
+19: 3
+20: 3
+</pre>
+</div>
+<div created="20210209032544244" modified="20210209032602792" tags="[[Raw Data]]" title="SpellSlot3" type="application/x-tiddler-dictionary">
+<pre>1: 0
+2: 0
+3: 0
+4: 0
+5: 2
+6: 3
+7: 3
+8: 3
+9: 3
+10: 3
+11: 3
+12: 3
+13: 3
+14: 3
+15: 3
+16: 3
+17: 3
+18: 3
+19: 3
+20: 3
+</pre>
+</div>
+<div created="20210209032626551" modified="20210209032700196" tags="[[Raw Data]]" title="SpellSlot4" type="application/x-tiddler-dictionary">
+<pre>1: 0
+2: 0
+3: 0
+4: 0
+5: 0
+6: 0
+7: 1
+8: 2
+9: 3
+10: 3
+11: 3
+12: 3
+13: 3
+14: 3
+15: 3
+16: 3
+17: 3
+18: 3
+19: 3
+20: 3
+</pre>
+</div>
+<div created="20210209032807916" modified="20210209032836574" tags="[[Raw Data]]" title="SpellSlot5" type="application/x-tiddler-dictionary">
+<pre>1: 0
+2: 0
+3: 0
+4: 0
+5: 0
+6: 0
+7: 0
+8: 0
+9: 1
+10: 2
+11: 2
+12: 2
+13: 2
+14: 2
+15: 2
+16: 2
+17: 2
+18: 3
+19: 3
+20: 3
+</pre>
+</div>
+<div created="20210209033046233" modified="20210209033107450" tags="[[Raw Data]]" title="SpellSlot6" type="application/x-tiddler-dictionary">
+<pre>1: 0
+2: 0
+3: 0
+4: 0
+5: 0
+6: 0
+7: 0
+8: 0
+9: 0
+10: 0
+11: 1
+12: 1
+13: 1
+14: 1
+15: 1
+16: 1
+17: 1
+18: 1
+19: 2
+20: 2
+</pre>
+</div>
+<div created="20210209033110651" modified="20210209033133752" tags="[[Raw Data]]" title="SpellSlot7" type="application/x-tiddler-dictionary">
+<pre>1: 0
+2: 0
+3: 0
+4: 0
+5: 0
+6: 0
+7: 0
+8: 0
+9: 0
+10: 0
+11: 0
+12: 0
+13: 1
+14: 1
+15: 1
+16: 1
+17: 1
+18: 1
+19: 1
+20: 2
+</pre>
+</div>
+<div created="20210209033136872" modified="20210209033152928" tags="[[Raw Data]]" title="SpellSlot8" type="application/x-tiddler-dictionary">
+<pre>1: 0
+2: 0
+3: 0
+4: 0
+5: 0
+6: 0
+7: 0
+8: 0
+9: 0
+10: 0
+11: 0
+12: 0
+13: 0
+14: 0
+15: 1
+16: 1
+17: 1
+18: 1
+19: 1
+20: 1
+</pre>
+</div>
+<div created="20210209033155978" modified="20210209033208970" tags="[[Raw Data]]" title="SpellSlot9" type="application/x-tiddler-dictionary">
+<pre>1: 0
+2: 0
+3: 0
+4: 0
+5: 0
+6: 0
+7: 0
+8: 0
+9: 0
+10: 0
+11: 0
+12: 0
+13: 0
+14: 0
+15: 0
+16: 0
+17: 1
+18: 1
+19: 1
+20: 1
+</pre>
+</div>
+<div created="20210226084046705" list="" modified="20210317014114619" tags="Template" title="SpellSummaryRowTemplate">
+<pre>&lt;tr&gt;
+&lt;th valign=&quot;top&quot; align=&quot;center&quot; style=&quot;width: 80px;&quot;&gt;{{!!glyph_casting_time}}&lt;$reveal type=&quot;match&quot; state=&quot;!!concentration&quot; text=&quot;Yes&quot;&gt;&lt;&lt;concentration&gt;&gt;&lt;/$reveal&gt;&lt;$reveal type=&quot;match&quot; state=&quot;!!ritual&quot; text=&quot;Yes&quot;&gt;&lt;&lt;ritual&gt;&gt;&lt;/$reveal&gt;&lt;$reveal type=&quot;nomatch&quot; state=&quot;!!at_higher_level&quot; text=&quot;&quot;&gt;&lt;&lt;upcast&gt;&gt;&lt;/$reveal&gt;&lt;/th&gt;
+&lt;th valign=&quot;top&quot; align=&quot;left&quot; colspan=&quot;3&quot; style=&quot;width: 200px;&quot;&gt;&lt;$link to={{!!title}}&gt;&lt;$view field=&quot;title&quot;/&gt;&lt;/$link&gt;&lt;span style=&quot;float: right; font-weight: normal; font-style: italic;&quot;&gt;&lt;$reveal type=&quot;match&quot; state=&quot;!!level&quot; text=&quot;0&quot;&gt;cantrip&lt;/$reveal&gt;&lt;$reveal type=&quot;match&quot; state=&quot;!!level&quot; text=&quot;1&quot;&gt;1st&lt;/$reveal&gt;&lt;$reveal type=&quot;match&quot; state=&quot;!!level&quot; text=&quot;2&quot;&gt;2nd&lt;/$reveal&gt;&lt;$reveal type=&quot;match&quot; state=&quot;!!level&quot; text=&quot;3&quot;&gt;3rd&lt;/$reveal&gt;&lt;$reveal type=&quot;match&quot; state=&quot;!!level&quot; text=&quot;4&quot;&gt;4th&lt;/$reveal&gt;&lt;$reveal type=&quot;match&quot; state=&quot;!!level&quot; text=&quot;5&quot;&gt;5th&lt;/$reveal&gt;&lt;$reveal type=&quot;match&quot; state=&quot;!!level&quot; text=&quot;6&quot;&gt;6th&lt;/$reveal&gt;&lt;$reveal type=&quot;match&quot; state=&quot;!!level&quot; text=&quot;7&quot;&gt;7th&lt;/$reveal&gt;&lt;$reveal type=&quot;match&quot; state=&quot;!!level&quot; text=&quot;8&quot;&gt;8th&lt;/$reveal&gt;&lt;$reveal type=&quot;match&quot; state=&quot;!!level&quot; text=&quot;9&quot;&gt;9th&lt;/$reveal&gt;&lt;/span&gt;&lt;/th&gt;
+&lt;td valign=&quot;top&quot; align=&quot;left&quot; rowspan=&quot;2&quot; style=&quot;width: 75%;&quot;&gt;{{!!glyph_effect}} &lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td valign=&quot;top&quot; align=&quot;center&quot;&gt;&lt;span style=&quot;font-size: smaller; font-style: italic;&quot; title={{!!material}}&gt;{{!!components}}&lt;/span&gt;&lt;/td&gt;
+&lt;td valign=&quot;top&quot; align=&quot;left&quot; colspan=&quot;3&quot;&gt;&lt;span style=&quot;display: inline-block; width: 60px; text-align: right;&quot;&gt;{{!!glyph_range}}&lt;/span&gt; &lt;span style=&quot;color: lightgray;&quot;&gt;|&lt;/span&gt; &lt;span style=&quot;display: inline-block; min-width: 40px; text-align: center;&quot;&gt;{{!!glyph_target}}&lt;/span&gt; &lt;span style=&quot;color: lightgray;&quot;&gt;|&lt;/span&gt; &lt;span style=&quot;display: inline-block;&quot;&gt;{{!!glyph_duration}}&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+</pre>
+</div>
+<div created="20190408010610453" list="" modified="20210226135447479" tags="Template" title="SpellTableRowTemplate">
+<pre>&lt;tr&gt;
+&lt;th valign=&quot;top&quot; align=&quot;left&quot;&gt;&lt;$link to={{!!title}}&gt;&lt;$view field=&quot;title&quot;/&gt;&lt;/$link&gt;&lt;/th&gt;
+&lt;td valign=&quot;top&quot; align=&quot;center&quot;&gt;{{!!level}}&lt;/td&gt;
+&lt;td valign=&quot;top&quot; align=&quot;center&quot;&gt;{{!!school}}&lt;/td&gt;
+&lt;td valign=&quot;top&quot; align=&quot;center&quot;&gt;{{!!casting_time}}&lt;/td&gt;
+&lt;td valign=&quot;top&quot; align=&quot;center&quot;&gt;{{!!components}}&lt;/td&gt;
+&lt;td valign=&quot;top&quot; align=&quot;center&quot;&gt;{{!!range}}&lt;/td&gt;
+&lt;td valign=&quot;top&quot; align=&quot;center&quot;&gt;{{!!duration}}&lt;/td&gt;
+&lt;td valign=&quot;top&quot; align=&quot;left&quot;&gt;
+&lt;$list filter=&quot;[all[current]has[at_higher_level]]&quot;&gt;&lt;&lt;upcast&gt;&gt;&lt;/$list&gt;
+&lt;$list filter=&quot;[all[current]field:concentration[Yes]]&quot;&gt;&lt;&lt;concentration&gt;&gt;&lt;/$list&gt;
+&lt;$list filter=&quot;[all[current]field:ritual[Yes]]&quot;&gt;&lt;&lt;ritual&gt;&gt;&lt;/$list&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+</pre>
+</div>
+<div created="20190407014656316" list="" list-before="$:/core/ui/ViewTemplate/body" modified="20210309171817000" tags="$:/tags/ViewTemplate" title="SpellUpperViewTemplate" type="text/vnd.tiddlywiki">
+<pre>&lt;$list filter=&quot;[all[current]tag[Spell]]&quot;&gt;
+
+&quot;&quot;&quot;
+&lt;hr/&gt;//{{!!classes}}// &lt;span style=&quot;float:right&quot;&gt;//Source: {{!!source}}//&lt;/span&gt;&lt;hr/&gt;//Level {{!!level}} {{!!school}}//
+
+''Casting Time'': {{!!casting_time}}
+''Range'': {{!!range}}
+''Components'': {{!!components}} {{!!material}}
+''Duration'': &lt;$reveal type=&quot;nomatch&quot; state=&quot;!!concentration&quot; text=&quot;No&quot;&gt;Concentration, &lt;/$reveal&gt; {{!!duration}}
+&quot;&quot;&quot;
+&lt;/$list&gt;</pre>
 </div>
 <div created="20190529211245621" modified="20210209125049282" tags="Condition" title="Stunned">
 <pre>* A stunned creature is [[Incapacitated]], can't move, and can speak only falteringly.
@@ -13569,6 +15283,10 @@ For example, a creature with a Constitution of 14 can hold its breath for 3 minu
 </div>
 <div created="20210717040641403" modified="20210717040643035" tags="Image" title="sword-shield.gif" type="image/gif">
 <pre>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</pre>
+</div>
+<div created="20200531022017188" modified="20200531024641925" tags="Template" title="TableRowTemplate">
+<pre>&lt;tr&gt;&lt;th valign=&quot;top&quot; align=&quot;left&quot;&gt;&lt;p&gt;&lt;$link to={{!!title}}&gt;&lt;$list filter=&quot;[all[current]has[icon]]&quot;&gt;&lt;$image source={{!!icon}} height=14 /&gt;&lt;/$list&gt;&lt;$list filter=&quot;[all[current][has[caption]]&quot;&gt;&lt;$view field=caption /&gt;&lt;/$list&gt;&lt;$list filter =&quot;[all[current]!has[caption]]&quot;&gt;&lt;$view field=title /&gt;&lt;/$list&gt;&lt;/$link&gt;&lt;/p&gt;&lt;/th&gt;&lt;td&gt;&lt;$transclude field=&quot;text&quot; mode=&quot;block&quot; /&gt;&lt;/td&gt;&lt;/tr&gt;
+</pre>
 </div>
 <div caption="TCE Spells" created="20201121062111843" modified="20210404012133840" tags="[[Spells By Sourcebook]]" title="TCE Spell">
 <pre>\define spells(level)
