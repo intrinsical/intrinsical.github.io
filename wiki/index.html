@@ -187,7 +187,11 @@ Error message and password prompt
 
 <li>$:/state/tab&lt;&lt;hash [tag[Campaign]sort[order]]&gt;&gt;--1411255381</li>
 
+<li>$:/state/tab&lt;&lt;hash [tag[Character Creation]sort[]]&gt;&gt;--1034965147</li>
+
 <li>$:/state/tab&lt;&lt;hash [tag[Config]sort[]]&gt;&gt;--2123993939</li>
+
+<li>$:/state/tab&lt;&lt;hash [tag[DnD]sort[]]&gt;&gt;--1327276369</li>
 
 <li>$:/state/tab&lt;&lt;hash [tag[TiddlyWiki]sort[]]&gt;&gt;-272320623</li>
 
@@ -12669,8 +12673,14 @@ exports.weaponAttack = weaponAttack;
 <div created="20210809060311286" modified="20210809060312664" title="$:/state/tab&lt;&lt;hash [tag[Campaign]sort[order]]&gt;&gt;--1411255381">
 <pre>Hardcover</pre>
 </div>
+<div created="20210809141837793" modified="20210809141837793" title="$:/state/tab&lt;&lt;hash [tag[Character Creation]sort[]]&gt;&gt;--1034965147">
+<pre>Background</pre>
+</div>
 <div created="20210809122438048" modified="20210809122438048" title="$:/state/tab&lt;&lt;hash [tag[Config]sort[]]&gt;&gt;--2123993939">
 <pre>MarksConfig</pre>
+</div>
+<div created="20210809141836678" modified="20210809141836678" title="$:/state/tab&lt;&lt;hash [tag[DnD]sort[]]&gt;&gt;--1327276369">
+<pre>Character Creation</pre>
 </div>
 <div created="20210809112929671" modified="20210809122431490" title="$:/state/tab&lt;&lt;hash [tag[TiddlyWiki]sort[]]&gt;&gt;-272320623">
 <pre>Config</pre>
@@ -12687,7 +12697,7 @@ exports.weaponAttack = weaponAttack;
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20210809141258752" list="$:/Import MainPage" modified="20210809141258752" title="$:/StoryList">
+<div created="20210809141258752" list="[[Monster Type]] MainPage DnD Background" modified="20210809141916428" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -13006,26 +13016,13 @@ At 18th level, the range of this aura increases to 30 feet.
 &lt;&lt;include &quot;Damage Severity Table&quot;&gt;&gt;
 </pre>
 </div>
-<div caption="Backgrounds" created="20190701044528421" modified="20210131035531662" tags="Table [[Character Creation]]" title="Background">
-<pre>|max|k
-| !Background | !Feature | !Proficiencies | !Equipment |
-|^![[Acolyte]] |^ [[Shelter of the Faithful]] |^''Skills:'' Insight, Religion&lt;br/&gt;''Languages:'' Two of your choice |A holy symbol&lt;br/&gt;(a gift to you when you entered the priesthood)&lt;br/&gt;a prayer book or prayer wheel&lt;br/&gt;5 sticks of incense&lt;br/&gt;vestments&lt;br/&gt;a set of common clothes&lt;br/&gt;a pouch containing 15 gp. |
-|^![[Charlatan]] |^ [[False Identity]] |^''Skills:'' Deception, Sleight of Hand&lt;br/&gt;''Tools:'' Disguise kit, Forgery kit |A set of fine clothes&lt;br/&gt;a disguise kit&lt;br/&gt;tools of the con of your choice&lt;br/&gt;&amp;nbsp;&amp;nbsp;* ten stoppered bottles filled with colored liquid&lt;br/&gt;&amp;nbsp;&amp;nbsp;* a set of weighted dice&lt;br/&gt;&amp;nbsp;&amp;nbsp;* a deck of marked cards&lt;br/&gt;&amp;nbsp;&amp;nbsp;* a signet ring of an imaginary duke&lt;br/&gt;a pouch containing 15 gp |
-|^![[Criminal]]&lt;br/&gt;Spy |^ [[Criminal Contact]] |^''Skills:'' Deception, Stealth&lt;br/&gt;''Tools: '' One type of gaming set, thieves’ tools |^A crowbar&lt;br/&gt;a set of dark common clothes including a hood&lt;br/&gt;a pouch containing 15 gp |
-|^![[Entertainer]] |^ [[By Popular Demand]] |^''Skills:'' Acrobatics, Performance&lt;br/&gt;''Tools:'' Disguise kit, one type of musical instrument |^A musical instrument (one of your choice)&lt;br/&gt;the favor of an admirer&lt;br/&gt;&amp;nbsp;&amp;nbsp;* love letter&lt;br/&gt;&amp;nbsp;&amp;nbsp;* lock of hair&lt;br/&gt;&amp;nbsp;&amp;nbsp;* trinket&lt;br/&gt;a costume&lt;br/&gt;and a pouch containing 15 gp |
-|^![[Folk Hero]] |^ [[Rustic Hospitality]] |^''Skills:'' Animal Handling, Survival&lt;br/&gt;''Tools:'' One type of artisan’s tools, vehicles (land) |^A set of artisan’s tools (one of your choice)&lt;br/&gt;a shovel&lt;br/&gt;an iron pot&lt;br/&gt;a set of common clothes&lt;br/&gt;a pouch containing 10 gp |
-|^![[Gladiator]] |^ [[By Popular Demand]] |^''Skills:'' Acrobatics, Performance&lt;br/&gt;''Tools:'' Disguise kit, one type of musical instrument |A inexpensive but unusual weapon&lt;br/&gt;or a musical instrument (one of your choice)&lt;br/&gt;the favor of an admirer&lt;br/&gt;&amp;nbsp;&amp;nbsp;* love letter&lt;br/&gt;&amp;nbsp;&amp;nbsp;* lock of hair&lt;br/&gt;&amp;nbsp;&amp;nbsp;* trinket&lt;br/&gt;a costume&lt;br/&gt;a pouch containing 15 gp |
-|^![[Guild Artisan]]&lt;br/&gt;Guild Merchant |^ [[Guild Membership]] |^''Skills:'' Insight, Persuasion&lt;br/&gt;''Tools:'' One type of artisan’s tools&lt;br/&gt;''Languages:'' One of your choice |^A set of artisan’s tools (one of your choice)&lt;br/&gt;a letter of introduction from your guild&lt;br/&gt;a set of traveler’s clothes&lt;br/&gt;a pouch containing 15 gp |
-|^![[Hermit]] |^ [[Discovery]] |^''Skills:'' Medicine, Religion&lt;br/&gt;''Tools:'' Herbalism kit&lt;br/&gt;''Languages:'' One of your choice |^A scroll case stuffed full of notes from your studies or prayers&lt;br/&gt;a winter blanket&lt;br/&gt;a set of common clothes&lt;br/&gt;an herbalism kit&lt;br/&gt;5 gp |
-|^![[Knight]] |^ [[Retainers]] |^''Skills:'' History, Persuasion&lt;br/&gt;''Tools:'' One type of gaming set&lt;br/&gt;''Languages:'' One of your choice|^A set of fine clothes&lt;br/&gt;a signet ring&lt;br/&gt;a scroll of pedigree&lt;br/&gt;a purse containing 25 gp |
-|^![[Noble]] |^ [[Position of Privilege]] |^''Skills:'' History, Persuasion&lt;br/&gt;''Tools:'' One type of gaming set&lt;br/&gt;''Languages:'' One of your choice |^A set of fine clothes&lt;br/&gt;a signet ring&lt;br/&gt;a scroll of pedigree&lt;br/&gt;a purse containing 25 gp |
-|^![[Outlander]] |^ [[Wanderer]] |^''Skill:'' Athletics, Survival&lt;br/&gt;''Tools:'' One type of musical instrument&lt;br/&gt;''Languages:'' One of your choice |^A staff&lt;br/&gt;a hunting trap&lt;br/&gt;a trophy from an animal you killed&lt;br/&gt;a set of traveler’s clothes&lt;br/&gt;a pouch containing 10 gp |
-|^![[Pirate]] |^ [[Bad Reputation]] |^''Skills:'' Athletics, Perception&lt;br/&gt;''Tools:'' Navigator’s tools, vehicles (water) |^A belaying pin (club)&lt;br/&gt;50 feet of silk rope&lt;br/&gt;a trinket(you may roll for a random trinket)&lt;br/&gt;a set of common clothes&lt;br/&gt;a pouch containing 10 gp |
-|^![[Sage]] |^ [[Researcher]] |^''Skills:'' Arcana, History&lt;br/&gt;''Languages:'' Two of your choice |^A bottle of black ink&lt;br/&gt;a quill&lt;br/&gt;a small knife&lt;br/&gt;a letter from a dead colleague posing a question you have not yet been able to answer&lt;br/&gt;a set of common clothes&lt;br/&gt;a pouch containing 10 gp |
-|^![[Sailor]] |^ [[Ship's Passage]] |^''Skills:'' Athletics, Perception&lt;br/&gt;''Tools:'' Navigator’s tools, vehicles (water) |^A belaying pin (club)&lt;br/&gt;50 feet of silk rope&lt;br/&gt;a trinket (you may roll for a random trinket)&lt;br/&gt;a set of common clothes&lt;br/&gt;a pouch containing 10 gp |
-|^![[Soldier]] |^ [[Military Rank]] |^''Skills:'' Athletics, Intimidation&lt;br/&gt;''Tools:'' One type of gaming set, vehicles (land) |^An insignia of rank&lt;br/&gt;a trophy taken from a fallen enemy&lt;br/&gt;&amp;nbsp;&amp;nbsp;* a dagger&lt;br/&gt;&amp;nbsp;&amp;nbsp;* broken blade&lt;br/&gt;&amp;nbsp;&amp;nbsp;* piece of a banner&lt;br/&gt;a set of bone dice or deck of cards&lt;br/&gt;a set of common clothes&lt;br/&gt;a pouch containing 10 gp |
-|^![[Urban Bounty Hunter]] |^ [[Ear to the Ground]] |^''Skills:'' Choose 2 from Deception, Insight, Persuasion, Stealth&lt;br/&gt;''Tools:'' Chose 2 from one type of gaming set, one musical instrument, and thieves' tools&lt;br/&gt; |A set of clothes&lt;br/&gt;a pouch containing 20 gp |
-|^![[Urchin]] |^ [[City Secrets]] |^''Skills:'' Sleight of Hand, Stealth&lt;br/&gt;''Tools:'' Disguise kit, thieves’ tools |^A small knife&lt;br/&gt;a map of the city you grew up in&lt;br/&gt;a pet mouse&lt;br/&gt;a token to remember your parents by&lt;br/&gt;a set of common clothes&lt;br/&gt;a pouch containing 10 gp |
+<div caption="Backgrounds" created="20190701044528421" modified="20210809142040518" tags="Table [[Character Creation]]" title="Background">
+<pre>Every story has a beginning. Your character’s background reveals where you came from, how you became an adventurer, and your place in the world. Your fighter might have been a courageous knight or a grizzled soldier. Your wizard could have been a
+sage or an artisan. Your rogue might have gotten by as a guild thief or commanded audiences as a jester.
+
+Choosing a background provides you with important story cues about your character’s identity. The most important question to ask about your background is what changed? Why did you stop doing whatever your background describes and start adventuring? Where did you get the money to purchase your starting gear, or, if you come from a wealthy background, why don’t you have more money? How did you learn the skills of your class? What sets you apart from ordinary people who share your background?
+
+&lt;div class=&quot;shadow-box&quot; style=&quot;column-width: 11em;&quot;&gt;&lt;$list filter=&quot;[tag[Background]sort[]]&quot;&gt;&lt;span style=&quot;width:200px; display: inline-block;&quot;&gt;{{||Link}}&lt;/span&gt;&lt;/$list&gt;&lt;/div&gt;
 </pre>
 </div>
 <div created="20190405081546493" icon="barbarian.png" modified="20191124093158557" tags="PHB Class TOC-END" title="Barbarian">
