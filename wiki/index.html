@@ -1247,6 +1247,10 @@ Error message and password prompt
 
 <li>Spell Mastery</li>
 
+<li>Spell Scroll Mishap</li>
+
+<li>Spell Scroll Table</li>
+
 <li>Spell Tool</li>
 
 <li>Spellbook</li>
@@ -11386,7 +11390,8 @@ Error message and password prompt
 <div status="complete" title="$:/Import">
 <pre>The following tiddlers were imported:
 
-# [[Spell]]</pre>
+# [[Spell Scroll Table]]
+# [[Spell Scroll Mishap]]</pre>
 </div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
@@ -12702,8 +12707,8 @@ exports.weaponAttack = weaponAttack;
 <div created="20210809122438048" modified="20210809122438048" title="$:/state/tab&lt;&lt;hash [tag[Config]sort[]]&gt;&gt;--2123993939">
 <pre>MarksConfig</pre>
 </div>
-<div created="20210809141836678" modified="20210809143720484" title="$:/state/tab&lt;&lt;hash [tag[DnD]sort[]]&gt;&gt;--1327276369">
-<pre>Sourcebook</pre>
+<div created="20210809141836678" modified="20210809144027607" title="$:/state/tab&lt;&lt;hash [tag[DnD]sort[]]&gt;&gt;--1327276369">
+<pre>Character Creation</pre>
 </div>
 <div created="20210809142241398" modified="20210809142242322" title="$:/state/tab&lt;&lt;hash [tag[Entity]sort[]]&gt;&gt;-913423281">
 <pre>Spellbook</pre>
@@ -12732,7 +12737,7 @@ exports.weaponAttack = weaponAttack;
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20210809143646717" list="$:/Import MainPage DnD Class" modified="20210809143648774" title="$:/StoryList">
+<div created="20210809144007793" list="$:/Import MainPage DnD" modified="20210809144031343" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -20027,6 +20032,33 @@ Uncounted thousands of spells have been created over the course of the multivers
 <pre>At 18th level, you have achieved such mastery over certain spells that you can cast them at will. Choose a 1st-level wizard spell and a 2nd-level wizard spell that are in your spellbook. You can cast those spells at their lowest level without expending a spell slot when you have them prepared. If you want to cast either spell at a higher level, you must expend a spell slot as normal.
 
 By spending 8 hours in study, you can exchange one or both of the spells you chose for different spells of the same levels.</pre>
+</div>
+<div caption="Variant Rule: Spell Scroll Mishaps" created="20210802052658348" modified="20210802052821550" title="Spell Scroll Mishap">
+<pre>A creature who tries and fails to cast a spell from a spell scroll must make a &lt;&lt;save Int 10&gt;&gt;. If the saving throw fails, roll on the Scroll Mishap table.
+
+|max top|k
+| !d6 | !Result |
+| !1 |A surge of magical energy deals the caster 1d6 force damage per level of the spell. |
+| !2 |The spell affects the caster or an ally (determined randomly) instead of the intended target, or it affects a random target nearby if the caster was the intended target. |
+| !3 |The spell affects a random location within the spell’s range. |
+| !4 |The spell’s effect is contrary to its normal one, but neither harmful nor beneficial. For instance, a fireball might produce an area of harmless cold. |
+| !5 |The caster suffers a minor but bizarre effect related to the spell. Such effects last only as long as the original spell’s duration, or 1d10 minutes for spells that take effect instantaneously. For example, a fireball might cause smoke to billow from the caster’s ears for 1d10 minutes. |
+| !6 |The spell activates after 1d12 hours. If the caster was the intended target, the spell takes effect normally. If the caster was not the intended target, the spell goes off in the general direction of the intended target, up to the spell’s maximum range, if the target has moved away. |
+</pre>
+</div>
+<div created="20191125033838257" modified="20191125034048115" tags="Table [[Spell Scroll]]" title="Spell Scroll Table">
+<pre>| !Spell Level | !Rarity | !Save DC | !Attack Bonus |
+| !Cantrip | !Common | 13 | +5 |
+| !1st | !Common | 13 | +5 |
+| !2nd | !Uncommon | 13 | +5 |
+| !3rd | !Uncommon | 15 | +7 |
+| !4th | !Rare | 15 | +7 |
+| !5th | !Rare | 17 | +9 |
+| !6th | !Very Rare | 17 | +9 |
+| !7th | !Very Rare | 18 | +10 |
+| !8th | !Very Rare | 18 | +10 |
+| !9th | !Legendary | 19 | +11 |
+</pre>
 </div>
 <div caption="Spell Tools" created="20210114021841553" modified="20210114021952525" tags="Tool" title="Spell Tool">
 <pre>These are tools to help with casting of spells, such as selecting creatures to be summoned.
